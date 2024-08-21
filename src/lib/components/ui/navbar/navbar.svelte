@@ -42,6 +42,6 @@
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a href="/" class="btn btn-primary">Sign In</a>
+		<a href="https://issuer.koredorcapital.com/" class="btn btn-primary">Sign In</a>
 	</div>
 </div>
