@@ -1,9 +1,25 @@
 <script>
 	import { Icons } from '$lib/components/icons';
+	import { onMount } from 'svelte';
 	import { navItems } from './navigation';
+
+	let isScrolled = false;
+
+	// Detect scroll event to toggle transparency
+	const handleScroll = () => {
+		isScrolled = window.scrollY > 0;
+	};
+	
+	// Add event listener on mount
+	onMount(() => {
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
 </script>
 
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100 sticky top-0 z-50 transition-all duration-300 ease-in-out {isScrolled ? 'bg-opacity-60 backdrop-blur' : ''}">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">

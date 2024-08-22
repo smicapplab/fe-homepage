@@ -1,4 +1,4 @@
-<svg role="img" height="auto" {...$$restProps}>
+<svg role="img" {...$$restProps}>
 	<g id="layer1" transform="translate(-90.677843,-87.738172)">
 		<g id="g2" transform="matrix(8.8344647,0,0,8.8344647,-39.978964,-1176.1897)">
 			<path
