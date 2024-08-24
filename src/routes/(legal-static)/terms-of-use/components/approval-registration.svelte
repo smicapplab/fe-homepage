@@ -48,13 +48,13 @@
 				</ol>
 			</li>
 			<li>
-				Investree has the right to change, modify, delay or terminate all or any parts of the Site
-				or its services at any time. Investree can also set limits on certain features and
+				Koredor has the right to change, modify, delay or terminate all or any parts of the Site
+				or its services at any time. Koredor can also set limits on certain features and
 				functionalities of the Site or limit your access to any part or parts of the Site or the
 				entire Site or services without need of prior notice. Your failure to provide and maintain
 				accurate, complete and updated information required by the Site may result in your inability
-				to access or use the Site and the services. Investree reserves the right to refuse or cancel
-				your account, registration, or your use of the Site and/or the Services if Investree
+				to access or use the Site and the services. Koredor reserves the right to refuse or cancel
+				your account, registration, or your use of the Site and/or the Services if Koredor
 				determines that you have not provided accurate, complete and updated information as required
 				by the Site.
 			</li>

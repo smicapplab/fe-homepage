@@ -22,7 +22,7 @@
 
 <div
 	class="hero min-h-[50vh] bg-base-200"
-	style={`background-image: url("${assets}/images/working-capital-term-note.jpg");`}
+	style={`background-image: url("${assets}/images/hero/working-capital-term-note.jpg");`}
 >
 	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
 		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
