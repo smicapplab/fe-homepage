@@ -15,7 +15,6 @@ html {
     color: #333;
     background-color: #fff;
     letter-spacing: 0.5px;
-    overflow: hidden;
   }
   
   input:-webkit-autofill,

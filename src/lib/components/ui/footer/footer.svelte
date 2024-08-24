@@ -1,15 +1,22 @@
 <script>
-	import { Icons } from "$lib/components/icons";
-
+	import { Icons } from '$lib/components/icons';
+	import { Facebook, Instagram, Linkedin, X, Youtube } from 'lucide-svelte';
 </script>
+
 <footer class="p-10 footer bg-base-200 text-base-content">
 	<aside>
-        <Icons.koredor height="50"/>
+		<Icons.koredor height="50" />
 		<p>
 			Koredor Capital Philippines
 			<br />
 			Providing Financial Services since 2024
 		</p>
+		<div class="flex space-x-1">
+			<Icons.iconButton icon={Icons.facebook} iconSize={24}/>
+			<Icons.iconButton icon={Icons.instagram} iconSize={24}/>
+			<Icons.iconButton icon={Icons.youtube} iconSize={24}/>
+			<Icons.iconButton icon={Icons.linkedin} iconSize={24}/>
+		</div>
 	</aside>
 	<nav>
 		<h6 class="footer-title">Navigation</h6>
@@ -17,7 +24,7 @@
 		<a href="/investor" class="link-hover link">Investor</a>
 		<a href="/anchor" class="link-hover link">Anchor</a>
 		<a href="/referral" class="link-hover link">Referral</a>
-        <a href="/faq" class="link-hover link">FAQ</a>
+		<a href="/faq" class="link-hover link">FAQ</a>
 	</nav>
 	<nav>
 		<h6 class="footer-title">Company</h6>

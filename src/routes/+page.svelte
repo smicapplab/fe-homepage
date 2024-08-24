@@ -52,7 +52,7 @@
 			{#each whyKoredorItems as whyKoredorItem}
 				<div class="card glass">
 					<figure>
-						<img src={`${assets}/${whyKoredorItem.image}`} alt="Shoes" />
+						<img src={`${assets}/${whyKoredorItem.image}`} alt={whyKoredorItem.title} />
 					</figure>
 					<div class="card-body">
 						<h2 class="card-title text-primary">

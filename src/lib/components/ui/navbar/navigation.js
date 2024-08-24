@@ -1,6 +1,14 @@
 const navItems = [
 	{ name: 'Home', href: '/' },
-	{ name: 'Products', href: '/products' },
+	{
+		name: 'Products',
+		href: '/products',
+		subMenus: [
+			{ name: 'Invoice Financing', href: '/invoice-financing' },
+			{ name: 'Purchase Order Financing', href: '/purchase-order-financing' },
+			{ name: 'Working Capital Term Note', href: '/working-capital-term-note' }
+		]
+	},
 	{ name: 'Investor', href: '/investor' },
 	{ name: 'Anchor', href: '/anchor' },
 	{ name: 'Referral', href: '/referral' },
