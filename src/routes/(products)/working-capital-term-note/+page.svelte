@@ -41,6 +41,9 @@
 		<h2 class="text-2xl font-bold text-center text-primary lg:text-4xl">
 			Why Koredor Invoice Financing?
 		</h2>
+		<p class="py-6 text-xl text-white">
+			Seize every opportunity without financial constraints. Investree's working capital term note offers affordable and flexible financing for sustained expansion. Register once and apply anytime!
+		</p>
 		<div class="grid grid-cols-1 gap-10 py-10 lg:grid-cols-3">
 			{#each whyKoredorItems as whyKoredorItem, index}
 				<div

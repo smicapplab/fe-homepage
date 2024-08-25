@@ -4,20 +4,19 @@
 
 	const whyKoredorItems = [
 		{
-			subject: 'Higher Loan-To-Value (LTV) of 80% of the invoice amount',
-			description: 'Apply for a higher financing amount of up to ₱15,000,000* per application.',
-			footNote:
-				'* Final financing amount will be determined during our standard credit and risk assessment process.'
+			subject: 'Maximize business potential',
+			description:
+				'Have immediate access to funds to fulfill larger-than-usual orders, expanding your operations and clientele.'
 		},
 		{
-			subject: 'Build stronger relationships and trust with the platform and investors',
+			subject: 'Increase your revenue',
 			description:
-				'Strengthen connections and instill confidence among stakeholders for a mutually rewarding and sustainable partnership.'
+				'Say yes to new projects without worrying about cash flow, has purchase order financing covers production costs.'
 		},
 		{
-			subject: 'Better relationships mean better rates and terms in the future',
+			subject: 'Build confidence',
 			description:
-				'Foster a strong relationship by maintaining timely payments, proactive networking and communication, and shared objectives to unlock valuable financial advantages.'
+				'Strengthen relationships with suppliers and clients by reliably delivering on orders, enhancing your business reputation.'
 		}
 	];
 </script>
@@ -32,9 +31,7 @@
 				Purchase Order Financing
 			</h1>
 			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
-				Never let cash flow gaps hinder your business growth. Koredor’s purchase order financing
-				allows you to procure inventory, fulfill projects faster, and meet unexpected demands.
-				Simply register and submit your purchase orders to apply!
+				Get additional funds using your purchase orders!
 			</p>
 			<button class="btn btn-primary">Get Started</button>
 		</div>
@@ -45,6 +42,9 @@
 		<h2 class="text-2xl font-bold text-center text-primary lg:text-4xl">
 			Why Koredor Invoice Financing?
 		</h2>
+		<p class="py-6 text-xl text-white">
+			Never let cash flow gaps hinder your business growth. Investree’s purchase order financing allows you to procure inventory, fulfill projects faster, and meet unexpected demands. Simply register and submit your purchase orders to apply!
+		</p>
 		<div class="grid grid-cols-1 gap-10 py-10 lg:grid-cols-3">
 			{#each whyKoredorItems as whyKoredorItem, index}
 				<div
@@ -55,9 +55,6 @@
 						<span class="flex-grow">{whyKoredorItem.subject}</span>
 					</h2>
 					<p class="py-3">{whyKoredorItem.description}</p>
-					{#if whyKoredorItem.footNote}
-						<p class="py-2 text-sm italic">{whyKoredorItem.footNote}</p>
-					{/if}
 				</div>
 			{/each}
 		</div>
