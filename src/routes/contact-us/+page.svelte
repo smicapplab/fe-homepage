@@ -8,6 +8,14 @@
 	import { addToast, ToastType } from '../../stores/toastStores';
 	import Toast from '$lib/components/ui/toast/toast.svelte';
 
+	const lat = 14.548192822087382;
+	const lng = 121.15233919734136;
+	const zoom = 14;
+	const width = '100%';
+	const height = '400px';
+
+	$: mapUrl = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15000!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1635787124!5m2!1sen!2sus`;
+
 	let isLoading = false;
 
 	let data = $$props;
@@ -96,6 +104,7 @@
 				</form>
 			</div>
 		</div>
+		<div class="p-5 bg-gray-100 lg:p-10">
 		<div class="grid grid-cols-1 gap-5 py-10 lg:grid-cols-2">
 			<div>
 				<h2 class="text-2xl font-bold text-primary">Koredor Capital</h2>
@@ -142,16 +151,19 @@
 			<div>
 				<div class="relative h-80">
 					<iframe
-					  title="addressmap"
-					  class="w-full h-full rounded-lg shadow-lg"
-					  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.9177472883294!2d-122.084249!3d37.4219999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb24d3c59f4b1%3A0xe2b47cf0983b30c6!2sGoogleplex!5e0!3m2!1sen!2sus!4v1617970120652!5m2!1sen!2sus&zoom=15&disableDefaultUI=true&disableDoubleClickZoom=true&scrollwheel=false&fullscreenControl=false"
-					  style="border:0;"
-					  allowfullscreen={false}
-					  loading="lazy"
+						width="100%"
+						height="100%"
+						style="border:0"
+						loading="lazy"
+						allowfullscreen
+						referrerpolicy="no-referrer-when-downgrade"
+						src="{mapUrl}&disableDefaultUI=true&scrollwheel=false&draggable=false&gestureHandling=none"
+						title="Google Map"
 					></iframe>
-				  </div>
+				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<Toast />
 </div>

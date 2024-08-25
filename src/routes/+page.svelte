@@ -1,5 +1,10 @@
 <script>
 	import { assets } from '$app/paths';
+	import Seo from '$lib/components/seo.svelte';
+	
+	const title = 'Koredor Kapital';
+	const description = "Philippines' 1st SEC-licensed fintech crowdfunding platform that provides the best affordable, low interest rate business loans to DTI and SEC-registered SMEs."
+	
 	const whyKoredorItems = [
 		{
 			title: 'No Collateral Credit',
@@ -31,6 +36,11 @@
 		}
 	];
 </script>
+
+<Seo
+  {title}
+  {description}
+/>
 
 <div class="hero min-h-[50vh] bg-base-200" style={`background-image: url("${assets}/hero.jpg");`}>
 	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">

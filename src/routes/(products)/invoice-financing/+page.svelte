@@ -1,6 +1,12 @@
 <script>
 	import { assets } from '$app/paths';
 	import { Icons } from '$lib/components/icons';
+	import Seo from '$lib/components/seo.svelte';
+
+	// SEO
+	const title = 'Koredor Express Invoice Financing';
+	const description = "Turn your invoices into opportunities! Here's a quick guide on what type of invoice you should submit to guarantee a hassle-free application."
+
 
 	const whyKoredorItems = [
 		{
@@ -20,6 +26,11 @@
 		}
 	];
 </script>
+
+<Seo
+  {title}
+  {description}
+/>
 
 <div
 	class="hero min-h-[50vh] bg-base-200"
