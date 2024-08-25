@@ -3,7 +3,12 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			zIndex: {
+				10: '10',
+				100: '100'
+			}
+		}
 	},
 
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
@@ -11,15 +16,15 @@ export default {
 		themes: [
 			{
 				mytheme: {
-					primary: "#ff7f00", // Orange as primary color
-					'primary-content': "#ffffff", // White text on primary color
-					secondary: "#008080", // Light grey as secondary color
-					'secondary-content': "#ffffff", 
-					neutral: "#3d4451", // Default neutral color for other elements
-					'base-100': "#ffffff", // Base background color
+					primary: '#ff7f00', // Orange as primary color
+					'primary-content': '#ffffff', // White text on primary color
+					secondary: '#008080', // Light grey as secondary color
+					'secondary-content': '#ffffff',
+					neutral: '#3d4451', // Default neutral color for other elements
+					'base-100': '#ffffff' // Base background color
 				}
 			},
 			'light'
-		] 
+		]
 	}
 };
