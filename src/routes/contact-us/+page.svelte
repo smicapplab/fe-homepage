@@ -10,10 +10,7 @@
 
 	const lat = 14.548192822087382;
 	const lng = 121.15233919734136;
-	const zoom = 14;
-	const width = '100%';
-	const height = '400px';
-
+	
 	$: mapUrl = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15000!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1635787124!5m2!1sen!2sus`;
 
 	let isLoading = false;
@@ -21,7 +18,7 @@
 	let data = $$props;
 	const form = superForm(data, {
 		validators: zodClient(contactUsFormSchema),
-		dataType: 'json', // Add this line
+		dataType: 'json', 
 		onSubmit: () => {
 			isLoading = true;
 		},

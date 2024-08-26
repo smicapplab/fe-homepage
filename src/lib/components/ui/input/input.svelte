@@ -6,6 +6,7 @@
 	export let icon;
 	export let formData;
 	export let prefix = undefined;
+	export let type = 'text';
 </script>
 
 <div class="mb-2">
@@ -16,7 +17,11 @@
 		{#if prefix}
 			{prefix}
 		{/if}
-		<input type="text" {name} class="grow" placeholder={label} bind:value={$formData[name]} />
+		{#if type === 'number'}
+			<input type="number" {name} class="grow" placeholder={label} bind:value={$formData[name]} />
+		{:else}
+			<input type="text" {name} class="grow" placeholder={label} bind:value={$formData[name]} />
+		{/if}
 	</label>
 	{#if $errors[name]}
 		<span class="text-red-600 label-text-alt">{$errors[name]}</span>

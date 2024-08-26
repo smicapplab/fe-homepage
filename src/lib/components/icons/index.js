@@ -1,4 +1,18 @@
-import { Facebook, Instagram, Linkedin, Mail, Youtube, CircleCheckBig, IdCard, Building, Smartphone, MapPin, Clock } from 'lucide-svelte';
+import {
+	Facebook,
+	Instagram,
+	Linkedin,
+	Mail,
+	Youtube,
+	CircleCheckBig,
+	IdCard,
+	Building,
+	Smartphone,
+	MapPin,
+	Clock,
+	Info,
+	Banknote
+} from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
 
@@ -11,9 +25,11 @@ export const Icons = {
 	iconButton: IconButton,
 	circleCheckBig: CircleCheckBig,
 	idCard: IdCard,
-    building: Building,
-    email: Mail,
-    smartphone: Smartphone,
-    mapPin: MapPin,
-	clock: Clock
+	building: Building,
+	email: Mail,
+	smartphone: Smartphone,
+	mapPin: MapPin,
+	clock: Clock,
+	info: Info,
+	banknote: Banknote
 };
