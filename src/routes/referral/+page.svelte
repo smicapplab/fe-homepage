@@ -1,23 +1,15 @@
 <script>
 	import { assets } from '$app/paths';
+	import Hero from '$lib/components/ui/hero/hero.svelte';
 </script>
 
-<div
-	class="hero min-h-[50vh] bg-base-200"
-	style={`background-image: url("${assets}/images/hero/referrals.jpg");`}
->
-	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
-		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
-			<h1 class="text-5xl font-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-				Enjoy unlimited earnings through our <strong>Referral program!</strong>
-			</h1>
-			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
-				Refer qualified SMEs in 2 easy ways and EARN up to ₱50,000 per referral!
-			</p>
-			<button class="btn btn-primary">Get Started</button>
-		</div>
-	</div>
-</div>
+
+<Hero
+	backgroundImage={assets + '/images/hero/referrals.jpg'}
+	heroLabel="Enjoy unlimited earnings through our Referral program!"
+	heroDescription="Refer qualified SMEs in 2 easy ways and EARN up to ₱50,000 per referral!"
+/>
+
 <div class="flex items-center justify-center bg-secondary">
 	<div class="container p-5">
 		<h2 class="text-2xl font-bold text-center text-primary lg:text-4xl">

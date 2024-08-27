@@ -7,6 +7,7 @@
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import { addToast, ToastType } from '../../stores/toastStores';
 	import Toast from '$lib/components/ui/toast/toast.svelte';
+	import Hero from '$lib/components/ui/hero/hero.svelte';
 
 	const lat = 14.548192822087382;
 	const lng = 121.15233919734136;
@@ -39,21 +40,12 @@
 	const { form: formData, errors, enhance } = form;
 </script>
 
-<div
-	class="hero min-h-[50vh] bg-base-200"
-	style={`background-image: url("${assets}/images/hero/contact.jpg");`}
->
-	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
-		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
-			<h1 class="text-5xl font-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-				Let’s Connect!
-			</h1>
-			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
-				Whether you have a question or feedback we are here to assist you.
-			</p>
-		</div>
-	</div>
-</div>
+<Hero
+	backgroundImage={assets + '/images/hero/contact.jpg'}
+	heroLabel="Let’s Konnect!"
+	heroDescription="Whether you have a question or feedback we are here to assist you."
+/>
+
 <div class="flex items-center justify-center">
 	<div class="container p-5">
 		<div class="grid grid-cols-1 gap-5 py-10 lg:grid-cols-2">

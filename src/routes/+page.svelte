@@ -4,6 +4,7 @@
 	import DocRequirements from '$lib/components/ui/doc-requirements/doc-requirements.svelte';
 	import FinancingCriteria from '$lib/components/ui/financing-criteria/financing-criteria.svelte';
 	import FinancingTimeline from '$lib/components/ui/financing-timeline/financing-timeline.svelte';
+	import Hero from '$lib/components/ui/hero/hero.svelte';
 	import Newsletter from '$lib/components/ui/newsletter/newsletter.svelte';
 	import Toast from '$lib/components/ui/toast/toast.svelte';
 
@@ -44,21 +45,13 @@
 </script>
 
 <Seo {title} {description} />
+<Hero
+	backgroundImage={assets + '/hero.jpg'}
+	heroLabel="Affordable Financing"
+	heroDescription="Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+				quasi. In deleniti eaque aut repudiandae et a id nisi."
+/>
 
-<div class="hero min-h-[50vh] bg-base-200" style={`background-image: url("${assets}/hero.jpg");`}>
-	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
-		<div class="w-full text-center text-white lg:w-1/2 lg:text-left">
-			<h1 class="text-5xl font-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-				Affordable Financing
-			</h1>
-			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
-				Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-				quasi. In deleniti eaque aut repudiandae et a id nisi.
-			</p>
-			<button class="btn btn-primary">Get Started</button>
-		</div>
-	</div>
-</div>
 <div class="flex items-center justify-center py-6">
 	<div class="container">
 		<div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
@@ -78,6 +71,7 @@
 		</div>
 	</div>
 </div>
+
 <FinancingTimeline />
 <DocRequirements />
 <FinancingCriteria />

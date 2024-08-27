@@ -1,6 +1,7 @@
 <script>
 	import { assets } from '$app/paths';
 	import { Icons } from '$lib/components/icons';
+	import Hero from '$lib/components/ui/hero/hero.svelte';
 
 	const whyKoredorItems = [
 		{
@@ -21,29 +22,21 @@
 	];
 </script>
 
-<div
-	class="hero min-h-[50vh] bg-base-200"
-	style={`background-image: url("${assets}/images/hero/purchase-order-financing.jpg");`}
->
-	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
-		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
-			<h1 class="text-5xl font-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-				Purchase Order Financing
-			</h1>
-			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
-				Get additional funds using your purchase orders!
-			</p>
-			<button class="btn btn-primary">Get Started</button>
-		</div>
-	</div>
-</div>
+<Hero
+	backgroundImage={assets + '/images/hero/purchase-order-financing.jpg'}
+	heroLabel="Purchase Order Financing"
+	heroDescription="Get additional funds using your purchase orders!"
+/>
+
 <div class="relative flex items-center justify-center overflow-hidden bg-secondary">
-	<div class="container z-10 p-5 ">
+	<div class="container z-10 p-5">
 		<h2 class="text-2xl font-bold text-center text-primary lg:text-4xl">
 			Why Koredor Invoice Financing?
 		</h2>
 		<p class="py-6 text-xl text-white">
-			Never let cash flow gaps hinder your business growth. Koredor’s purchase order financing allows you to procure inventory, fulfill projects faster, and meet unexpected demands. Simply register and submit your purchase orders to apply!
+			Never let cash flow gaps hinder your business growth. Koredor’s purchase order financing
+			allows you to procure inventory, fulfill projects faster, and meet unexpected demands. Simply
+			register and submit your purchase orders to apply!
 		</p>
 		<div class="grid grid-cols-1 gap-10 py-10 lg:grid-cols-3">
 			{#each whyKoredorItems as whyKoredorItem, index}

@@ -45,3 +45,31 @@ input:-webkit-autofill:active {
     @apply p-4 rounded-lg shadow-lg bg-base-200;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 500ms ease-in,
+    transform 500ms ease-in;
+}
+
+.hero-content.content-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

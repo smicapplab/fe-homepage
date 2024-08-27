@@ -75,7 +75,7 @@
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="w-5 h-5 {isScrolled ? 'text-white' : 'text-black'}"
+					class="h-5 w-5 {isScrolled ? 'text-white' : 'text-black'}"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
@@ -136,11 +136,11 @@
 				<li>
 					{#if navItem.subMenus}
 						<details on:toggle={(e) => toggleDetails(e, index)}>
-							<summary class="{isScrolled ? 'text-white' : 'text-black'}">
+							<summary class={isScrolled ? 'text-white' : 'text-black'}>
 								{navItem.name}
 							</summary>
 							<ul
-								class="p-2 rounded-none w-fit {isScrolled ? 'bg-primary' : 'bg-white'}"
+								class="w-fit rounded-none p-2 {isScrolled ? 'bg-primary' : 'bg-white'}"
 								on:mouseenter={cancelCloseTimer}
 								on:mouseleave={(e) => startCloseTimer(e.currentTarget.closest('details'))}
 							>
@@ -149,7 +149,7 @@
 										<a
 											href={subMenu.href}
 											style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
-											class="{isScrolled ? 'text-white' : 'text-black'}"
+											class={isScrolled ? 'text-white' : 'text-black'}
 										>
 											{subMenu.name}
 										</a>
@@ -158,14 +158,19 @@
 							</ul>
 						</details>
 					{:else}
-						<a href={navItem.href} class="{isScrolled ? 'text-white' : 'text-black'}">{navItem.name}</a>
+						<a href={navItem.href} class={isScrolled ? 'text-white' : 'text-black'}
+							>{navItem.name}</a
+						>
 					{/if}
 				</li>
 			{/each}
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a href="https://issuer.koredorcapital.com/" class="btn  {isScrolled ? 'btn-ghost' : 'btn-primary'}">Sign In</a>
+		<a
+			href="https://issuer.koredorcapital.com/"
+			class="btn {isScrolled ? 'btn-outline' : 'btn-primary'}">Sign In</a
+		>
 	</div>
 </div>
 

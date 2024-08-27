@@ -1,6 +1,7 @@
 <script>
 	import { assets } from '$app/paths';
 	import { Icons } from '$lib/components/icons';
+	import Hero from '$lib/components/ui/hero/hero.svelte';
 
 	const whyKoredorItems = [
 		{
@@ -20,22 +21,12 @@
 	];
 </script>
 
-<div
-	class="hero min-h-[50vh] bg-base-200"
-	style={`background-image: url("${assets}/images/hero/working-capital-term-note.jpg");`}
->
-	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
-		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
-			<h1 class="text-5xl font-bold" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-				Working Capital Term Note-flexible, secure, and built for long-term SME success!
-			</h1>
-			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
-				Use your clean-titled real estate property as collateral, ensuring added security while lowering interest rates.
-			</p>
-			<button class="btn btn-primary">Get Started</button>
-		</div>
-	</div>
-</div>
+<Hero
+	backgroundImage={assets + '/images/hero/working-capital-term-note.jpg'}
+	heroLabel="Working Capital Term Note-flexible, secure, and built for long-term SME success!"
+	heroDescription="Use your clean-titled real estate property as collateral, ensuring added security while lowering interest rates."
+/>
+
 <div class="relative flex items-center justify-center overflow-hidden bg-secondary">
 	<div class="container relative z-10 p-5">
 		<h2 class="text-2xl font-bold text-center text-primary lg:text-4xl">
