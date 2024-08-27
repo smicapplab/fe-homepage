@@ -17,6 +17,7 @@ import {
 	CircleChevronDown,
 	CircleChevronUp,
 	CircleDot,
+	LogIn,
 } from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
@@ -44,4 +45,5 @@ export const Icons = {
 	circleChevronDown: CircleChevronDown,
 	circleChevronUp: CircleChevronUp,
 	circleDot: CircleDot,
+	logIn: LogIn,
 };

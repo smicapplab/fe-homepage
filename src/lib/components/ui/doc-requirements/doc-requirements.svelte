@@ -1,6 +1,5 @@
 <script>
 	import { Icons } from '$lib/components/icons';
-	import { CircleCheck, ListIcon } from 'lucide-svelte';
 	import { docRequirements } from './doc-requirements';
 
 	let activeItems = new Array(docRequirements.length).fill(false);

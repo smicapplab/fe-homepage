@@ -1,6 +1,6 @@
 <script>
 	import Calculator from './calculator.svelte';
-import { ratesTerms } from './page-data';
+	import { ratesTerms } from './page-data';
 </script>
 
 <div class="container p-5 mx-auto">
@@ -16,7 +16,7 @@ import { ratesTerms } from './page-data';
 		</div>
 		<div class="p-5 rounded-lg bg-base-200">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">Loan Calculator</h2>
-            <Calculator />
+			<Calculator />
 		</div>
 	</div>
 </div>

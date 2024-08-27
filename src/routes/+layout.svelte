@@ -3,6 +3,7 @@
 	import { Navbar } from '$lib/components/ui/navbar';
 	import { fly } from 'svelte/transition';
 	import '../app.css';
+	import Toast from '$lib/components/ui/toast/toast.svelte';
 	export let data;
 </script>
 
@@ -14,5 +15,6 @@
 			<slot></slot>
 		</div>
 	{/key}
+	<Toast />
 	<Footer />
 </div>

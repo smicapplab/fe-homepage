@@ -27,7 +27,6 @@ input:-webkit-autofill:active {
   caret-color: auto !important;
 }
 
-
 @layer components {
   .timeline {
     @apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2;

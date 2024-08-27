@@ -1,11 +1,10 @@
 <script>
 	import { Icons } from '$lib/components/icons';
-	import { Facebook, Instagram, Linkedin, X, Youtube } from 'lucide-svelte';
 </script>
 
-<footer class="p-10 footer bg-base-200 text-base-content">
+<footer class="p-10 text-white footer bg-neutral">
 	<aside>
-		<Icons.koredor height="50" />
+		<Icons.koredorwhite height="50" />
 		<p>
 			Koredor Capital Philippines
 			<br />

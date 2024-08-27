@@ -28,7 +28,7 @@
 	heroDescription="Get additional funds using your purchase orders!"
 />
 
-<div class="relative flex items-center justify-center overflow-hidden bg-secondary">
+<div class="relative flex items-center justify-center overflow-hidden bg-secondary bg-[linear-gradient(to_right,#6966662e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
 	<div class="container z-10 p-5">
 		<h2 class="text-2xl font-bold text-center text-primary lg:text-4xl">
 			Why Koredor Invoice Financing?

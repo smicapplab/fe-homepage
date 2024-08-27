@@ -6,7 +6,6 @@
 	import FinancingTimeline from '$lib/components/ui/financing-timeline/financing-timeline.svelte';
 	import Hero from '$lib/components/ui/hero/hero.svelte';
 	import Newsletter from '$lib/components/ui/newsletter/newsletter.svelte';
-	import Toast from '$lib/components/ui/toast/toast.svelte';
 
 	const title = 'Koredor Kapital';
 	const description =

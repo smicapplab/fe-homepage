@@ -5,7 +5,7 @@ import { zod } from 'sveltekit-superforms/adapters';
 
 export const actions = {
 	subscribeToNewsletter: async ({ request }) => {
-    try{
+    try{      
       const form = await superValidate(request, zod(subscribeSchema));
 
       if (!form.valid) {

@@ -3,7 +3,7 @@
 	import { superForm } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import { addToast, ToastType } from '../../../../stores/toastStores';
-	import Toast from '../toast/toast.svelte';
+	import { Icons } from '$lib/components/icons';
 
 	let isLoading = false;
 
@@ -27,19 +27,20 @@
 			if (formResult.type === 'success') {
 				addToast(ToastType.success, 'Thanks for signing up for our newsletter!');
 				$formData.email = '';
-				// @ts-ignore
-				// formData.reset();
-			}else{
-                addToast(ToastType.error, ' Oops! Something didn’t quite work. Please give it another shot in a moment.');
-            }
+			} else {
+				addToast(
+					ToastType.error,
+					' Oops! Something didn’t quite work. Please give it another shot in a moment.'
+				);
+			}
 		}
 	});
 </script>
 
 <div class="flex items-center justify-center py-6">
 	<div class="container">
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-			<div>
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:justify-end">
+			<div class="lg:justify-self-start">
 				<h2 class="mb-4 text-2xl font-bold text-center text-secondary lg:text-left">
 					Join Our Newsletter
 				</h2>
@@ -48,27 +49,35 @@
 					today and get all the good stuff straight to your inbox—totally free!
 				</p>
 			</div>
-			<form method="POST" class="grid" use:enhance action="?/subscribeToNewsletter">
-				<div class="join">
-					<input
-						class="input join-item input-bordered grow"
-						placeholder="Email"
-						name="email"
-						bind:value={$formData.email}
-					/>
-					<button type="submit" class="rounded-r-lg btn btn-primary join-item" disabled={isLoading}>
-						{#if isLoading}
-							<span class="loading loading-dots loading-lg"></span>
-						{:else}
-							Subscribe
-						{/if}
-					</button>
-				</div>
-				{#if $errors.email}
-					<span class="text-red-600 label-text-alt lg:-mt-8">{$errors.email}</span>
-				{/if}
-			</form>
+			<div class="flex justify-center lg:justify-start">
+				<form method="POST" class="w-full max-w-lg" use:enhance action="?/subscribeToNewsletter">
+					<div class="w-full mt-10 join">
+						<label
+							class="input grow join-item input-bordered flex items-center gap-2 focus-within:outline-none focus-within:ring-0 focus-within:ring-offset-0 {$errors.email
+								? 'input-error'
+								: ''}"
+						>
+							<Icons.email />
+							<input
+								class="bg-transparent focus:outline-none"
+								placeholder="Email"
+								name="email"
+								bind:value={$formData.email}
+							/>
+						</label>
+						<button type="submit" class="rounded-r-lg btn btn-primary join-item" disabled={isLoading}>
+							{#if isLoading}
+								<span class="loading loading-dots loading-lg"></span>
+							{:else}
+								Subscribe
+							{/if}
+						</button>
+					</div>
+					{#if $errors.email}
+						<span class="text-red-600 label-text-alt lg:-mt-8">{$errors.email}</span>
+					{/if}
+				</form>
+			</div>
 		</div>
 	</div>
-	<Toast />
 </div>

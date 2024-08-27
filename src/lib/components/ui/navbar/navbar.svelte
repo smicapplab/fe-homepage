@@ -169,7 +169,7 @@
 	<div class="navbar-end">
 		<a
 			href="https://issuer.koredorcapital.com/"
-			class="btn {isScrolled ? 'btn-outline' : 'btn-primary'}">Sign In</a
+			class="btn {isScrolled ? 'btn-ghost' : 'btn-primary'}">Sign In <Icons.logIn /></a
 		>
 	</div>
 </div>
