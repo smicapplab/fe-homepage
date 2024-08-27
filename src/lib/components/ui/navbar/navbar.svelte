@@ -6,12 +6,30 @@
 
 	let isScrolled = false;
 	let openDetails = null;
-	let closeTimer = 500;
+	/**
+	 * @type {number | null | undefined}
+	 */
+	let closeTimer = null;
 
 	const handleScroll = () => {
 		if (browser) {
 			isScrolled = window.scrollY > 0;
 		}
+	};
+
+	// @ts-ignore
+	const startCloseTimer = (details) => {
+		if (closeTimer) clearTimeout(closeTimer);
+		closeTimer = setTimeout(() => {
+			if (details) {
+				details.open = false;
+				openDetails = null;
+			}
+		}, 1000);
+	};
+
+	const cancelCloseTimer = () => {
+		if (closeTimer) clearTimeout(closeTimer);
 	};
 
 	/**
@@ -29,11 +47,7 @@
 
 				if (details && details.open) {
 					openDetails = index;
-					if (closeTimer) clearTimeout(closeTimer);
-					closeTimer = setTimeout(() => {
-						details.open = false;
-						openDetails = null;
-					}, 1000);
+					cancelCloseTimer();
 				} else {
 					openDetails = null;
 				}
@@ -52,16 +66,16 @@
 </script>
 
 <div
-	class="navbar sticky top-0 z-50 bg-base-100 transition-all duration-300 ease-in-out {isScrolled
-		? 'bg-opacity-60 backdrop-blur'
-		: ''}"
+	class="navbar sticky top-0 z-50 transition-all duration-300 ease-in-out {isScrolled
+		? 'bg-primary text-white'
+		: 'bg-base-100 text-black'}"
 >
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					class="w-5 h-5"
+					class="w-5 h-5 {isScrolled ? 'text-white' : 'text-black'}"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
@@ -83,7 +97,11 @@
 							<span class="flex justify-start w-full text-left btn btn-ghost">
 								{navItem.name}
 							</span>
-							<ul class="p-2">
+							<ul
+								class="p-2"
+								on:mouseenter={cancelCloseTimer}
+								on:mouseleave={(e) => startCloseTimer(e.currentTarget.closest('details'))}
+							>
 								{#each navItem.subMenus as subMenu}
 									<li>
 										<a
@@ -104,7 +122,13 @@
 				{/each}
 			</ul>
 		</div>
-		<a class="btn btn-link" href="/"><Icons.koredor /></a>
+		<a class="btn btn-link" href="/">
+			{#if isScrolled}
+				<Icons.koredorwhite />
+			{:else}
+				<Icons.koredor />
+			{/if}
+		</a>
 	</div>
 	<div class="hidden navbar-center lg:flex">
 		<ul class="px-1 menu menu-horizontal">
@@ -112,15 +136,20 @@
 				<li>
 					{#if navItem.subMenus}
 						<details on:toggle={(e) => toggleDetails(e, index)}>
-							<summary>
+							<summary class="{isScrolled ? 'text-white' : 'text-black'}">
 								{navItem.name}
 							</summary>
-							<ul class="p-2 w-fit">
+							<ul
+								class="p-2 rounded-none w-fit {isScrolled ? 'bg-primary' : 'bg-white'}"
+								on:mouseenter={cancelCloseTimer}
+								on:mouseleave={(e) => startCloseTimer(e.currentTarget.closest('details'))}
+							>
 								{#each navItem.subMenus as subMenu}
 									<li>
 										<a
 											href={subMenu.href}
 											style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
+											class="{isScrolled ? 'text-white' : 'text-black'}"
 										>
 											{subMenu.name}
 										</a>
@@ -129,14 +158,14 @@
 							</ul>
 						</details>
 					{:else}
-						<a href={navItem.href}>{navItem.name}</a>
+						<a href={navItem.href} class="{isScrolled ? 'text-white' : 'text-black'}">{navItem.name}</a>
 					{/if}
 				</li>
 			{/each}
 		</ul>
 	</div>
 	<div class="navbar-end">
-		<a href="https://issuer.koredorcapital.com/" class="btn btn-primary">Sign In</a>
+		<a href="https://issuer.koredorcapital.com/" class="btn  {isScrolled ? 'btn-ghost' : 'btn-primary'}">Sign In</a>
 	</div>
 </div>
 

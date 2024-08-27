@@ -37,8 +37,8 @@
 		</div>
 	</div>
 </div>
-<div class="flex items-center justify-center bg-secondary">
-	<div class="container p-5">
+<div class="relative flex items-center justify-center overflow-hidden bg-secondary">
+	<div class="container z-10 p-5 ">
 		<h2 class="text-2xl font-bold text-center text-primary lg:text-4xl">
 			Why Koredor Invoice Financing?
 		</h2>

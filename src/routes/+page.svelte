@@ -64,16 +64,13 @@
 		<div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
 			{#each whyKoredorItems as whyKoredorItem}
 				<div class="card glass">
-					<figure>
-						<img src={`${assets}/${whyKoredorItem.image}`} alt={whyKoredorItem.title} />
-					</figure>
 					<div class="card-body">
 						<h2 class="card-title text-primary">
 							{whyKoredorItem.title}
 						</h2>
 						<p class="text-neutral">{whyKoredorItem.description}</p>
 						<div class="justify-start card-actions">
-							<button class="btn btn-secondary">Learn More</button>
+							<button class="pl-0 btn btn-link text-secondary">Learn More</button>
 						</div>
 					</div>
 				</div>

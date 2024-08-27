@@ -20,6 +20,7 @@ import {
 } from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
+import Koredorwhite from './koredorwhite.svelte';
 
 export const Icons = {
 	facebook: Facebook,
@@ -27,6 +28,7 @@ export const Icons = {
 	linkedin: Linkedin,
 	youtube: Youtube,
 	koredor: Koredor,
+	koredorwhite: Koredorwhite,
 	iconButton: IconButton,
 	circleCheckBig: CircleCheckBig,
 	idCard: IdCard,
