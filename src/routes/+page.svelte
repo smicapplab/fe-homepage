@@ -1,10 +1,16 @@
 <script>
 	import { assets } from '$app/paths';
 	import Seo from '$lib/components/seo.svelte';
-	
+	import DocRequirements from '$lib/components/ui/doc-requirements/doc-requirements.svelte';
+	import FinancingCriteria from '$lib/components/ui/financing-criteria/financing-criteria.svelte';
+	import FinancingTimeline from '$lib/components/ui/financing-timeline/financing-timeline.svelte';
+	import Newsletter from '$lib/components/ui/newsletter/newsletter.svelte';
+	import Toast from '$lib/components/ui/toast/toast.svelte';
+
 	const title = 'Koredor Kapital';
-	const description = "Philippines' 1st SEC-licensed fintech crowdfunding platform that provides the best affordable, low interest rate business loans to DTI and SEC-registered SMEs."
-	
+	const description =
+		"Philippines' 1st SEC-licensed fintech crowdfunding platform that provides the best affordable, low interest rate business loans to DTI and SEC-registered SMEs.";
+
 	const whyKoredorItems = [
 		{
 			title: 'No Collateral Credit',
@@ -37,10 +43,7 @@
 	];
 </script>
 
-<Seo
-  {title}
-  {description}
-/>
+<Seo {title} {description} />
 
 <div class="hero min-h-[50vh] bg-base-200" style={`background-image: url("${assets}/hero.jpg");`}>
 	<div class="flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
@@ -78,3 +81,7 @@
 		</div>
 	</div>
 </div>
+<FinancingTimeline />
+<DocRequirements />
+<FinancingCriteria />
+<Newsletter />

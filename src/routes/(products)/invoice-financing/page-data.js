@@ -38,3 +38,4 @@ export const disclaimers = [
 	'The computation is based on the interest rate of 2% per month. Actual interest rate may vary depending on the credit grade and investor bid.',
 	'The financing amount is based on the maximum Loan-To-Value.'
 ];
+

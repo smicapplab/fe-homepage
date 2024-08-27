@@ -41,16 +41,30 @@
 				return `<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-6h2v6zm0-8h-2V7h2v4z" />`;
 		}
 	};
+
+	// @ts-ignore
+	const getScheme = (type) => {
+		switch (type) {
+			case ToastType.success:
+				return `text-white alert alert-success`;
+			case ToastType.warning:
+				return `text-white alert alert-warning`;
+			case ToastType.info:
+				return `text-black alert alert-info`;
+			case ToastType.error:
+				return `text-white alert alert-error`;
+		}
+	};
 </script>
 
 <div
-	class={`z-100 toast ${getAlignmentClass({
+	class={`toast z-100 ${getAlignmentClass({
 		horizontal,
 		vertical
 	})}`}
 >
 	{#each $toasts as toast}
-		<div class="alert alert-{toast.type} {['info', 'warning'].includes(toast.type) ? 'text-black' : 'text-white'}">
+		<div class={getScheme(toast.type)}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="w-6 h-6 stroke-current shrink-0"

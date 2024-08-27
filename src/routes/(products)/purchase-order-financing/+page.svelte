@@ -43,7 +43,7 @@
 			Why Koredor Invoice Financing?
 		</h2>
 		<p class="py-6 text-xl text-white">
-			Never let cash flow gaps hinder your business growth. Investree’s purchase order financing allows you to procure inventory, fulfill projects faster, and meet unexpected demands. Simply register and submit your purchase orders to apply!
+			Never let cash flow gaps hinder your business growth. Koredor’s purchase order financing allows you to procure inventory, fulfill projects faster, and meet unexpected demands. Simply register and submit your purchase orders to apply!
 		</p>
 		<div class="grid grid-cols-1 gap-10 py-10 lg:grid-cols-3">
 			{#each whyKoredorItems as whyKoredorItem, index}

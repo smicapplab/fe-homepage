@@ -7,6 +7,7 @@
 	export let formData;
 	export let prefix = undefined;
 	export let type = 'text';
+	export let placeholder = '';
 </script>
 
 <div class="mb-2">
@@ -18,9 +19,21 @@
 			{prefix}
 		{/if}
 		{#if type === 'number'}
-			<input type="number" {name} class="grow" placeholder={label} bind:value={$formData[name]} />
+			<input
+				type="number"
+				{name}
+				class="grow join-item"
+				placeholder={placeholder || label}
+				bind:value={$formData[name]}
+			/>
 		{:else}
-			<input type="text" {name} class="grow" placeholder={label} bind:value={$formData[name]} />
+			<input
+				type="text"
+				{name}
+				class="grow join-item"
+				placeholder={placeholder || label}
+				bind:value={$formData[name]}
+			/>
 		{/if}
 	</label>
 	{#if $errors[name]}

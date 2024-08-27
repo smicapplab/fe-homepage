@@ -9,7 +9,7 @@
 			Why Koredor Invoice Financing?
 		</h2>
 		<p class="py-6 text-xl text-white">
-			Never miss out on new business opportunities because of lengthy payment terms. Investree's
+			Never miss out on new business opportunities because of lengthy payment terms. Koredor's
 			invoice financing allows you to accept larger projects, acquire more clients, and bridge
 			unexpected cash flow gaps. To apply, simply register and submit your invoices!
 		</p>

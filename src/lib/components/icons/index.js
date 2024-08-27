@@ -11,7 +11,12 @@ import {
 	MapPin,
 	Clock,
 	Info,
-	Banknote
+	Banknote,
+	CircleChevronRight,
+	CircleChevronLeft,
+	CircleChevronDown,
+	CircleChevronUp,
+	CircleDot,
 } from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
@@ -31,5 +36,10 @@ export const Icons = {
 	mapPin: MapPin,
 	clock: Clock,
 	info: Info,
-	banknote: Banknote
+	banknote: Banknote,
+	circleChevronRight: CircleChevronRight,
+	circleChevronLeft: CircleChevronLeft,
+	circleChevronDown: CircleChevronDown,
+	circleChevronUp: CircleChevronUp,
+	circleDot: CircleDot,
 };

@@ -3,9 +3,7 @@
 	import { Navbar } from '$lib/components/ui/navbar';
 	import { fly } from 'svelte/transition';
 	import '../app.css';
-
 	export let data;
-	console.log(data.url);
 </script>
 
 <div>

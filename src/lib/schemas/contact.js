@@ -9,6 +9,16 @@ const mobile = z
 		message: 'Mobile number must be at least 10 numeric digits'
 	});
 
+const email = z
+	.string({
+		required_error: 'Email is required.'
+	})
+	.email('Please enter a valid email address so we can reach you.');
+
+export const subscribeSchema = z.object({
+	email,
+})
+
 export const contactUsFormSchema = z.object({
 	fullName: z
 		.string({
@@ -20,12 +30,7 @@ export const contactUsFormSchema = z.object({
 			required_error: 'Please provide your company name so we know where you are from.'
 		})
 		.min(1, 'Please provide your company name so we know where you are from.'),
-	email: z
-		.string({
-			required_error: 'Email is required.'
-		})
-		.min(1, 'Email is required.')
-		.email('Please enter a valid email address so we can reach you.'),
+	email,
 	mobile,
 	message: z
 		.string({

@@ -25,12 +25,13 @@
 		onResult: (result) => {
 			isLoading = false;
 			const { result: formResult } = result;
-			console.log(formResult);
 			if (formResult.type === 'success') {
 				addToast(
 					ToastType.success,
 					'Thank you for contacting us. We will get back to you shortly.'
 				);
+			}else{
+				addToast(ToastType.error, 'Oops! Something didn’t quite work. Please give it another shot in a moment.');
 			}
 		}
 	});

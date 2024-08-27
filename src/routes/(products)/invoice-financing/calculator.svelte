@@ -48,10 +48,10 @@
 </form>
 
 <div class="w-full">
-	<div class="w-full text-center shadow stats stats-vertical sm:stats-horizontal">
-		<div class="stat">
+	<div class="w-full text-center shadow stats stats-vertical sm:stats-horizontal no-scrollbar">
+		<div class="p-3 stat">
 			<div class="flex items-center space-x-1 stat-title">
-				<div class="w-full mb-2 text-lg font-bold text-secondary">
+				<div class="w-full mb-2 font-bold text-secondary">
 					<span>Financing Amount</span>
 					<div class="tooltip tooltip-bottom z-100" data-tip="Estimated amount to finance">
 						<Icons.info size={16} />
@@ -64,14 +64,14 @@
 			{#if financingAmount < 100000}
 				<div class="stat-desc text-error">Financing amount must be at least ₱100,000.00</div>
 			{/if}
-            {#if financingAmount > 15000000}
-            <div class="stat-desc text-error">Financing amount must not exceed ₱15,000,000.00</div>
-        {/if}
+			{#if financingAmount > 15000000}
+				<div class="stat-desc text-error">Financing amount must not exceed ₱15,000,000.00</div>
+			{/if}
 		</div>
 
 		<div class="stat">
 			<div class="flex items-center space-x-1 stat-title">
-				<div class="w-full mb-2 text-lg font-bold text-secondary">
+				<div class="w-full mb-2 font-bold text-secondary">
 					<span>Marketplace Fee</span>
 					<div class="tooltip tooltip-bottom z-100" data-tip="3.5 of amount to finance">
 						<Icons.info size={16} />
@@ -86,8 +86,8 @@
 
 	<h2 class="py-3 mt-10 text-xl font-bold">Repayment Terms</h2>
 	<div class="relative grid grid-cols-2 gap-2 p-5 bg-white shadow rounded-xl">
-		<p class="text-lg font-bold text-center text-secondary">Terms</p>
-		<p class="text-lg font-bold text-center text-secondary">Amount</p>
+		<p class="font-bold text-center text-secondary">Terms</p>
+		<p class="font-bold text-center text-secondary">Amount</p>
 
 		<p class="font-bold">One time payment</p>
 		<p class="px-5 text-lg font-bold text-center text-primary">
@@ -102,10 +102,25 @@
 		<!-- Vertical line -->
 		<div class="absolute inset-y-0 w-px bg-gray-200 left-1/2"></div>
 	</div>
-    <p class="mt-10 mb-2 text-sm italic font-bold">Disclaimer:</p>
-    <ul class="ml-4 text-sm italic list-decimal selection:list-outside">
-        {#each disclaimers as disclaimer}
-            <li>{disclaimer}</li>
-        {/each}
-    </ul>
+	<p class="mt-10 mb-2 text-sm italic font-bold">Disclaimer:</p>
+	<ul class="ml-4 text-sm italic list-decimal selection:list-outside">
+		{#each disclaimers as disclaimer}
+			<li>{disclaimer}</li>
+		{/each}
+	</ul>
 </div>
+
+<style>
+	.no-scrollbar {
+		overflow: hidden;
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+</style>
