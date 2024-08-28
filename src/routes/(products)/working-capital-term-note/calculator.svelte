@@ -2,30 +2,37 @@
 	// @ts-nocheck
 	import { Icons } from '$lib/components/icons';
 	import Input from '$lib/components/ui/input/input.svelte';
-	import { invoiceCalculatorSchema } from '$lib/schemas/calculators';
+	import { capitalCalculatorSchema } from '$lib/schemas/calculators';
 	import { superForm } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import numeral from 'numeral';
 	import { calculateMarketplaceFee, disclaimers } from '../product-data';
+	import Toast from '$lib/components/ui/toast/toast.svelte';
+	import { addToast, ToastType } from '../../../stores/toastStores';
 
-	// Set the default value for invoiceAmount
+	// Set the default value for appraisalValue
 	let data = {
 		email: '',
-		invoiceAmount: 200000,
-		product: product.invoice
+		appraisalValue: 5000000,
+		product: 'Working Capital Term Note'
 	};
 
 	let showForm = false;
 	let isLoading = false;
-	const interestRate = 0.02;
-	const paymentTerms = [1, 3, 6, 9, 12];
+	const interestRate = 0.01;
+	const paymentTerms = [7, 9, 12, 24, 36];
 
-	$: financingAmount = calculateFinAmount($formData.invoiceAmount);
+	$: financingAmount = calculateFinAmount($formData.appraisalValue);
 	$: marketplaceFee = calculateMarketplaceFee(financingAmount);
 	$: amountToPay = calculateRepayment(financingAmount);
+	$: amount = $formData.appraisalValue;
 
-	const form = superForm(data, {
-		validators: zodClient(invoiceCalculatorSchema),
+	const {
+		form: formData,
+		errors,
+		enhance
+	} = superForm(data, {
+		validators: zodClient(capitalCalculatorSchema),
 		dataType: 'json',
 		onSubmit: () => {
 			isLoading = true;
@@ -47,20 +54,14 @@
 		}
 	});
 
-	const { form: formData, errors, enhance } = form;
-
-	const calculateFinAmount = (invoiceAmount) => {
-		return invoiceAmount * 0.8;
+	const calculateFinAmount = (appraisalValue) => {
+		return appraisalValue * 0.6;
 	};
 
 	const calculateRepayment = (finAmount) => {
 		let amount = {};
 		paymentTerms.forEach((term) => {
-			if (term == 1) {
-				amount[term] = finAmount * interestRate * 2 + finAmount;
-			} else if (term == 3 || (term > 3 && finAmount >= 1500000)) {
-				amount[term] = (finAmount * interestRate * term + finAmount) / term;
-			}
+			amount[term] = (finAmount * interestRate * term + finAmount) / term;
 		});
 		return amount;
 	};
@@ -72,10 +73,10 @@
 </script>
 
 <form method="POST" class="grid gap-2 py-5" use:enhance action="?/sendComputation">
-	<p class="px-2 label-text">Invoice Amount</p>
+	<p class="px-2 label-text">Purchase Order Amount</p>
 	<div class="grid grid-cols-3 gap-4">
 		<div class="col-span-2">
-			<Input type="number" name="invoiceAmount" {formData} {errors} icon={Icons.banknote} />
+			<Input type="number" name="appraisalValue" {formData} {errors} icon={Icons.banknote} />
 		</div>
 	</div>
 
@@ -93,8 +94,8 @@
 				<div class="text-lg font-bold text-center stat-value text-primary">
 					₱{numeral(financingAmount).format('0,0.00')}
 				</div>
-				{#if financingAmount < 100000}
-					<div class="stat-desc text-error">Financing amount must be at least ₱100,000.00</div>
+				{#if financingAmount < 2000000}
+					<div class="stat-desc text-error">Financing amount must be at least ₱2,000,000.00</div>
 				{/if}
 				{#if financingAmount > 15000000}
 					<div class="stat-desc text-error">Financing amount must not exceed ₱15,000,000.00</div>

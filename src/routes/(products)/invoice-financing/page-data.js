@@ -32,10 +32,3 @@ export const ratesTerms = [
 	{ label: 'Repayment Options', value: 'One-time (on or before maturity date)' },
 	{ label: 'Other Costs', value: 'VAT & DST' }
 ];
-
-export const disclaimers = [
-	'All amount presented here are estimate only. Final financing amount and other terms are subject to credit assessment.',
-	'The computation is based on the interest rate of 2% per month. Actual interest rate may vary depending on the credit grade and investor bid.',
-	'The financing amount is based on the maximum Loan-To-Value.'
-];
-

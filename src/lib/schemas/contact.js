@@ -9,7 +9,7 @@ const mobile = z
 		message: 'Mobile number must be at least 10 numeric digits'
 	});
 
-const email = z
+export const email = z
 	.string({
 		required_error: 'Email is required.'
 	})

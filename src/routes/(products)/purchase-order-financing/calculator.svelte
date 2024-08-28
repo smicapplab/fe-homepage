@@ -2,17 +2,19 @@
 	// @ts-nocheck
 	import { Icons } from '$lib/components/icons';
 	import Input from '$lib/components/ui/input/input.svelte';
-	import { invoiceCalculatorSchema } from '$lib/schemas/calculators';
+	import { poCalculatorSchema } from '$lib/schemas/calculators';
 	import { superForm } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import numeral from 'numeral';
 	import { calculateMarketplaceFee, disclaimers } from '../product-data';
+	import { product } from '$lib/components/enums';
+	import { addToast, ToastType } from '../../../stores/toastStores';
 
-	// Set the default value for invoiceAmount
+	// Set the default value for poAmount
 	let data = {
 		email: '',
-		invoiceAmount: 200000,
-		product: product.invoice
+		poAmount: 200000,
+		product: product.po
 	};
 
 	let showForm = false;
@@ -20,12 +22,12 @@
 	const interestRate = 0.02;
 	const paymentTerms = [1, 3, 6, 9, 12];
 
-	$: financingAmount = calculateFinAmount($formData.invoiceAmount);
+	$: financingAmount = calculateFinAmount($formData.poAmount);
 	$: marketplaceFee = calculateMarketplaceFee(financingAmount);
 	$: amountToPay = calculateRepayment(financingAmount);
 
 	const form = superForm(data, {
-		validators: zodClient(invoiceCalculatorSchema),
+		validators: zodClient(poCalculatorSchema),
 		dataType: 'json',
 		onSubmit: () => {
 			isLoading = true;
@@ -49,8 +51,8 @@
 
 	const { form: formData, errors, enhance } = form;
 
-	const calculateFinAmount = (invoiceAmount) => {
-		return invoiceAmount * 0.8;
+	const calculateFinAmount = (poAmount) => {
+		return poAmount * 0.5;
 	};
 
 	const calculateRepayment = (finAmount) => {
@@ -72,10 +74,10 @@
 </script>
 
 <form method="POST" class="grid gap-2 py-5" use:enhance action="?/sendComputation">
-	<p class="px-2 label-text">Invoice Amount</p>
+	<p class="px-2 label-text">Purchase Order Amount</p>
 	<div class="grid grid-cols-3 gap-4">
 		<div class="col-span-2">
-			<Input type="number" name="invoiceAmount" {formData} {errors} icon={Icons.banknote} />
+			<Input type="number" name="poAmount" {formData} {errors} icon={Icons.banknote} />
 		</div>
 	</div>
 
