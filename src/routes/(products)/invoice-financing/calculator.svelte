@@ -7,6 +7,7 @@
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import numeral from 'numeral';
 	import { calculateMarketplaceFee, disclaimers } from '../product-data';
+	import { product } from '$lib/components/enums';
 
 	// Set the default value for invoiceAmount
 	let data = {

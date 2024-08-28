@@ -9,12 +9,13 @@
 	import { calculateMarketplaceFee, disclaimers } from '../product-data';
 	import Toast from '$lib/components/ui/toast/toast.svelte';
 	import { addToast, ToastType } from '../../../stores/toastStores';
+	import { product } from '$lib/components/enums';
 
 	// Set the default value for appraisalValue
 	let data = {
 		email: '',
 		appraisalValue: 5000000,
-		product: 'Working Capital Term Note'
+		product: product.capital
 	};
 
 	let showForm = false;
