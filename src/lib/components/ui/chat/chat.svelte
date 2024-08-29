@@ -1,8 +1,6 @@
 <script>
 	import { Icons } from '$lib/components/icons';
 	import { formatDistanceToNow } from 'date-fns';
-	// @ts-ignore
-	import { afterUpdate, onMount } from 'svelte';
 
 	let chatMessages = [
 		{
@@ -44,23 +42,28 @@
 	 */
 	let chatContainer;
 
-	let isInit = false;
+    // @ts-ignore
+	let interval;
 
 	function toggleChat() {
 		isOpen = !isOpen;
 
-		if (!isInit) {
-			isInit = true;
-
-			pickRandomPhrase(); // Pick an initial phrase
-			const interval = setInterval(pickRandomPhrase, 10000); // Run every 3 seconds
-
-			return () => clearInterval(interval); // Cleanup the interval on component destroy
+		if (isOpen) {
+			pickRandomPhrase(); 
+			interval = setInterval(pickRandomPhrase, 3000); 
+			// @ts-ignore
+			return () => clearInterval(interval); 
+		} else {
+			// @ts-ignore
+			if (interval) {
+				clearInterval(interval); 
+				interval = null; 
+			}
 		}
 	}
 
 	function sendMessage() {
-		if (customerMessage.trim() === '') return; // Prevent sending empty messages
+		if (customerMessage.trim() === '') return; 
 
 		chatMessages = [
 			...chatMessages,
