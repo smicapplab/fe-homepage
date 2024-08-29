@@ -1,5 +1,6 @@
 <script>
 	import { assets } from '$app/paths';
+	import { PUBLIC_ISSUER_REGISTRATION } from '$env/static/public';
 	import Seo from '$lib/components/seo.svelte';
 	import Hero from '$lib/components/ui/hero/hero.svelte';
 	import Summary from '$lib/components/ui/products/summary.svelte';
@@ -13,6 +14,8 @@
 	backgroundImage={assets + '/images/hero/purchase-order-financing.jpg'}
 	heroLabel="Expand your client base with Purchase Order Financing and unlock the additional working capital needed to seize bigger opportunities"
 	heroDescription="Fuel your growth and take on larger projects with confidence!"
+	heroButton="Get Started"
+	heroLink={ PUBLIC_ISSUER_REGISTRATION }
 />
 
 <Summary

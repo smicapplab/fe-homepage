@@ -1,10 +1,24 @@
 <script>
+	import { scrollToSection } from '$lib/util';
 	import { onMount } from 'svelte';
+
 	let imageLoaded = false;
 
 	export let backgroundImage = '';
 	export let heroLabel = '';
 	export let heroDescription = '';
+	/**
+	 * @type {string|null}
+	 */
+	export let heroButton = null;
+	/**
+	 * @type {string|null}
+	 */
+	export let heroLink = null;
+	/**
+	 * @type {string|null}
+	 */
+	export let heroAnchorLink = null;
 
 	// Trigger content visibility after 1 second delay
 	onMount(() => {
@@ -30,7 +44,15 @@
 			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
 				{heroDescription}
 			</p>
-			<button class="btn btn-primary">Get Started</button>
+			{#if heroButton}
+				{#if heroAnchorLink}
+					<button on:click={() => scrollToSection(heroAnchorLink)} class="btn btn-primary"
+						>{heroButton}</button
+					>
+				{:else}
+					<a href={heroLink ?? '/'} class="btn btn-primary">{heroButton}</a>
+				{/if}
+			{/if}
 		</div>
 	</div>
 </div>

@@ -48,7 +48,7 @@
 	});
 </script>
 
-<div class="container p-5 mx-auto">
+<div class="container p-5 mx-auto" id="reg-form">
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<div class="py-5">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">

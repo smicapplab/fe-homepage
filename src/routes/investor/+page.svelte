@@ -16,6 +16,8 @@
 	backgroundImage={assets + '/images/hero/investor.jpg'}
 	heroLabel={ title }
 	heroDescription={description}
+	heroButton="Get Started"
+	heroAnchorLink="reg-form"
 />
 
 <div class="flex items-center justify-center bg-secondary bg-[linear-gradient(to_right,#6966662e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">

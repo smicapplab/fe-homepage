@@ -13,6 +13,8 @@
 	backgroundImage={assets + '/images/hero/anchor.jpg'}
 	heroLabel={title}
 	heroDescription={description}
+	heroButton="Get Started"
+	heroAnchorLink="reg-form"
 />
 
 <div
