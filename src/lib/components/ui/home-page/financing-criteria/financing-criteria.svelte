@@ -11,10 +11,10 @@
 				<h2 class="text-xl font-bold text-center text-secondary lg:text-left lg:text-2xl">
 					What does it take to qualify for our financing?
 				</h2>
-				<h3 class="mb-5 text-center text-neutral lg:text-left">
+				<h2 class="py-3 text-xl">
 					If you meet all the criteria on our checklist, you’re ready to take the next step—register
 					and create your account to get started!
-				</h3>
+				</h2>
 			</div>
 			<div>
 				<div class="w-full bg-white join join-vertical">

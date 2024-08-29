@@ -6,7 +6,7 @@
 <div class="flex bg-neutral items-center justify-center bg-[linear-gradient(to_right,#6966662e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
 	<div class="container p-5">
 		<h2 class="text-2xl font-bold text-center text-white">What is our financing process?</h2>
-		<h2 class="mb-5 font-bold text-center text-white">
+		<h2 class="py-3 text-xl text-center text-white">
 			Our process is 100% online, so you can apply anytime, anywhere!
 		</h2>
 		<div class="container p-4 mx-auto">

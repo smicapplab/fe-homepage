@@ -29,6 +29,7 @@
 	"type": "module",
 	"dependencies": {
 		"daisyui": "^4.12.10",
+		"date-fns": "^3.6.0",
 		"lucide-svelte": "^0.436.0",
 		"numeral": "^2.0.6",
 		"sveltekit-superforms": "^2.17.0"

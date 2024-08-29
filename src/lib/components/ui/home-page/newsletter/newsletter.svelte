@@ -2,8 +2,8 @@
 	import { subscribeSchema } from '$lib/schemas/contact';
 	import { superForm } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
-	import { addToast, ToastType } from '../../../../stores/toastStores';
 	import { Icons } from '$lib/components/icons';
+	import { addToast, ToastType } from '../../../../../stores/toastStores';
 
 	let isLoading = false;
 
@@ -37,17 +37,17 @@
 	});
 </script>
 
-<div class="flex items-center justify-center py-6">
+<div class="flex items-center justify-center py-20">
 	<div class="container">
 		<div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:justify-end">
 			<div class="lg:justify-self-start">
 				<h2 class="mb-4 text-2xl font-bold text-center text-secondary lg:text-left">
 					Join Our Newsletter
 				</h2>
-				<p class="mb-6 text-center text-neutral lg:text-left">
+				<h2 class="py-3 text-xl ">
 					Stay in the loop with the latest tips, industry insights, and special offers. Sign up
 					today and get all the good stuff straight to your inbox—totally free!
-				</p>
+				</h2>
 			</div>
 			<div class="flex justify-center lg:justify-start">
 				<form method="POST" class="w-full max-w-lg" use:enhance action="?/subscribeToNewsletter">

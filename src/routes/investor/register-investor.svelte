@@ -54,11 +54,9 @@
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">
 				Diversify your investments through high-growth SMEs!
 			</h2>
-			<div class="grid grid-cols-2 gap-2 py-5">
-				<h2 class="py-3 text-xl">
-					Fill out the form, and we will set up an initial discussion with you!
-				</h2>
-			</div>
+			<h2 class="py-3 text-xl">
+				Fill out the form, and we will set up an initial discussion with you!
+			</h2>
 		</div>
 		<div class="p-5 rounded-lg bg-base-200">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">Invest with Koredor</h2>

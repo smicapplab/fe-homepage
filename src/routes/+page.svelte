@@ -1,11 +1,11 @@
 <script>
 	import { assets } from '$app/paths';
 	import Seo from '$lib/components/seo.svelte';
-	import DocRequirements from '$lib/components/ui/doc-requirements/doc-requirements.svelte';
-	import FinancingCriteria from '$lib/components/ui/financing-criteria/financing-criteria.svelte';
-	import FinancingTimeline from '$lib/components/ui/financing-timeline/financing-timeline.svelte';
+	import FinancingCriteria from '$lib/components/ui/home-page/financing-criteria/financing-criteria.svelte';
+	import FinancingTimeline from '$lib/components/ui/home-page/financing-timeline/financing-timeline.svelte';
 	import Hero from '$lib/components/ui/hero/hero.svelte';
-	import Newsletter from '$lib/components/ui/newsletter/newsletter.svelte';
+	import DocRequirements from '$lib/components/ui/home-page/doc-requirements/doc-requirements.svelte';
+	import Newsletter from '$lib/components/ui/home-page/newsletter/newsletter.svelte';
 
 	const title = 'Koredor Kapital - Unlock affordable, flexible, collateral-free financing';
 	const description =
@@ -45,7 +45,7 @@
 
 <Seo {title} {description} />
 <Hero
-	backgroundImage={assets + '/hero.jpg'}
+	backgroundImage={assets + '/images/hero/home.jpg'}
 	heroLabel="Unlock affordable, flexible, collateral-free financing with Koredor to boost your business growth"
 	heroDescription="Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs."
 />

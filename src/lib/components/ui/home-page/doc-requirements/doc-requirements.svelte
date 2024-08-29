@@ -19,10 +19,10 @@
 				<h2 class="text-xl font-bold text-center text-secondary lg:text-left lg:text-2xl">
 					What documents are needed?
 				</h2>
-				<h3 class="mb-5 text-center text-neutral lg:text-left">
+				<h2 class="py-3 text-xl">
 					To speed up your application process, please have the following documents ready when you
 					register.
-				</h3>
+				</h2>
 			</div>
 			<div>
 				<div class="w-full join join-vertical">

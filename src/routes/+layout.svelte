@@ -1,9 +1,10 @@
 <script>
-	import { Footer } from '$lib/components/ui/footer';
-	import { Navbar } from '$lib/components/ui/navbar';
+	import { Footer } from '$lib/components/ui/layout/footer';
+	import { Navbar } from '$lib/components/ui/layout/navbar';
 	import { fly } from 'svelte/transition';
 	import '../app.css';
 	import Toast from '$lib/components/ui/toast/toast.svelte';
+	import Chat from '$lib/components/ui/chat/chat.svelte';
 	export let data;
 </script>
 
@@ -16,5 +17,6 @@
 		</div>
 	{/key}
 	<Toast />
+	<Chat />
 	<Footer />
 </div>

@@ -11,11 +11,11 @@
 		<h2 class="mb-5 font-bold text-center text-white">
 			Our process is 100% online, so you can apply anytime, anywhere!
 		</h2>
-		<div class="container p-4 mx-auto">
+		<div class="container py-5 mx-auto">
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
 				<div class="relative w-full shadow-xl card bg-base-100">
 					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.chevronRight class="w-10 h-10 p-2 text-white rounded-full bg-primary" />
+						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
 					</div>
 
 					<div class="pl-12 card-body">
@@ -40,7 +40,7 @@
 
 				<div class="relative w-full shadow-xl card bg-base-100">
 					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.chevronRight class="w-10 h-10 p-2 text-white rounded-full bg-primary" />
+						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
 					</div>
 
 					<div class="pl-12 card-body">
@@ -63,7 +63,7 @@
 
 				<div class="relative w-full shadow-xl card bg-base-100">
 					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.chevronRight class="w-10 h-10 p-2 text-white rounded-full bg-primary" />
+						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
 					</div>
 
 					<div class="pl-12 card-body">
@@ -80,7 +80,7 @@
 
 				<div class="relative w-full shadow-xl card bg-base-100">
 					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.chevronRight class="w-10 h-10 p-2 text-white rounded-full bg-primary" />
+						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
 					</div>
 
 					<div class="pl-12 card-body">
