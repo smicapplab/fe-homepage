@@ -1,11 +1,12 @@
 <!-- src/lib/SEO.svelte -->
 <script>
+	import { assets } from '$app/paths';
     import { page } from '$app/stores';
 
 	export let title = 'Koredor Kapital';
     export let siteName = 'Koredor Kapital';
 	export let description = 'Koredor Kapital';
-	export let image = 'https://example.com/default-image.jpg';
+	export let image = `${assets}/images/koredor-cap.jpg`; 
 
     $: url = $page.url.href;
 
