@@ -50,7 +50,7 @@
 
 		if (isOpen) {
 			pickRandomPhrase(); 
-			interval = setInterval(pickRandomPhrase, 3000); 
+			interval = setInterval(pickRandomPhrase, 10000); 
 			// @ts-ignore
 			return () => clearInterval(interval); 
 		} else {
@@ -115,7 +115,7 @@
 </script>
 
 <!-- Chat Window -->
-<div class="fixed bottom-4 right-4">
+<div class="fixed bottom-4 right-4 z-100">
 	<!-- Chat Toggle Button -->
 	{#if !isOpen}
 		<button
