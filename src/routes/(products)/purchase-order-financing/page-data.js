@@ -1,5 +1,5 @@
-export const title = 'Grow your client base through Purchase Order Financing';
-export const description = "Seize bigger opportunities with additional working capital you need!";
+export const title = 'Expand your client base with Purchase Order Financing and unlock the additional working capital needed to seize bigger opportunities';
+export const description = "Fuel your growth and take on larger projects with confidence!";
 
 export const whyKoredorItems = [
     {

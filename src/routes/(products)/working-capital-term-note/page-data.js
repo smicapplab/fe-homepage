@@ -1,6 +1,6 @@
-export const title = 'Affordable financing for sustainable SME growth and expansion';
+export const title = 'Working Capital Term Note — flexible, reliable, and designed to fuel long-term success for SMEs!';
 export const description =
-	"Seize every opportunity without financial constraints. Investree's working capital term note offers affordable and flexible financing for sustained expansion. Register once and apply anytime!";
+	"Seize every opportunity without financial constraints. Koredor's working capital term note offers affordable and flexible financing for sustained expansion. Register once and apply anytime!";
 
 export const whyKoredorItems = [
 	{

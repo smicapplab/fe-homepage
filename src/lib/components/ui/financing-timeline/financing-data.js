@@ -1,19 +1,19 @@
 export const finProcessSteps = [
     {
-        title: "Register Online",
-        description: "One-time account registration and activation",
+        title: "One-Time Online Registration and Activation",
+        description: "Register your account with a simple one-time online registration activation process",
         link: {
             label: "Register Now",
             url: "/register",
         }
     },
     {
-        title: "Complete Documents",
-        description: "Accomplish the requirements and submit invoice or purchase order for financing",
+        title: "Submit Requirements",
+        description: "Provide the necessary documents and submit your invoice or purchase order for financing consideration",
     },
     {
         title: "Application Assessment",
-        description: "Koredor team will assess and approved the application",
+        description: "The Koredor team will thoroughly review and assess your application for approval",
     },
     {
         title: "Bidding of Investors",
@@ -21,14 +21,14 @@ export const finProcessSteps = [
     },
     {
         title: "Receive Financing Offer",
-        description: "Agree to the financing terms such as interest rate,maturity date, and mode of payment",
+        description: "Review and agree to the financing terms, including interest rate, maturity date, and payment method",
     },
     {
-        title: "Disbursement of Funds",
-        description: "Use the funds to grow and maintain your operations",
+        title: "Disbursement and Utilizing of Funds",
+        description: "Use the approved funds to grow your business and support ongoing operations",
     },
     {
-        title: "Pay on Time",
-        description: "Make payments on time to be eligible for repeat transactions and more affordable terms",
+        title: "Timely Payments",
+        description: "Make timely payments to qualify for repeat transactions and enjoy even more favorable terms in the future",
     },
 ]

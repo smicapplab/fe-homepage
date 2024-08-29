@@ -39,7 +39,7 @@
 
 <div class="flex items-center justify-center py-6">
 	<div class="container">
-		<div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:justify-end">
+		<div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:justify-end">
 			<div class="lg:justify-self-start">
 				<h2 class="mb-4 text-2xl font-bold text-center text-secondary lg:text-left">
 					Join Our Newsletter

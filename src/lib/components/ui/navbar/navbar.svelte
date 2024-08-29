@@ -89,7 +89,7 @@
 				</svg>
 			</div>
 			<ul
-				class="w-fill menu dropdown-content menu-sm z-[1] mt-3 rounded-box bg-base-100 p-2 shadow"
+				class="w-fill menu dropdown-content menu-sm z-[1] mt-3 rounded-box p-2 shadow { isScrolled ? "bg-primary" : "bg-base-100 " }"
 			>
 				{#each navItems as navItem}
 					<li>

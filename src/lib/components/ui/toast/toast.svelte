@@ -64,7 +64,9 @@
 	})}`}
 >
 	{#each $toasts as toast}
-		<div class={getScheme(toast.type)}>
+		<div
+			class="{getScheme(toast.type)} flex w-full max-w-md items-start space-x-2 overflow-auto p-2"
+		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="w-6 h-6 stroke-current shrink-0"
@@ -73,10 +75,13 @@
 			>
 				{@html getPath(toast.type)}
 			</svg>
-			<span>{toast.message}</span>
-			<button on:click={() => removeToast(toast.id)} class="ml-auto btn btn-circle btn-ghost btn-sm"
-				>&times;</button
+			<span class="flex-1 break-words whitespace-normal">{toast.message}</span>
+			<button
+				on:click={() => removeToast(toast.id)}
+				class="ml-auto btn btn-circle btn-ghost btn-sm"
 			>
+				&times;
+			</button>
 		</div>
 	{/each}
 </div>
@@ -113,5 +118,19 @@
 
 	.toast-bottom {
 		justify-content: flex-end;
+	}
+
+	.toast > div {
+		display: flex;
+		flex-wrap: wrap;
+		word-wrap: break-word; /* Forces long words to wrap */
+		overflow-wrap: anywhere; /* Break lines at any point */
+		max-width: 100%;
+	}
+
+	.break-words {
+		overflow-wrap: anywhere;
+		word-break: break-word; /* Break long words */
+		white-space: normal; /* Allow text to wrap normally */
 	}
 </style>

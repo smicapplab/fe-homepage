@@ -1,4 +1,6 @@
 import {
+	Building,
+	Building2,
 	Facebook,
 	Instagram,
 	Linkedin,
@@ -6,7 +8,6 @@ import {
 	Youtube,
 	CircleCheckBig,
 	IdCard,
-	Building,
 	Smartphone,
 	MapPin,
 	Clock,
@@ -17,7 +18,15 @@ import {
 	CircleChevronDown,
 	CircleChevronUp,
 	CircleDot,
+	ChevronRight,
+	ChevronLeft,
+	ChevronDown,
+	ChevronUp,
 	LogIn,
+	UserRound,
+	FileStack,
+	ListTodo,
+	HandCoins,
 } from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
@@ -34,6 +43,7 @@ export const Icons = {
 	circleCheckBig: CircleCheckBig,
 	idCard: IdCard,
 	building: Building,
+	building2: Building2,
 	email: Mail,
 	smartphone: Smartphone,
 	mapPin: MapPin,
@@ -46,4 +56,12 @@ export const Icons = {
 	circleChevronUp: CircleChevronUp,
 	circleDot: CircleDot,
 	logIn: LogIn,
+	userRound: UserRound,
+	chevronRight: ChevronRight,
+	chevronLeft: ChevronLeft,
+	chevronDown: ChevronDown,
+	chevronUp: ChevronUp,
+	fileStack: FileStack,
+	listTodo: ListTodo,
+	handCoins: HandCoins,
 };

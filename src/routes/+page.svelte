@@ -9,34 +9,34 @@
 
 	const title = 'Koredor Kapital';
 	const description =
-		"Philippines' 1st SEC-licensed fintech crowdfunding platform that provides the best affordable, low interest rate business loans to DTI and SEC-registered SMEs.";
+		'Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs.';
 
 	const whyKoredorItems = [
 		{
 			title: 'No Collateral Credit',
 			description:
-				'Get additional working capital up to ₱5 million pesos on the first two transactions, increasing up to ₱15 million per transaction.',
+				'Access additional working capital with Koredor, with no collateral required! Secure up to ₱5 million on your first two transactions, with potential increases up to ₱15 million per transaction as you continue. Empower your business growth effortlessly and without the need for assets as security',
 			url: '/',
 			image: 'placeholder.jpg'
 		},
 		{
 			title: 'Affordable & Risk-based',
 			description:
-				'Rate is comparable to unsecured business loans from banks. Risk-based pricing enable businesses to get lower rate by building good credit history with Koredor.',
+				'Our rates are competitive with unsecured business loans from banks, offering you a cost-effective financing solution. With risk-based pricing, you have the opportunity to secure even lower rates by establishing a strong credit history with Koredor. Build trust, save more, and grow your business with tailored financial support',
 			url: '/',
 			image: 'placeholder.jpg'
 		},
 		{
 			title: '100% Online Application',
 			description:
-				'Apply anytime, anywhere! Complete your registration online and get excellent customer support.',
+				'Apply anytime, from anywhere! Complete your registration online with ease and enjoy exceptional customer support every step of the way. Experience hassle-free service designed to meet your needs on your schedule',
 			url: '/',
 			image: 'placeholder.jpg'
 		},
 		{
 			title: 'Seamless Support and Full Transparency',
 			description:
-				'Your dedicated Relationship Manager ensures tailored support, prioritizing an in-depth comprehension of your business and complete transparency on fees and process.',
+				'Your dedicated Relationship Manager provides personalized support, focusing on a deep understanding of your business needs and ensuring complete transparency in fees and processes. Experience tailored guidance designed to help your business thrive',
 			url: '/',
 			image: 'placeholder.jpg'
 		}
@@ -46,9 +46,8 @@
 <Seo {title} {description} />
 <Hero
 	backgroundImage={assets + '/hero.jpg'}
-	heroLabel="Affordable Financing"
-	heroDescription="Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-				quasi. In deleniti eaque aut repudiandae et a id nisi."
+	heroLabel="Unlock affordable, flexible, collateral-free financing with Koredor to boost your business growth"
+	heroDescription="Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs."
 />
 
 <div class="flex items-center justify-center py-6">

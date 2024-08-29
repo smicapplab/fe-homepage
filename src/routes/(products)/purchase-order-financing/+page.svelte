@@ -11,13 +11,13 @@
 
 <Hero
 	backgroundImage={assets + '/images/hero/purchase-order-financing.jpg'}
-	heroLabel="Grow your client base through Purchase Order Financing"
-	heroDescription="Seize bigger opportunities with additional working capital you need!"
+	heroLabel="Expand your client base with Purchase Order Financing and unlock the additional working capital needed to seize bigger opportunities"
+	heroDescription="Fuel your growth and take on larger projects with confidence!"
 />
 
 <Summary
 	whyItems={whyKoredorItems}
-	title="Grow your client base through Purchase Order Financing"
-	description="Never let cash flow gaps hinder your business growth. Investree’s purchase order financing allows you to procure inventory, fulfill projects faster, and meet unexpected demands. Simply register and submit your purchase orders to apply!"
+	title="Why Koredor Purchase Order Financing"
+	description="Never let cash flow gaps hinder your business growth. Koredor purchase order financing allows you to procure inventory, fulfill projects faster, and meet unexpected demands. Simply register and submit your purchase orders to apply!"
 />
 <TermsMain />
