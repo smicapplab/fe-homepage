@@ -7,6 +7,10 @@
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import { addToast, ToastType } from '../../stores/toastStores';
 	import Hero from '$lib/components/ui/hero/hero.svelte';
+	import Seo from '$lib/components/seo.svelte';
+
+	const title = "Let’s Konnect!"
+	const description = "Whether you have a question or feedback, we’re here to help and support you every step of the way."
 
 	const lat = 14.548192822087382;
 	const lng = 121.15233919734136;
@@ -42,10 +46,12 @@
 	const { form: formData, errors, enhance } = form;
 </script>
 
+<Seo {title} {description} />
+
 <Hero
 	backgroundImage={assets + '/images/hero/contact.jpg'}
-	heroLabel="Let’s Konnect!"
-	heroDescription="Whether you have a question or feedback we are here to assist you."
+	heroLabel={title}
+	heroDescription={description}
 />
 
 <div class="flex items-center justify-center">
@@ -54,7 +60,7 @@
 			<div>
 				<h2 class="text-2xl font-bold text-primary">Get in touch with us!</h2>
 				<p class="text-secondary">
-					Fill out the form and we will get back to you as soon as possible.
+					Just fill out the form, and we’ll get back to you as soon as we can!
 				</p>
 			</div>
 			<div>
@@ -86,11 +92,11 @@
 						<span class="text-red-600 label-text-alt">{$errors.message}</span>
 					{/if}
 
-					<button type="submit" class="mt-2 btn btn-primary" disabled={isLoading}>
+					<button type="submit" class="mt-2 btn btn-primary max-w-60" disabled={isLoading}>
 						{#if isLoading}
 							<span class="loading loading-dots loading-lg"></span>
 						{:else}
-							Submit
+							Submit <Icons.send/>
 						{/if}
 					</button>
 				</form>

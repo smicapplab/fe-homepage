@@ -7,7 +7,7 @@
 	import Hero from '$lib/components/ui/hero/hero.svelte';
 	import Newsletter from '$lib/components/ui/newsletter/newsletter.svelte';
 
-	const title = 'Koredor Kapital';
+	const title = 'Koredor Kapital - Unlock affordable, flexible, collateral-free financing';
 	const description =
 		'Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs.';
 

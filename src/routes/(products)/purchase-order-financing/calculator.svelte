@@ -158,12 +158,12 @@
 						{#if isLoading}
 							<span class="loading loading-dots loading-lg"></span>
 						{:else}
-							Subscribe
+							Submit <Icons.send/>
 						{/if}
 					</button>
 				</div>
 			{:else}
-				<button class="btn btn-primary" on:click={toggleForm}>Send Computation Via Email</button>
+				<button class="btn btn-primary" on:click={toggleForm}><Icons.email/> Send Computation Via Email</button>
 			{/if}
 		</div>
 		{#if $errors.email}

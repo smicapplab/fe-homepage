@@ -1,18 +1,21 @@
 <script>
 	import { assets } from '$app/paths';
 	import { Icons } from '$lib/components/icons';
+	import Seo from '$lib/components/seo.svelte';
 	import Hero from '$lib/components/ui/hero/hero.svelte';
 	import InvestmentProcess from './investment-process.svelte';
-	import { whyInvestItems } from './page-data';
+	import { description, title, whyInvestItems } from './page-data';
 	import Qualifications from './qualifications.svelte';
 	import RegisterInvestor from './register-investor.svelte';
 	import Requirements from './requirements.svelte';
 </script>
 
+<Seo {title} {description} />
+
 <Hero
 	backgroundImage={assets + '/images/hero/investor.jpg'}
-	heroLabel="Confidently diversify your wealth through SME investments"
-	heroDescription="Discover high-potential SMEs with a risk-based and hassle-free alternative investment opportunity!"
+	heroLabel={ title }
+	heroDescription={description}
 />
 
 <div class="flex items-center justify-center bg-secondary bg-[linear-gradient(to_right,#6966662e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">

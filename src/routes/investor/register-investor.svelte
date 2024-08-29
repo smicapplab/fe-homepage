@@ -9,10 +9,10 @@
 	import { investorType } from '$lib/lov';
 
 	let data = {
-		investorType: "",
-		fullName: "",
-		email: "",
-		mobile: "",
+		investorType: '',
+		fullName: '',
+		email: '',
+		mobile: ''
 	};
 
 	let isLoading = false;
@@ -32,7 +32,10 @@
 			// @ts-ignore
 			const { result: formResult } = result;
 			if (formResult.type === 'success') {
-				addToast(ToastType.success, 'Thank you for reaching out! Your form has been successfully submitted. Our team at Koredor will review your details and contact you shortly to set up an initial discussion with you.');
+				addToast(
+					ToastType.success,
+					'Thank you for reaching out! Your form has been successfully submitted. Our team at Koredor will review your details and contact you shortly to set up an initial discussion with you.'
+				);
 				// @ts-ignore
 				$formData = {};
 			} else {
@@ -52,13 +55,22 @@
 				Diversify your investments through high-growth SMEs!
 			</h2>
 			<div class="grid grid-cols-2 gap-2 py-5">
-				<h2 class="py-3 text-xl">Fill out the form, and we will set up an initial discussion with you!</h2>				
+				<h2 class="py-3 text-xl">
+					Fill out the form, and we will set up an initial discussion with you!
+				</h2>
 			</div>
 		</div>
 		<div class="p-5 rounded-lg bg-base-200">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">Invest with Koredor</h2>
 			<form method="POST" class="grid gap-2 py-5" use:enhance action="?/anchorContact">
-				<Select icon={Icons.handCoins} label="I want to invest as" name="investorType" {formData} {errors} options={investorType} />
+				<Select
+					icon={Icons.handCoins}
+					label="I want to invest as"
+					name="investorType"
+					{formData}
+					{errors}
+					options={investorType}
+				/>
 				<Input label="Full Name" name="fullName" {formData} {errors} icon={Icons.idCard} />
 				<Input label="Email" name="email" {formData} {errors} icon={Icons.email} />
 				<Input
@@ -69,13 +81,12 @@
 					{errors}
 					icon={Icons.smartphone}
 				/>
-                
 
-				<button type="submit" class="mt-2 btn btn-primary" disabled={isLoading}>
+				<button type="submit" class="mt-2 btn btn-primary max-w-60" disabled={isLoading}>
 					{#if isLoading}
 						<span class="loading loading-dots loading-lg"></span>
 					{:else}
-						Submit
+						Submit <Icons.send />
 					{/if}
 				</button>
 			</form>

@@ -69,7 +69,7 @@
 							{#if isLoading}
 								<span class="loading loading-dots loading-lg"></span>
 							{:else}
-								Subscribe
+								Subscribe <Icons.send/>
 							{/if}
 						</button>
 					</div>

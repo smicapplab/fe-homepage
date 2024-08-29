@@ -1,3 +1,6 @@
+export const title = "Empower your supplier network with accessible and cost-effective financing solutions, driving growth and stability across your ecosystem!"
+export const description = "Partner with us as an Anchor to support your SME suppliers and service providers by bridging their working capital gaps. Enable them to serve you better with enhanced financial stability and efficiency!"
+
 export const whyAnchorItems = [
 	{
 		subject: 'Extended credit terms with suppliers for improved liquidity',

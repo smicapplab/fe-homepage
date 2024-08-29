@@ -27,6 +27,7 @@ import {
 	FileStack,
 	ListTodo,
 	HandCoins,
+	Send,
 } from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
@@ -64,4 +65,5 @@ export const Icons = {
 	fileStack: FileStack,
 	listTodo: ListTodo,
 	handCoins: HandCoins,
+	send: Send,
 };

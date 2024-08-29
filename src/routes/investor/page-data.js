@@ -1,3 +1,6 @@
+export const title = "Confidently expand your wealth by investing in SMEs and diversifying your portfolio"
+export const description = "Unlock high-potential SME investments with a risk-based, hassle-free alternative that maximizes your returns!"
+
 export const whyInvestItems = [
 	{
 		subject: 'Investments based on risk appetite with a wide pool of SME notes to match parameters',

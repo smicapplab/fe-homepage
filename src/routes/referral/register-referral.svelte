@@ -116,11 +116,11 @@
 					<span class="text-red-600 label-text-alt">{$errors.message}</span>
 				{/if}
 
-				<button type="submit" class="mt-2 btn btn-primary" disabled={isLoading}>
+				<button type="submit" class="mt-2 btn btn-primary max-w-60" disabled={isLoading}>
 					{#if isLoading}
 						<span class="loading loading-dots loading-lg"></span>
 					{:else}
-						Submit
+						Submit <Icons.send/>
 					{/if}
 				</button>
 			</form>
