@@ -36,6 +36,6 @@
 		<p class="footer-title">Legal</p>
 		<a href="/terms-of-use" class="link-hover link" aria-label="terms-of-use">Terms of use</a>
 		<a href="/privacy-policy" class="link-hover link" aria-label="privacy-policy">Privacy policy</a>
-		<a href="/" class="link-hover link" aria-label="cookie-policy">Cookie policy</a>
+		<a href="/cookie-policy" class="link-hover link" aria-label="cookie-policy">Cookie policy</a>
 	</nav>
 </footer>

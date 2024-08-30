@@ -1,6 +1,9 @@
 <script>
+	import Seo from '$lib/components/seo.svelte';
 	import { PrivacyAccordion } from './components';
 </script>
+
+<Seo title="Privacy Policy" description="Privacy Policy - Koredor Capital" />
 
 <div class="flex items-center justify-center py-6">
 	<div class="container p-5">

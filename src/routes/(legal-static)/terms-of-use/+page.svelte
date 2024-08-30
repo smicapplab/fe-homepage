@@ -1,8 +1,9 @@
 <script>
+	import Seo from '$lib/components/seo.svelte';
 	import { TermsOfUseAccordion } from './components';
-	import ApprovalRegistration from './components/approval-registration.svelte';
-	import Definition from './components/definition.svelte';
 </script>
+
+<Seo title="Terms and Conditions" description="Terms and Conditions - Koredor Capital" />
 
 <div class="flex items-center justify-center py-6">
 	<div class="container p-5">
