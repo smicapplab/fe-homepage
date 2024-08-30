@@ -1,4 +1,4 @@
-const navItems = [
+export const navItems = [
 	{ name: 'Home', href: '/' },
 	{
 		name: 'Products',
@@ -16,5 +16,3 @@ const navItems = [
 	{ name: 'FAQ', href: '/faq' },
 	{ name: 'Contact Us', href: '/contact-us' }
 ];
-
-export { navItems };
