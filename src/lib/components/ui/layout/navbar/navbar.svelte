@@ -73,7 +73,7 @@
 	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-				<svg
+				<svg aria-labelledby="koredor-menu-icon"
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-5 w-5 {isScrolled ? 'text-white' : 'text-black'}"
 					fill="none"

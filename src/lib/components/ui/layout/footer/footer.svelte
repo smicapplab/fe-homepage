@@ -2,7 +2,7 @@
 	import { Icons } from '$lib/components/icons';
 </script>
 
-<footer class="footer bg-neutral p-10 text-white">
+<footer class="p-10 text-white footer bg-neutral">
 	<aside>
 		<Icons.koredorwhite height="50" />
 		<p>
@@ -18,7 +18,7 @@
 		</div>
 	</aside>
 	<nav>
-		<h6 class="footer-title">Navigation</h6>
+		<p class="footer-title">Navigation</p>
 		<a href="/products" class="link-hover link" aria-label="products">Products</a>
 		<a href="/investor" class="link-hover link" aria-label="investor">Investor</a>
 		<a href="/anchor" class="link-hover link" aria-label="anchor">Anchor</a>
@@ -26,14 +26,14 @@
 		<a href="/faq" class="link-hover link" aria-label="faq">FAQ</a>
 	</nav>
 	<nav>
-		<h6 class="footer-title">Company</h6>
+		<p class="footer-title">Company</p>
 		<a href="/about-us" class="link-hover link" aria-label="about-us">About us</a>
 		<a href="/contact-us" class="link-hover link" aria-label="contact">Contact</a>
 		<!-- <a href="/" class="link-hover link">Jobs</a>
 		<a href="/" class="link-hover link">Press kit</a> -->
 	</nav>
 	<nav>
-		<h6 class="footer-title">Legal</h6>
+		<p class="footer-title">Legal</p>
 		<a href="/terms-of-use" class="link-hover link" aria-label="terms-of-use">Terms of use</a>
 		<a href="/privacy-policy" class="link-hover link" aria-label="privacy-policy">Privacy policy</a>
 		<a href="/" class="link-hover link" aria-label="cookie-policy">Cookie policy</a>
