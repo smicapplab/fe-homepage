@@ -18,7 +18,7 @@
 	{#if icon}
 		<svelte:component
 			this={icon}
-			class="absolute w-5 h-5 transform -translate-y-1/2 pointer-events-none left-5 top-1/2"
+			class="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 transform"
 		/>
 	{/if}
 
@@ -34,6 +34,6 @@
 	</select>
 
 	{#if $errors[name]}
-		<span class="text-red-600 label-text-alt">{$errors[name]}</span>
+		<span class="label-text-alt text-red-600">{$errors[name]}</span>
 	{/if}
 </div>

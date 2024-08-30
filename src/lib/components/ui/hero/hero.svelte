@@ -36,7 +36,7 @@
 	>
 		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
 			<h1
-				class="text-5xl font-bold hero-label"
+				class="hero-label text-5xl font-bold"
 				style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);"
 			>
 				{heroLabel}
@@ -46,19 +46,23 @@
 			</p>
 
 			{#if heroButton}
-				<div class="relative inline-flex group">
+				<div class="group relative inline-flex">
 					<div
 						class="transitiona-all animate-tilt absolute -inset-px rounded-xl bg-gradient-to-r from-secondary via-[#FF44EC] to-primary opacity-70 blur-lg duration-1000 group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200"
 					></div>
 					{#if heroAnchorLink}
-						<button on:click={() => scrollToSection(heroAnchorLink)} class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+						<button
+							aria-label="hero-button"
+							on:click={() => scrollToSection(heroAnchorLink)}
+							class="font-pj relative inline-flex items-center justify-center rounded-xl bg-gray-900 px-8 py-4 text-lg font-bold text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
 							>{heroButton}</button
 						>
 					{:else}
 						<a
+							aria-label="hero-button"
 							href={heroLink ?? '/'}
 							title="Get quote now"
-							class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+							class="font-pj relative inline-flex items-center justify-center rounded-xl bg-gray-900 px-8 py-4 text-lg font-bold text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
 							role="button"
 							>{heroButton}
 						</a>

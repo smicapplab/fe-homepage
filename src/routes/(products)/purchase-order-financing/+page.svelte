@@ -15,7 +15,7 @@
 	heroLabel="Expand your client base with Purchase Order Financing and unlock the additional working capital needed to seize bigger opportunities"
 	heroDescription="Fuel your growth and take on larger projects with confidence!"
 	heroButton="Get Started"
-	heroLink={ PUBLIC_ISSUER_REGISTRATION }
+	heroLink={PUBLIC_ISSUER_REGISTRATION}
 />
 
 <Summary

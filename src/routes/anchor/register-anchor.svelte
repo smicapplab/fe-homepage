@@ -34,7 +34,10 @@
 			// @ts-ignore
 			const { result: formResult } = result;
 			if (formResult.type === 'success') {
-				addToast(ToastType.success, 'Thank you for reaching out! Your form has been successfully submitted. Our team at Koredor will review your details and contact you shortly to set up an initial discussion on how we can support your supplier ecosystem’s working capital needs. We look forward to partnering with you for your company’s growth.');
+				addToast(
+					ToastType.success,
+					'Thank you for reaching out! Your form has been successfully submitted. Our team at Koredor will review your details and contact you shortly to set up an initial discussion on how we can support your supplier ecosystem’s working capital needs. We look forward to partnering with you for your company’s growth.'
+				);
 				// @ts-ignore
 				$formData = {};
 			} else {
@@ -47,16 +50,18 @@
 	});
 </script>
 
-<div class="container p-5 mx-auto" id="reg-form">
+<div class="container mx-auto p-5" id="reg-form">
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<div class="py-5">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">
 				Transform your company's operations by partnering with Koredor to support your supplier
 				ecosystem's working capital requirements
 			</h2>
-			<h2 class="py-3 text-xl">Fill out the form, and we will set up an initial discussion with you!</h2>
+			<h2 class="py-3 text-xl">
+				Fill out the form, and we will set up an initial discussion with you!
+			</h2>
 		</div>
-		<div class="p-5 rounded-lg bg-base-200">
+		<div class="rounded-lg bg-base-200 p-5">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">Partner with Koredor for Growth</h2>
 			<form method="POST" class="grid gap-2 py-5" use:enhance action="?/anchorContact">
 				<Input label="Full Name" name="fullName" {formData} {errors} icon={Icons.idCard} />
@@ -70,7 +75,14 @@
 					{errors}
 					icon={Icons.smartphone}
 				/>
-                <Select icon={Icons.building2} label="Company Industry" name="industry" {formData} {errors} options={industries} />
+				<Select
+					icon={Icons.building2}
+					label="Company Industry"
+					name="industry"
+					{formData}
+					{errors}
+					options={industries}
+				/>
 
 				<textarea
 					class="textarea textarea-bordered {$errors.message ? 'textarea-error' : ''}"
@@ -78,14 +90,19 @@
 					bind:value={$formData.message}
 				></textarea>
 				{#if $errors.message}
-					<span class="text-red-600 label-text-alt">{$errors.message}</span>
+					<span class="label-text-alt text-red-600">{$errors.message}</span>
 				{/if}
 
-				<button type="submit" class="mt-2 btn btn-primary max-w-60" disabled={isLoading}>
+				<button
+					type="submit"
+					class="btn btn-primary mt-2 max-w-60"
+					disabled={isLoading}
+					aria-label="submit"
+				>
 					{#if isLoading}
 						<span class="loading loading-dots loading-lg"></span>
 					{:else}
-						Submit <Icons.send/>
+						Submit <Icons.send />
 					{/if}
 				</button>
 			</form>

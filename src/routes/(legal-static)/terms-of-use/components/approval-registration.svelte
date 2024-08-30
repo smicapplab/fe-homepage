@@ -1,8 +1,8 @@
-<div class="mt-2 collapse collapse-plus bg-base-200">
+<div class="collapse collapse-plus mt-2 bg-base-200">
 	<input type="radio" name="policy-accordion" checked />
-	<div class="text-xl font-medium collapse-title text-primary">Approval of Registration</div>
+	<div class="collapse-title text-xl font-medium text-primary">Approval of Registration</div>
 	<div class="collapse-content">
-		<ul class="space-y-4 list-decimal list-inside">
+		<ul class="list-inside list-decimal space-y-4">
 			<li>
 				By using and/or registering on the Site, you hereby represent and guarantee that:
 				<ol class="mt-2 list-[lower-alpha] space-y-2 pl-10">
@@ -48,8 +48,8 @@
 				</ol>
 			</li>
 			<li>
-				Koredor has the right to change, modify, delay or terminate all or any parts of the Site
-				or its services at any time. Koredor can also set limits on certain features and
+				Koredor has the right to change, modify, delay or terminate all or any parts of the Site or
+				its services at any time. Koredor can also set limits on certain features and
 				functionalities of the Site or limit your access to any part or parts of the Site or the
 				entire Site or services without need of prior notice. Your failure to provide and maintain
 				accurate, complete and updated information required by the Site may result in your inability

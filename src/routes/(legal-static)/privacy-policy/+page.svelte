@@ -1,5 +1,5 @@
 <script>
-	import { PrivacyAccordion } from "./components";
+	import { PrivacyAccordion } from './components';
 </script>
 
 <div class="flex items-center justify-center py-6">

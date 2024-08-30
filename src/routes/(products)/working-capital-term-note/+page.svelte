@@ -14,7 +14,7 @@
 	heroLabel="Working Capital Term Note — flexible, reliable, and designed to fuel long-term success for SMEs!"
 	heroDescription="Leverage your clean-titled real estate as collateral to enhance security and benefit from reduced interest rates"
 	heroButton="Get Started"
-	heroLink={ PUBLIC_ISSUER_REGISTRATION }
+	heroLink={PUBLIC_ISSUER_REGISTRATION}
 />
 
 <Summary

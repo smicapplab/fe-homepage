@@ -1,6 +1,7 @@
-export const title = "Unlock unlimited earning potential with our Referral Program—earn commissions on every successful referral, work at your own pace without quotas, and access exclusive resources to boost your income and support financial inclusion nationwide."
-export const description = "Refer qualified SMEs in just two simple steps and earn up to ₱50,000 for each referral!"
-
+export const title =
+	'Unlock unlimited earning potential with our Referral Program—earn commissions on every successful referral, work at your own pace without quotas, and access exclusive resources to boost your income and support financial inclusion nationwide.';
+export const description =
+	'Refer qualified SMEs in just two simple steps and earn up to ₱50,000 for each referral!';
 
 export const whyPartnerItems = [
 	{

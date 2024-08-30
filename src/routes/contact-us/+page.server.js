@@ -17,7 +17,7 @@ export const actions = {
 
 		// const { fullName, email, companyName, mobile, message } = form.data;
 
-    return {
+		return {
 			form
 		};
 	}

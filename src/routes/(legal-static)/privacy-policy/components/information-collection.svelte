@@ -1,11 +1,11 @@
-<div class="mt-2 collapse collapse-plus bg-base-200">
-	<input type="radio" name="policy-accordion"/>
-	<div class="text-xl font-medium collapse-title text-primary">Information Collection</div>
+<div class="collapse collapse-plus mt-2 bg-base-200">
+	<input type="radio" name="policy-accordion" />
+	<div class="collapse-title text-xl font-medium text-primary">Information Collection</div>
 	<div class="collapse-content">
-		<ul class="space-y-4 list-decimal list-inside">
+		<ul class="list-inside list-decimal space-y-4">
 			<li>
-				From time to time, Koredor may collect information and data about you, including those
-				which are:
+				From time to time, Koredor may collect information and data about you, including those which
+				are:
 				<ol class="mt-2 list-[lower-alpha] space-y-2 pl-10">
 					<li>given by you or given by anyone authorized by you;</li>
 					<li>in relation with each of your visits to our Site; and</li>

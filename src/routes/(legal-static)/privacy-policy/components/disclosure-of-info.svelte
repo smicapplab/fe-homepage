@@ -1,14 +1,14 @@
-<div class="mt-2 collapse collapse-plus bg-base-200">
-	<input type="radio" name="policy-accordion"/>
-	<div class="text-xl font-medium collapse-title text-primary">
+<div class="collapse collapse-plus mt-2 bg-base-200">
+	<input type="radio" name="policy-accordion" />
+	<div class="collapse-title text-xl font-medium text-primary">
 		Use And Disclosure of Information and Personal Data
 	</div>
 	<div class="collapse-content">
-		<ul class="space-y-4 list-decimal list-inside">
+		<ul class="list-inside list-decimal space-y-4">
 			<li>
-				When considered necessary and appropriate by Koredor and in accordance with applicable
-				laws, rules, and regulations, Personal Data may be used and disclosed by Koredor and/or
-				Koredor Group for the following purposes:
+				When considered necessary and appropriate by Koredor and in accordance with applicable laws,
+				rules, and regulations, Personal Data may be used and disclosed by Koredor and/or Koredor
+				Group for the following purposes:
 				<ol class="mt-2 list-[lower-alpha] space-y-2 pl-10">
 					<li>
 						Provide access to you and facilitate the use of our Site and ensure that Site and its
@@ -98,19 +98,18 @@
 					</li>
 					<li>
 						Fulfill domestic and foreign legal, regulatory and compliance requirements applicable to
-						Koredor and Koredor Group (including anti-money laundering and tax obligations
-						imposed to Koredor and Koredor Group, and disclosures on every exchange effect, the
-						court, government authority, supervisory authority or regulator in accordance with
-						guidelines, regulations, orders, instructions or relevant requests from these
-						organizations) and comply with any applicable international agreements or agreements
-						with or between foreign and domestic governments that applies to Koredor and Koredor
-						Group;
+						Koredor and Koredor Group (including anti-money laundering and tax obligations imposed
+						to Koredor and Koredor Group, and disclosures on every exchange effect, the court,
+						government authority, supervisory authority or regulator in accordance with guidelines,
+						regulations, orders, instructions or relevant requests from these organizations) and
+						comply with any applicable international agreements or agreements with or between
+						foreign and domestic governments that applies to Koredor and Koredor Group;
 					</li>
 					<li>
 						Check the identity and/or authority of your attorneys and/or representatives who contact
-						Koredor or Koredor Group and/or who may be contacted by Koredor or Koredor Group
-						to carry out or respond to requests, questions or instructions from the audited powers
-						or other parties in accordance with security procedures we apply;
+						Koredor or Koredor Group and/or who may be contacted by Koredor or Koredor Group to
+						carry out or respond to requests, questions or instructions from the audited powers or
+						other parties in accordance with security procedures we apply;
 					</li>
 					<li>
 						Conduct risk assessment, statistical analysis and planning, including carrying out data
@@ -131,8 +130,8 @@
 					</li>
 					<li>
 						Implement (including, but not limited to, billing the amount owed to Koredor and/or
-						Koredor Group) or defend the rights of Koredor or Koredor Group arising from a
-						contract or agreement between you and Koredor or otherwise;
+						Koredor Group) or defend the rights of Koredor or Koredor Group arising from a contract
+						or agreement between you and Koredor or otherwise;
 					</li>
 					<li>
 						Conduct the internal management to operate control and management information systems
@@ -145,13 +144,12 @@
 					</li>
 					<li>
 						Comply with contractual arrangements by or among autonomous industries, industry groups,
-						industry provider associations or other similar entities with Koredor or Koredor
-						Group;
+						industry provider associations or other similar entities with Koredor or Koredor Group;
 					</li>
 					<li>
-						Manage the Koredor relationship with you, which may include providing information to
-						you or relevant individuals, about products and services of Koredor or Koredor
-						Group, when specifically approved or allowed under applicable laws and regulations;
+						Manage the Koredor relationship with you, which may include providing information to you
+						or relevant individuals, about products and services of Koredor or Koredor Group, when
+						specifically approved or allowed under applicable laws and regulations;
 					</li>
 					<li>
 						Market the financial products or services related to financing through various
@@ -161,10 +159,10 @@
 					</li>
 					<li>
 						Comply with any obligations, requirements, policies, procedures, assessments or
-						arrangements for sharing the data and information in Koredor or Koredor Group and
-						the use of other data and information in accordance with each of Koredor Group's
-						programs to complete the sanctions or prevention or detecting money laundering,
-						terrorist funding or other illegal activities.
+						arrangements for sharing the data and information in Koredor or Koredor Group and the
+						use of other data and information in accordance with each of Koredor Group's programs to
+						complete the sanctions or prevention or detecting money laundering, terrorist funding or
+						other illegal activities.
 					</li>
 				</ol>
 			</li>
@@ -217,21 +215,21 @@
 						Any such organization or person, if we are under an obligation to disclose or share your
 						Personal Data to comply with any legal obligations, or to implement or apply our Terms
 						of Use, our Cookie Policy, and other agreements, or to protect rights, assets, or
-						security of Koredor and Koredor Group, our customers, Users or others. Such
-						obligation shall include exchanging information with other companies and organizations
-						for the purpose of fraud protection and credit risk reduction;
+						security of Koredor and Koredor Group, our customers, Users or others. Such obligation
+						shall include exchanging information with other companies and organizations for the
+						purpose of fraud protection and credit risk reduction;
 					</li>
 					<li>
 						The third party agents, contractors or service providers that provide administration,
 						postal delivery, telemarketing, telecommunication direct sales, call centers, business
 						processes, travel, visas, knowledge management, human resources, data processing,
 						information technology, computers, payments, debt collection, credit reference or other
-						background checks or other services to Koredor or Koredor Group in connection with
-						the business operations of Koredor or Koredor Group;
+						background checks or other services to Koredor or Koredor Group in connection with the
+						business operations of Koredor or Koredor Group;
 					</li>
 					<li>
-						A person or entity that is part of Koredor Group to the extent necessary to fulfill
-						the relevant permitted purposes/objectives;
+						A person or entity that is part of Koredor Group to the extent necessary to fulfill the
+						relevant permitted purposes/objectives;
 					</li>
 					<li>
 						The bank that is interested in connection with each check or equivalent that is
@@ -245,21 +243,21 @@
 						An individual or entity having an investment on you which may be obliged or required to
 						make disclosures in accordance with the legal process or based on the requirements of
 						the law, regulations, court orders inside or outside the country or agreements that are
-						binding on Koredor or Koredor Group and any government authority, inside or outside
-						the country, or between two or more government authorities inside or outside the
-						country, or any disclosure based on and for the purpose of guidelines or instructions
-						given or issued by law enforcement agencies, regulations, government agencies, tax
-						authorities, law enforcement agencies or other authorities, or autonomous regulations
-						from industry group or associations required or expected by financial service providers
-						or stock exchanges to be fulfilled by Koredor or Koredor Group, or any disclosures
-						in accordance with each contract or other commitments from Koredor or Koredor Group
-						with legal institutions, regulations, government agencies, taxes, law enforcement
-						agencies or other authorities, or autonomous or industrial groups or associations from
-						providers of financial services, or stock exchanges, all of which may be inside or
-						outside the Philippines including disclosure to court proceedings, tribunal courts,
-						and/or legal, regulatory, tax and government agencies, regardless of whether the legal
-						process, obligations, requests, requirements, agreements or guidelines are currently
-						available or made in the future;
+						binding on Koredor or Koredor Group and any government authority, inside or outside the
+						country, or between two or more government authorities inside or outside the country, or
+						any disclosure based on and for the purpose of guidelines or instructions given or
+						issued by law enforcement agencies, regulations, government agencies, tax authorities,
+						law enforcement agencies or other authorities, or autonomous regulations from industry
+						group or associations required or expected by financial service providers or stock
+						exchanges to be fulfilled by Koredor or Koredor Group, or any disclosures in accordance
+						with each contract or other commitments from Koredor or Koredor Group with legal
+						institutions, regulations, government agencies, taxes, law enforcement agencies or other
+						authorities, or autonomous or industrial groups or associations from providers of
+						financial services, or stock exchanges, all of which may be inside or outside the
+						Philippines including disclosure to court proceedings, tribunal courts, and/or legal,
+						regulatory, tax and government agencies, regardless of whether the legal process,
+						obligations, requests, requirements, agreements or guidelines are currently available or
+						made in the future;
 					</li>
 					<li>
 						Financial institutions, process agents, or other parties who will be involved in money
@@ -278,7 +276,10 @@
 					</li>
 				</ol>
 			</li>
-			<li>The purpose, use and/or disclosure of information and data about you referred in article IV shall collectively be hereinafter referred to as "Objectives Allowed".</li>
+			<li>
+				The purpose, use and/or disclosure of information and data about you referred in article IV
+				shall collectively be hereinafter referred to as "Objectives Allowed".
+			</li>
 		</ul>
 	</div>
 </div>

@@ -1,8 +1,7 @@
-import ApprovalRegistration from "./approval-registration.svelte";
-import Definition from "./definition.svelte";
-
+import ApprovalRegistration from './approval-registration.svelte';
+import Definition from './definition.svelte';
 
 export const TermsOfUseAccordion = {
-    definition: Definition,
-    approvalRegistration: ApprovalRegistration
-}
+	definition: Definition,
+	approvalRegistration: ApprovalRegistration
+};

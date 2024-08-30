@@ -6,17 +6,17 @@ export const invoiceCalculatorSchema = z.object({
 	product: z.string({
 		required_error: 'Please enter product name.'
 	}),
-	invoiceAmount,
+	invoiceAmount
 });
 
 export const poCalculatorSchema = z.object({
 	email: email,
 	product,
-	poAmount,
+	poAmount
 });
 
 export const capitalCalculatorSchema = z.object({
 	email: email,
 	product,
-	appraisalValue,
+	appraisalValue
 });

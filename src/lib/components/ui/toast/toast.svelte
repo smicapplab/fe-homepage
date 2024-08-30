@@ -63,22 +63,23 @@
 		vertical
 	})}`}
 >
-	{#each $toasts as toast}
+	{#each $toasts as toast, index}
 		<div
 			class="{getScheme(toast.type)} flex w-full max-w-md items-start space-x-2 overflow-auto p-2"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
-				class="w-6 h-6 stroke-current shrink-0"
+				class="h-6 w-6 shrink-0 stroke-current"
 				fill="none"
 				viewBox="0 0 24 24"
 			>
 				{@html getPath(toast.type)}
 			</svg>
-			<span class="flex-1 break-words whitespace-normal">{toast.message}</span>
+			<span class="flex-1 whitespace-normal break-words">{toast.message}</span>
 			<button
+				aria-label="close={index}"
 				on:click={() => removeToast(toast.id)}
-				class="ml-auto btn btn-circle btn-ghost btn-sm"
+				class="btn btn-circle btn-ghost btn-sm ml-auto"
 			>
 				&times;
 			</button>

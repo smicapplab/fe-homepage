@@ -6,10 +6,10 @@ export const disclaimers = [
 
 /**
  * Calculates the marketplace fee for a given financing amount.
- * 
+ *
  * The marketplace fee is calculated as 5% of the financing amount,
  * multiplied by a 12% annual appreciation rate.
- * 
+ *
  * @param {number} financingAmount - The amount borrowed from the marketplace.
  * @returns {number} - The calculated marketplace fee.
  */

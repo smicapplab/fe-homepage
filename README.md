@@ -38,5 +38,6 @@ You can preview the production build with `npm run preview`.
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
 ## Vercel Deployment
+
 This project is deployed on Vercel. You can view the live demo at:
 [Koredor Homepage](https://koredorcapital.com/)

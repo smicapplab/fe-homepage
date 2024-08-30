@@ -60,8 +60,10 @@
 							{whyKoredorItem.title}
 						</h2>
 						<p class="text-neutral">{whyKoredorItem.description}</p>
-						<div class="justify-start card-actions">
-							<button class="pl-0 btn btn-link text-secondary">Learn More</button>
+						<div class="card-actions justify-start">
+							<button class="btn btn-link pl-0 text-secondary" aria-label="learn-more"
+								>Learn More</button
+							>
 						</div>
 					</div>
 				</div>

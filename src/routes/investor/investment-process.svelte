@@ -7,24 +7,24 @@
 	class="flex items-center justify-center bg-neutral bg-[linear-gradient(to_right,#6966662e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]"
 >
 	<div class="container p-5">
-		<h2 class="text-2xl font-bold text-center text-white">What is our financing process?</h2>
-		<h2 class="mb-5 font-bold text-center text-white">
+		<h2 class="text-center text-2xl font-bold text-white">What is our financing process?</h2>
+		<h2 class="mb-5 text-center font-bold text-white">
 			Our process is 100% online, so you can apply anytime, anywhere!
 		</h2>
-		<div class="container py-5 mx-auto">
+		<div class="container mx-auto py-5">
 			<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-				<div class="relative w-full shadow-xl card bg-base-100">
-					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
+				<div class="card relative w-full bg-base-100 shadow-xl">
+					<div class="absolute -left-5 top-1/2 -translate-y-1/2 transform">
+						<Icons.moveRight class="h-12 w-12 rounded-full bg-primary p-2 text-white" />
 					</div>
 
-					<div class="pl-12 card-body">
+					<div class="card-body pl-12">
 						<h2 class="card-title text-primary">
-							<Icons.fileStack class="inline-block w-6 h-6 mr-2" />
+							<Icons.fileStack class="mr-2 inline-block h-6 w-6" />
 							Onboarding
 						</h2>
 						<div class="divider" />
-						<ul class="space-y-4 list-disc list-inside text-neutral">
+						<ul class="list-inside list-disc space-y-4 text-neutral">
 							<li>
 								Submission of <strong class="text-secondary">standard onboarding documents</strong>
 							</li>
@@ -38,18 +38,18 @@
 					</div>
 				</div>
 
-				<div class="relative w-full shadow-xl card bg-base-100">
-					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
+				<div class="card relative w-full bg-base-100 shadow-xl">
+					<div class="absolute -left-5 top-1/2 -translate-y-1/2 transform">
+						<Icons.moveRight class="h-12 w-12 rounded-full bg-primary p-2 text-white" />
 					</div>
 
-					<div class="pl-12 card-body">
+					<div class="card-body pl-12">
 						<h2 class="card-title text-primary">
-							<Icons.listTodo class="inline-block w-6 h-6 mr-2" />
+							<Icons.listTodo class="mr-2 inline-block h-6 w-6" />
 							Listing
 						</h2>
 						<div class="divider" />
-						<ul class="space-y-4 list-disc list-inside text-neutral">
+						<ul class="list-inside list-disc space-y-4 text-neutral">
 							<li>
 								<strong class="text-secondary">Note offering, bidding</strong>, and
 								<strong class="text-secondary">auction</strong> through our platform
@@ -61,42 +61,50 @@
 					</div>
 				</div>
 
-				<div class="relative w-full shadow-xl card bg-base-100">
-					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
+				<div class="card relative w-full bg-base-100 shadow-xl">
+					<div class="absolute -left-5 top-1/2 -translate-y-1/2 transform">
+						<Icons.moveRight class="h-12 w-12 rounded-full bg-primary p-2 text-white" />
 					</div>
 
-					<div class="pl-12 card-body">
+					<div class="card-body pl-12">
 						<h2 class="card-title text-primary">
-							<Icons.handCoins class="inline-block w-6 h-6 mr-2" />
+							<Icons.handCoins class="mr-2 inline-block h-6 w-6" />
 							Disbursement
 						</h2>
 						<div class="divider" />
-						<ul class="space-y-4 list-disc list-inside text-neutral">
+						<ul class="list-inside list-disc space-y-4 text-neutral">
 							<li><strong class="text-secondary">Disbursement</strong> of funded notes</li>
 						</ul>
 					</div>
 				</div>
 
-				<div class="relative w-full shadow-xl card bg-base-100">
-					<div class="absolute transform -translate-y-1/2 -left-5 top-1/2">
-						<Icons.moveRight class="w-12 h-12 p-2 text-white rounded-full bg-primary" />
+				<div class="card relative w-full bg-base-100 shadow-xl">
+					<div class="absolute -left-5 top-1/2 -translate-y-1/2 transform">
+						<Icons.moveRight class="h-12 w-12 rounded-full bg-primary p-2 text-white" />
 					</div>
 
-					<div class="pl-12 card-body">
+					<div class="card-body pl-12">
 						<h2 class="card-title text-primary">
-							<Icons.banknote class="inline-block w-6 h-6 mr-2" />
+							<Icons.banknote class="mr-2 inline-block h-6 w-6" />
 							Repayment
 						</h2>
 						<div class="divider" />
-						<ul class="space-y-4 list-disc list-inside text-neutral">
-							<li><strong class="text-secondary">Receipt of issuer repayment</strong> (principal + interest amount)</li>
-							<li><strong class="text-secondary">Extension management</strong> for issuer extension requests, if applicable</li>
-							<li><strong class="text-secondary">Handling of past due or non-performing loans</strong>, if applicable</li>
+						<ul class="list-inside list-disc space-y-4 text-neutral">
+							<li>
+								<strong class="text-secondary">Receipt of issuer repayment</strong> (principal + interest
+								amount)
+							</li>
+							<li>
+								<strong class="text-secondary">Extension management</strong> for issuer extension requests,
+								if applicable
+							</li>
+							<li>
+								<strong class="text-secondary">Handling of past due or non-performing loans</strong
+								>, if applicable
+							</li>
 						</ul>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

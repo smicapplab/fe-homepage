@@ -5,11 +5,11 @@ const toasts = writable([]);
 let idCounter = 0;
 
 export const ToastType = {
-    success: "success",
-    warning: "warning",
-    info: "info",
-    error: "error",
-}
+	success: 'success',
+	warning: 'warning',
+	info: 'info',
+	error: 'error'
+};
 
 /**
  * Adds a new toast notification to the store.
@@ -19,12 +19,12 @@ export const ToastType = {
  * @param {number} [duration=15000] - The duration of the toast notification in milliseconds
  * @return {void}
  */
-export function addToast( type, message, duration = 5000) {
-    const id = idCounter++;
-    const newToast = { id, type, message, duration };
-    // @ts-ignore
-    toasts.update(t => [...t, newToast]);
-    setTimeout(() => removeToast(id), duration);
+export function addToast(type, message, duration = 5000) {
+	const id = idCounter++;
+	const newToast = { id, type, message, duration };
+	// @ts-ignore
+	toasts.update((t) => [...t, newToast]);
+	setTimeout(() => removeToast(id), duration);
 }
 
 /**
@@ -34,8 +34,8 @@ export function addToast( type, message, duration = 5000) {
  * @return {void} This function does not return anything.
  */
 export function removeToast(id) {
-    // @ts-ignore
-    toasts.update(t => t.filter(toast => toast.id !== id));
+	// @ts-ignore
+	toasts.update((t) => t.filter((toast) => toast.id !== id));
 }
 
 export { toasts };

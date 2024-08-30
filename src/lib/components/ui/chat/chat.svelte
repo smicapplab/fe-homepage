@@ -1,5 +1,6 @@
 <script>
 	import { Icons } from '$lib/components/icons';
+	import IconButton from '$lib/components/icons/icon-button.svelte';
 	import { formatDistanceToNow } from 'date-fns';
 
 	let chatMessages = [
@@ -42,28 +43,28 @@
 	 */
 	let chatContainer;
 
-    // @ts-ignore
+	// @ts-ignore
 	let interval;
 
 	function toggleChat() {
 		isOpen = !isOpen;
 
 		if (isOpen) {
-			pickRandomPhrase(); 
-			interval = setInterval(pickRandomPhrase, 10000); 
+			pickRandomPhrase();
+			interval = setInterval(pickRandomPhrase, 10000);
 			// @ts-ignore
-			return () => clearInterval(interval); 
+			return () => clearInterval(interval);
 		} else {
 			// @ts-ignore
 			if (interval) {
-				clearInterval(interval); 
-				interval = null; 
+				clearInterval(interval);
+				interval = null;
 			}
 		}
 	}
 
 	function sendMessage() {
-		if (customerMessage.trim() === '') return; 
+		if (customerMessage.trim() === '') return;
 
 		chatMessages = [
 			...chatMessages,
@@ -97,9 +98,6 @@
 	function pickRandomPhrase() {
 		const randomIndex = Math.floor(Math.random() * jediPhrases.length);
 		const currentPhrase = jediPhrases[randomIndex];
-
-		console.log(currentPhrase);
-
 		chatMessages = [
 			...chatMessages,
 			{
@@ -118,25 +116,24 @@
 <div class="fixed bottom-4 right-4 z-100">
 	<!-- Chat Toggle Button -->
 	{#if !isOpen}
-		<button
-			class="p-4 text-white transition transform rounded-full shadow-lg bg-primary hover:scale-110 hover:bg-secondary"
+		<IconButton
+			icon={Icons.messagesSquare}
 			on:click={toggleChat}
-			aria-label="Toggle Chat"
-		>
-			<Icons.messagesSquare />
-		</button>
+			name="chat-button"
+			buttonClass="p-4 text-white transition transform rounded-full shadow-lg bg-primary hover:scale-110 hover:bg-secondary"
+		/>
 	{/if}
 
 	{#if isOpen}
-		<div class="max-w-full p-4 mt-2 bg-white rounded-lg shadow-lg w-96">
-			<div class="flex items-center justify-between mb-2">
+		<div class="mt-2 w-96 max-w-full rounded-lg bg-white p-4 shadow-lg">
+			<div class="mb-2 flex items-center justify-between">
 				<h3 class="text-lg font-semibold">Chat with Us</h3>
 				<button on:click={toggleChat} aria-label="Close Chat">
 					<Icons.circleX />
 				</button>
 			</div>
 			<!-- Bind the chat container to chatContainer for scrolling -->
-			<div class="my-2 space-y-2 overflow-y-auto border-t border-b h-96" bind:this={chatContainer}>
+			<div class="my-2 h-96 space-y-2 overflow-y-auto border-b border-t" bind:this={chatContainer}>
 				{#each chatMessages as message}
 					<div class="chat {message.role === 'admin' ? 'chat-start' : 'chat-end'}">
 						<div class="chat-header">
@@ -158,16 +155,16 @@
 					</div>
 				{/each}
 			</div>
-			<div class="flex items-center mt-2">
+			<div class="mt-2 flex items-center">
 				<input
 					type="text"
 					placeholder="Type a message..."
-					class="w-full input input-bordered"
+					class="input input-bordered w-full"
 					bind:value={customerMessage}
 					on:keydown={handleKeyDown}
 				/>
 				<button
-					class="p-2 ml-2 text-white transition rounded-full bg-primary hover:bg-secondary"
+					class="ml-2 rounded-full bg-primary p-2 text-white transition hover:bg-secondary"
 					on:click={sendMessage}
 					aria-label="Send Message"
 					disabled={customerMessage.trim() === ''}

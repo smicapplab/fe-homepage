@@ -1,9 +1,9 @@
 <script>
-	import { TermsOfUseAccordion } from "./components";
-	import ApprovalRegistration from "./components/approval-registration.svelte";
-	import Definition from "./components/definition.svelte";
-
+	import { TermsOfUseAccordion } from './components';
+	import ApprovalRegistration from './components/approval-registration.svelte';
+	import Definition from './components/definition.svelte';
 </script>
+
 <div class="flex items-center justify-center py-6">
 	<div class="container p-5">
 		<h1 class="text-2xl font-bold text-primary lg:text-4xl">Koredor Terms of Use</h1>
@@ -47,7 +47,7 @@
 			breach of this Agreement.
 		</p>
 
-        <TermsOfUseAccordion.definition />
-        <TermsOfUseAccordion.approvalRegistration />
+		<TermsOfUseAccordion.definition />
+		<TermsOfUseAccordion.approvalRegistration />
 	</div>
 </div>

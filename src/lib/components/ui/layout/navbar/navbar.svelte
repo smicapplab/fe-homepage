@@ -89,7 +89,9 @@
 				</svg>
 			</div>
 			<ul
-				class="w-fill menu dropdown-content menu-sm z-[1] mt-3 rounded-box p-2 shadow { isScrolled ? "bg-primary" : "bg-base-100 " }"
+				class="w-fill menu dropdown-content menu-sm z-[1] mt-3 rounded-box p-2 shadow {isScrolled
+					? 'bg-primary'
+					: 'bg-base-100 '}"
 			>
 				{#each navItems as navItem}
 					<li>
@@ -105,6 +107,7 @@
 								{#each navItem.subMenus as subMenu}
 									<li>
 										<a
+											aria-label={subMenu.name}
 											href={subMenu.href}
 											style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
 										>
@@ -114,7 +117,11 @@
 								{/each}
 							</ul>
 						{:else}
-							<a href={navItem.href} class="flex justify-start w-full text-left btn btn-ghost">
+							<a
+								aria-label={navItem.name}
+								href={navItem.href}
+								class="flex justify-start w-full text-left btn btn-ghost"
+							>
 								{navItem.name}
 							</a>
 						{/if}
@@ -122,7 +129,7 @@
 				{/each}
 			</ul>
 		</div>
-		<a class="btn btn-link" href="/">
+		<a class="btn btn-link" href="/" aria-label="logo-link">
 			{#if isScrolled}
 				<Icons.koredorwhite />
 			{:else}
@@ -147,6 +154,7 @@
 								{#each navItem.subMenus as subMenu}
 									<li>
 										<a
+											aria-label={subMenu.name}
 											href={subMenu.href}
 											style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"
 											class={isScrolled ? 'text-white' : 'text-black'}
@@ -158,8 +166,12 @@
 							</ul>
 						</details>
 					{:else}
-						<a href={navItem.href} class={isScrolled ? 'text-white' : 'text-black'}
-							>{navItem.name}</a
+						<a
+							href={navItem.href}
+							class={isScrolled ? 'text-white' : 'text-black'}
+							aria-label={navItem.name}
+						>
+							{navItem.name}</a
 						>
 					{/if}
 				</li>
@@ -168,6 +180,7 @@
 	</div>
 	<div class="navbar-end">
 		<a
+			aria-label="sign-in"
 			href="https://issuer.koredorcapital.com/"
 			class="btn {isScrolled ? 'btn-ghost' : 'btn-primary'}">Sign In <Icons.logIn /></a
 		>

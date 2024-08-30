@@ -41,19 +41,19 @@
 	<div class="container">
 		<div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:justify-end">
 			<div class="lg:justify-self-start">
-				<h2 class="mb-4 text-2xl font-bold text-center text-secondary lg:text-left">
+				<h2 class="mb-4 text-center text-2xl font-bold text-secondary lg:text-left">
 					Join Our Newsletter
 				</h2>
-				<h2 class="py-3 text-xl ">
+				<h2 class="py-3 text-xl">
 					Stay in the loop with the latest tips, industry insights, and special offers. Sign up
 					today and get all the good stuff straight to your inbox—totally free!
 				</h2>
 			</div>
 			<div class="flex justify-center lg:justify-start">
 				<form method="POST" class="w-full max-w-lg" use:enhance action="?/subscribeToNewsletter">
-					<div class="w-full mt-10 join">
+					<div class="join mt-10 w-full">
 						<label
-							class="input grow join-item input-bordered flex items-center gap-2 focus-within:outline-none focus-within:ring-0 focus-within:ring-offset-0 {$errors.email
+							class="input join-item input-bordered flex grow items-center gap-2 focus-within:outline-none focus-within:ring-0 focus-within:ring-offset-0 {$errors.email
 								? 'input-error'
 								: ''}"
 						>
@@ -65,16 +65,21 @@
 								bind:value={$formData.email}
 							/>
 						</label>
-						<button type="submit" class="rounded-r-lg btn btn-primary join-item" disabled={isLoading}>
+						<button
+							aria-label="Subscribe"
+							type="submit"
+							class="btn btn-primary join-item rounded-r-lg"
+							disabled={isLoading}
+						>
 							{#if isLoading}
 								<span class="loading loading-dots loading-lg"></span>
 							{:else}
-								Subscribe <Icons.send/>
+								Subscribe <Icons.send />
 							{/if}
 						</button>
 					</div>
 					{#if $errors.email}
-						<span class="text-red-600 label-text-alt lg:-mt-8">{$errors.email}</span>
+						<span class="label-text-alt text-red-600 lg:-mt-8">{$errors.email}</span>
 					{/if}
 				</form>
 			</div>

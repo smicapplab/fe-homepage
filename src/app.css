@@ -3,71 +3,71 @@
 @import 'tailwindcss/utilities';
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  font-family: Lato, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  letter-spacing: 0.5px;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333;
+	background-color: #fff;
+	letter-spacing: 0.5px;
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
-  box-shadow: 0 0 0 30px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-  caret-color: auto !important;
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+	box-shadow: 0 0 0 30px white inset !important;
+	-webkit-text-fill-color: #000 !important;
+	caret-color: auto !important;
 }
 
 @layer components {
-  .timeline {
-    @apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2;
-  }
+	.timeline {
+		@apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2;
+	}
 
-  .timeline-item {
-    @apply flex flex-col md:flex-row lg:flex-col;
-  }
+	.timeline-item {
+		@apply flex flex-col md:flex-row lg:flex-col;
+	}
 
-  .timeline-icon {
-    @apply flex items-center mb-2 font-bold text-white;
-  }
+	.timeline-icon {
+		@apply flex items-center mb-2 font-bold text-white;
+	}
 
-  .timeline-content {
-    @apply p-4 rounded-lg shadow-lg bg-base-200;
-  }
+	.timeline-content {
+		@apply p-4 rounded-lg shadow-lg bg-base-200;
+	}
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+	0% {
+		opacity: 0;
+	}
 
-  100% {
-    opacity: 1;
-  }
+	100% {
+		opacity: 1;
+	}
 }
 
 .hero {
-  background-size: cover;
-  background-position: center;
-  animation: fadeIn 1s ease-in forwards;
+	background-size: cover;
+	background-position: center;
+	animation: fadeIn 1s ease-in forwards;
 }
 
 .hero-content {
-  opacity: 0;
-  transform: translateY(20px);
-  transition:
-    opacity 500ms ease-in,
-    transform 500ms ease-in;
+	opacity: 0;
+	transform: translateY(20px);
+	transition:
+		opacity 500ms ease-in,
+		transform 500ms ease-in;
 }
 
 .hero-content.content-visible {
-  opacity: 1;
-  transform: translateY(0);
+	opacity: 1;
+	transform: translateY(0);
 }

@@ -22,7 +22,7 @@
 			<input
 				type="number"
 				{name}
-				class="grow join-item"
+				class="join-item grow"
 				placeholder={placeholder || label}
 				bind:value={$formData[name]}
 			/>
@@ -30,13 +30,13 @@
 			<input
 				type="text"
 				{name}
-				class="grow join-item"
+				class="join-item grow"
 				placeholder={placeholder || label}
 				bind:value={$formData[name]}
 			/>
 		{/if}
 	</label>
 	{#if $errors[name]}
-		<span class="text-red-600 label-text-alt">{$errors[name]}</span>
+		<span class="label-text-alt text-red-600">{$errors[name]}</span>
 	{/if}
 </div>

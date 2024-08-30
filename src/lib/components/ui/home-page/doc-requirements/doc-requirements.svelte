@@ -13,10 +13,10 @@
 </script>
 
 <div class="flex items-center justify-center">
-	<div class="container p-4 mx-auto">
+	<div class="container mx-auto p-4">
 		<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 			<div>
-				<h2 class="text-xl font-bold text-center text-secondary lg:text-left lg:text-2xl">
+				<h2 class="text-center text-xl font-bold text-secondary lg:text-left lg:text-2xl">
 					What documents are needed?
 				</h2>
 				<h2 class="py-3 text-xl">
@@ -25,7 +25,7 @@
 				</h2>
 			</div>
 			<div>
-				<div class="w-full join join-vertical">
+				<div class="join join-vertical w-full">
 					{#each docRequirements as docRequirement, index}
 						<div
 							class="collapse join-item collapse-arrow border border-base-300 {activeItems[index]
@@ -33,11 +33,12 @@
 								: ''}"
 						>
 							<button
+								aria-label={docRequirement.title}
 								type="button"
-								class="w-full text-xl font-medium text-left cursor-pointer collapse-title text-neutral"
+								class="collapse-title w-full cursor-pointer text-left text-xl font-medium text-neutral"
 								on:click={() => toggleItem(index)}
 							>
-								<Icons.circleCheckBig class="inline-block mr-2" />
+								<Icons.circleCheckBig class="mr-2 inline-block" />
 								{docRequirement.title}
 							</button>
 							<div class="collapse-content">
@@ -48,7 +49,7 @@
 								<ul>
 									{#if docRequirement.list}
 										{#each docRequirement.list as listItem}
-											<li class="list-disc list-inside text-md">{listItem}</li>
+											<li class="text-md list-inside list-disc">{listItem}</li>
 										{/each}
 									{/if}
 								</ul>

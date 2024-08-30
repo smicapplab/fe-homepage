@@ -1,5 +1,7 @@
-export const title = "Confidently expand your wealth by investing in SMEs and diversifying your portfolio"
-export const description = "Unlock high-potential SME investments with a risk-based, hassle-free alternative that maximizes your returns!"
+export const title =
+	'Confidently expand your wealth by investing in SMEs and diversifying your portfolio';
+export const description =
+	'Unlock high-potential SME investments with a risk-based, hassle-free alternative that maximizes your returns!';
 
 export const whyInvestItems = [
 	{
@@ -18,4 +20,3 @@ export const whyInvestItems = [
 			'Leverage our credit scoring methodology to minimize investment risk. Our dynamic approach continuously evaluates and adjusts to the latest data, providing a more accurate assessment of each SME’s creditworthiness. By integrating advanced analytics and real-time insights, we offer a tailored risk profile that helps safeguard your investments, enabling you to make smarter, more confident decisions.'
 	}
 ];
-

@@ -15,7 +15,7 @@
 	heroLabel="Accelerate your funding process with Express Invoice Financing, designed to fast-track your application and get you the capital you need quickly"
 	heroDescription="Get your outstanding invoices assessed for financing eligibility in just 1 day! Quickly determine which invoices qualify for fast and easy funding."
 	heroButton="Get Started"
-	heroLink={ PUBLIC_ISSUER_REGISTRATION }
+	heroLink={PUBLIC_ISSUER_REGISTRATION}
 />
 
 <Summary

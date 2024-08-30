@@ -9,8 +9,9 @@
 	import Hero from '$lib/components/ui/hero/hero.svelte';
 	import Seo from '$lib/components/seo.svelte';
 
-	const title = "Let’s Konnect!"
-	const description = "Whether you have a question or feedback, we’re here to help and support you every step of the way."
+	const title = 'Let’s Konnect!';
+	const description =
+		'Whether you have a question or feedback, we’re here to help and support you every step of the way.';
 
 	const lat = 14.548192822087382;
 	const lng = 121.15233919734136;
@@ -89,20 +90,25 @@
 						bind:value={$formData.message}
 					></textarea>
 					{#if $errors.message}
-						<span class="text-red-600 label-text-alt">{$errors.message}</span>
+						<span class="label-text-alt text-red-600">{$errors.message}</span>
 					{/if}
 
-					<button type="submit" class="mt-2 btn btn-primary max-w-60" disabled={isLoading}>
+					<button
+						type="submit"
+						class="btn btn-primary mt-2 max-w-60"
+						disabled={isLoading}
+						aria-label="submit"
+					>
 						{#if isLoading}
 							<span class="loading loading-dots loading-lg"></span>
 						{:else}
-							Submit <Icons.send/>
+							Submit <Icons.send />
 						{/if}
 					</button>
 				</form>
 			</div>
 		</div>
-		<div class="p-5 bg-gray-100 lg:p-10">
+		<div class="bg-gray-100 p-5 lg:p-10">
 			<div class="grid grid-cols-1 gap-5 py-10 lg:grid-cols-2">
 				<div>
 					<h2 class="text-2xl font-bold text-primary">Koredor Capital</h2>
