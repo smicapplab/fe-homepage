@@ -44,14 +44,26 @@
 			<p class="py-6 text-xl" style="text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);">
 				{heroDescription}
 			</p>
+
 			{#if heroButton}
-				{#if heroAnchorLink}
-					<button on:click={() => scrollToSection(heroAnchorLink)} class="btn btn-primary"
-						>{heroButton}</button
-					>
-				{:else}
-					<a href={heroLink ?? '/'} class="btn btn-primary">{heroButton}</a>
-				{/if}
+				<div class="relative inline-flex group">
+					<div
+						class="transitiona-all animate-tilt absolute -inset-px rounded-xl bg-gradient-to-r from-secondary via-[#FF44EC] to-primary opacity-70 blur-lg duration-1000 group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200"
+					></div>
+					{#if heroAnchorLink}
+						<button on:click={() => scrollToSection(heroAnchorLink)} class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+							>{heroButton}</button
+						>
+					{:else}
+						<a
+							href={heroLink ?? '/'}
+							title="Get quote now"
+							class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+							role="button"
+							>{heroButton}
+						</a>
+					{/if}
+				</div>
 			{/if}
 		</div>
 	</div>

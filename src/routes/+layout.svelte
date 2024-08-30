@@ -6,6 +6,21 @@
 	import Toast from '$lib/components/ui/toast/toast.svelte';
 	import Chat from '$lib/components/ui/chat/chat.svelte';
 	export let data;
+
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const link = document.createElement('link');
+		link.href =
+			'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap';
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.media = 'all';
+		link.onload = () => {
+			document.body.classList.add('font-loaded');
+		};
+		document.head.appendChild(link);
+	});
 </script>
 
 <div>
