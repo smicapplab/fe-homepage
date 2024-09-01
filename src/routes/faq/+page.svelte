@@ -1,3 +1,10 @@
+<script>
+	import Seo from "$lib/components/seo.svelte";
+
+</script>
+
+<Seo title="FAQ" description="Koredor Capital - FAQ" />
+
 <div class="flex items-center justify-center py-6">
 	<div class="container">
 		<h1 class="text-5xl font-bold text-primary">FAQ</h1>
