@@ -1,12 +1,16 @@
 <!-- src/lib/SEO.svelte -->
 <script>
+	import { dev } from '$app/environment';
 	import { assets } from '$app/paths';
 	import { page } from '$app/stores';
+	import GoogleAnalytics from '$lib/google-analytics.svelte';
 
 	export let title = 'Koredor Kapital';
 	export let siteName = 'Koredor Kapital';
 	export let description = 'Koredor Kapital';
 	export let image = `${assets}/images/koredor-cap.jpg`;
+	
+	let GA_TRACKING_ID = 'G-34KG9BD86Q';
 
 	$: url = $page.url.href;
 
@@ -164,6 +168,7 @@
 
 		return allKeywords.join(', ');
 	}
+
 </script>
 
 <svelte:head>
@@ -192,4 +197,9 @@
 
 	<!-- Robots -->
 	<meta name="robots" content="index, follow" />
+
+	{#if !dev}
+		<GoogleAnalytics measurementId={GA_TRACKING_ID} />
+	{/if}
+
 </svelte:head>
