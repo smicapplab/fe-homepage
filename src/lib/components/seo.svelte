@@ -1,11 +1,6 @@
 <script>
 	import { assets } from '$app/paths';
 	import { page } from '$app/stores';
-	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
-
-	let measurementId = 'G-34KG9BD86Q';
-	let previousPath = '';
 
 	export let title = 'Koredor Kapital';
 	export let siteName = 'Koredor Kapital';
@@ -168,36 +163,6 @@
 
 		return allKeywords.join(', ');
 	}
-
-	onMount(() => {
-		if (browser) {
-			const script = document.createElement('script');
-			script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-			script.async = true;
-			document.head.appendChild(script);
-
-			// @ts-ignore
-			window.dataLayer = window.dataLayer || [];
-			// @ts-ignore
-			window.gtag = function () {
-				// @ts-ignore
-				window.dataLayer.push(arguments);
-			};
-			// @ts-ignore
-			window.gtag('js', new Date());
-			// @ts-ignore
-			window.gtag('config', measurementId);
-		}
-	});
-
-// @ts-ignore
-		$: if (browser && $page.url.pathname !== previousPath) {
-		previousPath = $page.url.pathname;
-		// @ts-ignore
-		window.gtag('config', measurementId, {
-			page_path: $page.url.pathname
-		});
-	}
 </script>
 
 <svelte:head>
@@ -226,4 +191,16 @@
 
 	<!-- Robots -->
 	<meta name="robots" content="index, follow" />
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-34KG9BD86Q"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-34KG9BD86Q');
+	</script>
 </svelte:head>
