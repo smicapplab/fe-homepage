@@ -3,7 +3,7 @@ import { writeFileSync } from 'fs';
 import { navItems } from './src/lib/components/ui/layout/navbar/navigation.js';
 
 // Define the base URL of your website
-const baseUrl = 'https://www.koredorcapital.com/';
+const baseUrl = 'https://koredorcapital.com/';
 
 const staticRoutes = [
     "/terms-of-use",

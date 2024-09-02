@@ -13,7 +13,7 @@
 			<section class="mb-6">
 			  <h2 class="mb-4 text-xl font-semibold">Introduction</h2>
 			  <p class="text-lg leading-relaxed">
-				At Koredor Capital, accessible from <a href="https://www.koredorcapital.com" class="text-blue-500 underline">www.koredorcapital.com</a>, we use cookies to enhance your experience, analyze site performance, and understand our audience. This Cookie Policy explains what cookies are, how we use cookies, and how you can manage your cookie preferences.
+				At Koredor Capital, accessible from <a href="https://koredorcapital.com" class="text-blue-500 underline">koredorcapital.com</a>, we use cookies to enhance your experience, analyze site performance, and understand our audience. This Cookie Policy explains what cookies are, how we use cookies, and how you can manage your cookie preferences.
 			  </p>
 			</section>
 		
