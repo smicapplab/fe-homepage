@@ -12,13 +12,13 @@
 	import { browser } from '$app/environment';
 
 	let GA_MEASUREMENT_ID = 'G-34KG9BD86Q';
-	$: if (browser) {
-		// @ts-ignore
-		window.gtag('config', GA_MEASUREMENT_ID, {
-			// @ts-ignore
-			page_path: $page.url.pathname
-		});
-	}
+	// $: if (browser) {
+	// 	// @ts-ignore
+	// 	window.gtag('config', GA_MEASUREMENT_ID, {
+	// 		// @ts-ignore
+	// 		page_path: $page.url.pathname
+	// 	});
+	// }
 
 	onMount(() => {
 		const link = document.createElement('link');
