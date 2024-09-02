@@ -1,3 +1,4 @@
+<!-- svelte-ignore missing-declaration -->
 <script>
 	import { Footer } from '$lib/components/ui/layout/footer';
 	import { Navbar } from '$lib/components/ui/layout/navbar';
@@ -8,6 +9,16 @@
 	export let data;
 
 	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+
+	let GA_MEASUREMENT_ID = 'G-34KG9BD86Q';
+	$: if (browser) {
+		// @ts-ignore
+		window.gtag('config', GA_MEASUREMENT_ID, {
+			// @ts-ignore
+			page_path: $page.url.pathname
+		});
+	}
 
 	onMount(() => {
 		const link = document.createElement('link');
@@ -22,6 +33,7 @@
 		document.head.appendChild(link);
 	});
 </script>
+
 
 <div>
 	<Navbar />
