@@ -4,6 +4,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"convert-images": "node convert-images.js",
+		"prebuild": "npm run convert-images",
 		"build": "vite build && node generate-sitemap.js",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
@@ -31,8 +33,10 @@
 	"dependencies": {
 		"daisyui": "^4.12.10",
 		"date-fns": "^3.6.0",
+		"glob": "^11.0.0",
 		"lucide-svelte": "^0.436.0",
 		"numeral": "^2.0.6",
+		"sharp": "^0.33.5",
 		"sveltekit-superforms": "^2.17.0"
 	}
 }
