@@ -1,15 +1,22 @@
 <script>
-	import { Footer } from '$lib/components/ui/layout/footer';
+	// @ts-nocheck
 	import { Navbar } from '$lib/components/ui/layout/navbar';
 	import { fly } from 'svelte/transition';
 	import '../app.css';
-	import Toast from '$lib/components/ui/toast/toast.svelte';
-	import Chat from '$lib/components/ui/chat/chat.svelte';
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
+	import { lazyLoadLayoutComponents } from '$lib/lazy-loader';
+
 	export let data;
 
-	import { onMount } from 'svelte';
+	let lazyComponents = {};
+	
+	onMount(async () => {
+		if (browser) {
+			lazyComponents = await lazyLoadLayoutComponents();
+			console.log("Components loaded:", Object.keys(lazyComponents));
+		}
 
-	onMount(() => {
 		const link = document.createElement('link');
 		link.href =
 			'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap';
@@ -31,7 +38,7 @@
 			<slot></slot>
 		</div>
 	{/key}
-	<Toast />
-	<Chat />
-	<Footer />
+	<svelte:component this={lazyComponents.Toast} />
+	<svelte:component this={lazyComponents.Footer} />
+	<svelte:component this={lazyComponents.Chat} />
 </div>

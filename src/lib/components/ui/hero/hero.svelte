@@ -2,12 +2,15 @@
 	import { scrollToSection } from '$lib/util';
 	import { onMount } from 'svelte';
 
+	let imageLoaded = false;
 	let webpSupported = false;
-	let heroBackground = '';
+	let heroBackground = ""
 
 	export let backgroundImage = '';
 	export let heroLabel = '';
 	export let heroDescription = '';
+
+
 
 	$: webpBackgroundImage = backgroundImage.replace(/\.(jpg|jpeg|png)$/i, '.webp');
 
@@ -37,9 +40,13 @@
 	};
 
 	// Trigger content visibility after 1 second delay
-	onMount(async () => {
+	onMount( async () => {
 		webpSupported = await checkWebPSupport();
 		heroBackground = webpSupported ? webpBackgroundImage : backgroundImage;
+
+		setTimeout(() => {
+			imageLoaded = true;
+		}, 300);
 	});
 </script>
 
@@ -48,7 +55,9 @@
 	style={`background-image: url("${heroBackground}");`}
 >
 	<div class="absolute inset-0 bg-black opacity-50"></div>
-	<div class="relative flex-col hero-content lg:flex-row lg:items-start lg:justify-start">
+	<div
+		class="relative flex-col hero-content lg:flex-row lg:items-start lg:justify-start content-visible"
+	>
 		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
 			<h1
 				class="text-3xl font-bold hero-label lg:text-5xl"

@@ -1,11 +1,9 @@
 <script>
+	import { browser } from '$app/environment';
 	import { assets } from '$app/paths';
-	import Seo from '$lib/components/seo.svelte';
-	import FinancingCriteria from '$lib/components/ui/home-page/financing-criteria/financing-criteria.svelte';
-	import FinancingTimeline from '$lib/components/ui/home-page/financing-timeline/financing-timeline.svelte';
 	import Hero from '$lib/components/ui/hero/hero.svelte';
-	import DocRequirements from '$lib/components/ui/home-page/doc-requirements/doc-requirements.svelte';
-	import Newsletter from '$lib/components/ui/home-page/newsletter/newsletter.svelte';
+	import { lazyLoadHomeComponents } from '$lib/lazy-loader';
+	import { onMount } from 'svelte';
 
 	const title = 'Koredor Kapital - Unlock affordable, flexible, collateral-free financing';
 	const description =
@@ -41,14 +39,28 @@
 			image: 'placeholder.jpg'
 		}
 	];
+
+	let lazyComponents = {};
+
+	onMount(async () => {
+		if (browser) {
+			// @ts-ignore
+			lazyComponents = await lazyLoadHomeComponents();
+			console.log('Components loaded:', Object.keys(lazyComponents));
+		}
+	});
+
+	const heroProps = {
+		backgroundImage: assets + '/images/hero/home.jpg',
+		heroLabel:
+			'Unlock affordable, flexible, collateral-free financing with Koredor to boost your business growth',
+		heroDescription:
+			'Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs.'
+	};
 </script>
 
-<Seo {title} {description} />
-<Hero
-	backgroundImage={assets + '/images/hero/home.jpg'}
-	heroLabel="Unlock affordable, flexible, collateral-free financing with Koredor to boost your business growth"
-	heroDescription="Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs."
-/>
+<svelte:component this={lazyComponents.Seo} {title} {description} />
+<svelte:component this={lazyComponents.Hero} {...heroProps} />
 
 <div class="flex items-center justify-center py-6">
 	<div class="container">
@@ -60,8 +72,8 @@
 							{whyKoredorItem.title}
 						</h2>
 						<p class="text-neutral">{whyKoredorItem.description}</p>
-						<div class="card-actions justify-start">
-							<button class="btn btn-link pl-0 text-secondary" aria-label="learn-more"
+						<div class="justify-start card-actions">
+							<button class="pl-0 btn btn-link text-secondary" aria-label="learn-more"
 								>Learn More</button
 							>
 						</div>
@@ -72,7 +84,7 @@
 	</div>
 </div>
 
-<FinancingTimeline />
-<DocRequirements />
-<FinancingCriteria />
-<Newsletter />
+<svelte:component this={lazyComponents.FinancingTimeline} />
+<svelte:component this={lazyComponents.DocRequirements} />
+<svelte:component this={lazyComponents.FinancingCriteria} />
+<svelte:component this={lazyComponents.Newsletter} /> 
