@@ -3,11 +3,17 @@
 	import { onMount } from 'svelte';
 
 	let imageLoaded = false;
+	let webpSupported = false;
+	let heroBackground = ""
 
 	export let backgroundImage = '';
-	let webpSupported = false;
 	export let heroLabel = '';
 	export let heroDescription = '';
+
+
+
+	$: webpBackgroundImage = backgroundImage.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+
 	/**
 	 * @type {string|null}
 	 */
@@ -36,9 +42,7 @@
 	// Trigger content visibility after 1 second delay
 	onMount(async () => {
 		webpSupported = await checkWebPSupport();
-		if (webpSupported) {
-			backgroundImage = backgroundImage.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-		}
+		heroBackground = webpSupported ? webpBackgroundImage : backgroundImage;
 
 		setTimeout(() => {
 			imageLoaded = true;
@@ -48,7 +52,7 @@
 
 <div
 	class="hero relative min-h-[50vh] bg-base-200"
-	style={`background-image: url("${backgroundImage}");`}
+	style={`background-image: url("${heroBackground}");`}
 >
 	<div class="absolute inset-0 bg-black opacity-50"></div>
 	<div
@@ -58,7 +62,7 @@
 	>
 		<div class="w-full text-center text-white lg:w-5/6 lg:text-left">
 			<h1
-				class="hero-label text-3xl font-bold lg:text-5xl"
+				class="text-3xl font-bold hero-label lg:text-5xl"
 				style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);"
 			>
 				{heroLabel}
@@ -68,7 +72,7 @@
 			</p>
 
 			{#if heroButton}
-				<div class="group relative inline-flex">
+				<div class="relative inline-flex group">
 					<div
 						class="animate-tilt absolute -inset-px rounded-xl bg-gradient-to-r from-secondary via-[#FF44EC] to-primary opacity-70 blur-lg transition-all duration-1000 group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200"
 					></div>
@@ -76,7 +80,7 @@
 						<button
 							aria-label="hero-button"
 							on:click={() => scrollToSection(heroAnchorLink)}
-							class="font-pj relative inline-flex items-center justify-center rounded-xl bg-gray-900 px-8 py-4 text-lg font-bold text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+							class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
 							>{heroButton}</button
 						>
 					{:else}
@@ -84,7 +88,7 @@
 							aria-label="hero-button"
 							href={heroLink ?? '/'}
 							title="Get quote now"
-							class="font-pj relative inline-flex items-center justify-center rounded-xl bg-gray-900 px-8 py-4 text-lg font-bold text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+							class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
 							role="button"
 							>{heroButton}
 						</a>
