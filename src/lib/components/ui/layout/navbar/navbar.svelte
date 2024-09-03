@@ -72,8 +72,9 @@
 >
 	<div class="navbar-start">
 		<div class="dropdown">
-			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-				<svg aria-labelledby="koredor-menu-icon"
+			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Toggle Menu">
+				<svg
+					aria-labelledby="koredor-menu-icon"
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-5 w-5 {isScrolled ? 'text-white' : 'text-black'}"
 					fill="none"
@@ -96,7 +97,7 @@
 				{#each navItems as navItem}
 					<li>
 						{#if navItem.subMenus}
-							<span class="flex justify-start w-full text-left btn btn-ghost">
+							<span class="btn btn-ghost flex w-full justify-start text-left">
 								{navItem.name}
 							</span>
 							<ul
@@ -120,7 +121,7 @@
 							<a
 								aria-label={navItem.name}
 								href={navItem.href}
-								class="flex justify-start w-full text-left btn btn-ghost"
+								class="btn btn-ghost flex w-full justify-start text-left"
 							>
 								{navItem.name}
 							</a>
@@ -137,8 +138,8 @@
 			{/if}
 		</a>
 	</div>
-	<div class="hidden navbar-center lg:flex">
-		<ul class="px-1 menu menu-horizontal">
+	<div class="navbar-center hidden lg:flex">
+		<ul class="menu menu-horizontal px-1">
 			{#each navItems as navItem, index}
 				<li>
 					{#if navItem.subMenus}

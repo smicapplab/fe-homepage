@@ -1,6 +1,5 @@
 <script>
-	import Seo from "$lib/components/seo.svelte";
-
+	import Seo from '$lib/components/seo.svelte';
 </script>
 
 <Seo title="FAQ" description="Koredor Capital - FAQ" />

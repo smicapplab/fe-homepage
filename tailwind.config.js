@@ -6,17 +6,17 @@ export default {
 		extend: {
 			zIndex: {
 				10: '10',
+				50: '50',
 				100: '100'
 			}
 		}
 	},
-
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
 		themes: [
 			{
 				mytheme: {
-					primary: '#ff7f00', // Orange as primary color
+					primary: '#F57C00', // Orange as primary color
 					'primary-content': '#ffffff', // White text on primary color
 					secondary: '#008080', // Light grey as secondary color
 					'secondary-content': '#ffffff',

@@ -2,7 +2,7 @@
 	import { Icons } from '$lib/components/icons';
 </script>
 
-<footer class="p-10 text-white footer bg-neutral">
+<footer class="footer bg-neutral p-10 text-white">
 	<aside>
 		<Icons.koredorwhite height="50" />
 		<p>
