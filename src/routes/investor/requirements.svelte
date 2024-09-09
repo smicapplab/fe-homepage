@@ -3,50 +3,50 @@
 </script>
 
 <div class="w-full bg-base-200">
-	<div class="container mx-auto p-5">
-		<h1 class="text-center text-2xl font-bold text-primary">What are the requirements?</h1>
-		<h2 class="text-center text-xl">
+	<div class="container p-5 mx-auto">
+		<h1 class="text-2xl font-bold text-center text-primary">What are the requirements?</h1>
+		<h2 class="text-xl text-center">
 			To start your investor journey, prepare the following documents upon onboarding:
 		</h2>
-		<div class="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-2">
-			<div class="rounded-lg bg-white p-5 py-5">
-				<h2 class="text-center text-xl font-bold text-secondary lg:text-2xl">
+		<div class="grid grid-cols-1 gap-5 mt-10 lg:grid-cols-2">
+			<div class="p-5 py-5 bg-white rounded-lg">
+				<h2 class="text-xl font-bold text-center text-secondary lg:text-2xl">
 					Individual Investors
 				</h2>
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">Investor Data Form</div>
 				</div>
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">
-						Supporting Documents such as Funding Provision Agreement and Special Power of Attorney
+						Supporting Documents such as Funding Provision Agreement and Board Resolution
 					</div>
 				</div>
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">Other Supporting Documents as determined by Koredor</div>
 				</div>
 			</div>
 
-			<div class="rounded-lg bg-white p-5 py-5">
-				<h2 class="text-center text-xl font-bold text-secondary lg:text-2xl">
+			<div class="p-5 py-5 bg-white rounded-lg">
+				<h2 class="text-xl font-bold text-center text-secondary lg:text-2xl">
 					Institutional Investors
 				</h2>
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">Investor Data Form</div>
 				</div>
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">
@@ -54,12 +54,12 @@
 					</div>
 				</div>
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">
 						Business Documents
-						<ul class="list-inside list-disc">
+						<ul class="list-disc list-inside">
 							<li>SEC Certificate</li>
 							<li>Articles of Incorporation</li>
 							<li>General Information Sheet</li>
@@ -69,12 +69,15 @@
 					</div>
 				</div>
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">Other Supporting Documents as determined by Koredor</div>
 				</div>
 			</div>
 		</div>
+		<p class="mt-10 text-center">
+			We value investor safety at Koredor. Our current product offerings are limited for qualified investors only. Interested but don’t qualify? Stay tuned for our retail investor products. 
+		</p>
 	</div>
 </div>

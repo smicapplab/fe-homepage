@@ -31,7 +31,7 @@ export const appraisalValue = z.preprocess(
 	(value) => (value === null || value === undefined ? null : Number(value)),
 	z
 		.number({ invalid_type_error: 'Invoice amount is required' })
-		.max(25_000_001, 'Invoice amount cannot exceed 16,000,000.00')
+		.max(16_000_000, 'Invoice amount cannot exceed 16,000,000.00')
 );
 
 export const email = z
@@ -69,3 +69,10 @@ export const investorType = z
 		required_error: 'Please select a type of investor'
 	})
 	.min(1, 'Please select a type of investor');
+
+export const capital = z.preprocess(
+	(value) => (value === null || value === undefined ? null : Number(value)),
+	z
+		.number({ invalid_type_error: 'Estimated Capital is required' })
+		.max(1_000_000_000, 'Estimated Capital cannot exceed 1,000,000,000.00')
+);

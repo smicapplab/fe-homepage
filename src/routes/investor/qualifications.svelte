@@ -2,7 +2,7 @@
 	import { Icons } from '$lib/components/icons';
 </script>
 
-<div class="container mx-auto p-5">
+<div class="container p-5 mx-auto">
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<div class="py-5">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">
@@ -23,22 +23,23 @@
 				>
 			</h3>
 			<div class="flex items-start py-5 text-lg lg:text-xl">
-				<Icons.building2 class="mr-2 flex-shrink-0 text-secondary" />
+				<Icons.building2 class="flex-shrink-0 mr-2 text-secondary" />
 				<div class="flex-grow">
 					<p class="text-secondary">Institutional Investors</p>
 					<p class="text-base font-normal">
-						Refers to established entities that meet certain financial criteria, such as minimal
-						annual gross revenue or total portfolio investment.
+						Refers to established entities that meet certain financial criteria, such as gross
+						assets or total portfolio investment.
 					</p>
 				</div>
 			</div>
 			<div class="flex items-start py-5 text-lg lg:text-xl">
-				<Icons.userRound class="mr-2 flex-shrink-0 text-secondary" />
+				<Icons.userRound class="flex-shrink-0 mr-2 text-secondary" />
 				<div class="flex-grow">
 					<p class="text-secondary">Individual Investors</p>
 					<p class="text-base font-normal">
-						Refers to established entities that meet certain financial criteria, such as minimal
-						annual gross revenue or total portfolio investment.
+						Refers to established entities that meet certain financial criteria, such as gross
+						income, total portfolio investment, or personal net worth. Individual investors must
+						also be knowledgeable in securities trading.
 					</p>
 				</div>
 			</div>

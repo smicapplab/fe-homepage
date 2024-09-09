@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import {
+	capital,
 	companyName,
 	email,
 	fullName,
@@ -34,7 +35,8 @@ export const investorContactSchema = z.object({
 	investorType,
 	fullName,
 	email,
-	mobile
+	mobile,
+	capital,
 });
 
 export const referralContactSchema = z.object({

@@ -20,6 +20,7 @@
 	// @ts-ignore
 	const startCloseTimer = (details) => {
 		if (closeTimer) clearTimeout(closeTimer);
+		// @ts-ignore
 		closeTimer = setTimeout(() => {
 			if (details) {
 				details.open = false;

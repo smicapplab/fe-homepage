@@ -48,7 +48,7 @@
 	});
 </script>
 
-<div class="container mx-auto p-5" id="reg-form">
+<div class="container p-5 mx-auto" id="reg-form">
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<div class="py-5">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">
@@ -58,7 +58,7 @@
 				Fill out the form, and we will set up an initial discussion with you!
 			</h2>
 		</div>
-		<div class="rounded-lg bg-base-200 p-5">
+		<div class="p-5 rounded-lg bg-base-200">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">Invest with Koredor</h2>
 			<form method="POST" class="grid gap-2 py-5" use:enhance action="?/anchorContact">
 				<Select
@@ -79,10 +79,18 @@
 					{errors}
 					icon={Icons.smartphone}
 				/>
+				<Input
+					type="number"
+					label="Estimated Capital for Investment with Koredor"
+					name="capital"
+					{formData}
+					{errors}
+					icon={Icons.banknote}
+				/>
 
 				<button
 					type="submit"
-					class="btn btn-primary mt-2 max-w-60"
+					class="mt-2 btn btn-primary max-w-60"
 					disabled={isLoading}
 					aria-label="submit"
 				>
