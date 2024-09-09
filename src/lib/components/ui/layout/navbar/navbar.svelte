@@ -97,7 +97,7 @@
 				{#each navItems as navItem}
 					<li>
 						{#if navItem.subMenus}
-							<span class="btn btn-ghost flex w-full justify-start text-left">
+							<span class="flex justify-start w-full text-left btn btn-ghost">
 								{navItem.name}
 							</span>
 							<ul
@@ -121,7 +121,7 @@
 							<a
 								aria-label={navItem.name}
 								href={navItem.href}
-								class="btn btn-ghost flex w-full justify-start text-left"
+								class="flex justify-start w-full text-left btn btn-ghost"
 							>
 								{navItem.name}
 							</a>
@@ -138,8 +138,8 @@
 			{/if}
 		</a>
 	</div>
-	<div class="navbar-center hidden lg:flex">
-		<ul class="menu menu-horizontal px-1">
+	<div class="hidden navbar-center lg:flex">
+		<ul class="px-1 menu menu-horizontal">
 			{#each navItems as navItem, index}
 				<li>
 					{#if navItem.subMenus}
@@ -186,6 +186,9 @@
 			class="btn {isScrolled ? 'btn-ghost' : 'btn-primary'}">Sign In <Icons.logIn /></a
 		>
 	</div>
+</div>
+<div class="w-full py-5 text-center text-white bg-secondary">
+	Operating Soon! We’re in our beta stage and accepting pre-registrations for the waitlist. For inquiries, email us at developer@koredorcapital.com.
 </div>
 
 <style>

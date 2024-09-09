@@ -4,36 +4,36 @@
 	import { lazyLoadHomeComponents } from '$lib/lazy-loader';
 	import { onMount } from 'svelte';
 
-	const title = 'Koredor Kapital - Unlock affordable, flexible, collateral-free financing';
+	const title = 'Koredor Capital - Facilitating Financing for SMEs | Funding Opportunities for Investors';
 	const description =
-		'Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs.';
+		'Discover Koredor’s flexible financing solutions designed to empower your business with no competitive, risk-based rates. Apply online effortlessly and enjoy support tailored to meet your unique business needs.';
 
 	const whyKoredorItems = [
 		{
-			title: 'No Collateral Credit',
+			title: 'Flexible Credit',
 			description:
-				'Access additional working capital with Koredor, with no collateral required! Secure up to ₱5 million on your first two transactions, with potential increases up to ₱15 million per transaction as you continue. Empower your business growth effortlessly and without the need for assets as security',
+				'Access flexible terms with Koredor. Working capital solutions that fit your needs. Our offerings include collateral free and mortgage backed options. Our platform helps SMEs get the best terms possible from our diverse investor pool through our auction system.',
 			url: '/',
 			image: 'placeholder.jpg'
 		},
 		{
 			title: 'Affordable & Risk-based',
 			description:
-				'Our rates are competitive with unsecured business loans from banks, offering you a cost-effective financing solution. With risk-based pricing, you have the opportunity to secure even lower rates by establishing a strong credit history with Koredor. Build trust, save more, and grow your business with tailored financial support',
+				'Our rates are competitive providing SMEs with affordable solutions AND investors attractive returns on risk. Our platform provides both SMEs and investors with peace of mind using our unique approach ensuring both parties meet their needs. Join the Koredor ecosystem today!',
 			url: '/',
 			image: 'placeholder.jpg'
 		},
 		{
-			title: '100% Online Application',
+			title: 'Anywhere in the Philippines',
 			description:
-				'Apply anytime, from anywhere! Complete your registration online with ease and enjoy exceptional customer support every step of the way. Experience hassle-free service designed to meet your needs on your schedule',
+				'Apply anytime, from anywhere! Complete your registration online with ease and enjoy exceptional customer support every step of the way. Experience hassle-free service designed to meet your needs on your schedule.',
 			url: '/',
 			image: 'placeholder.jpg'
 		},
 		{
 			title: 'Seamless Support and Full Transparency',
 			description:
-				'Your dedicated Relationship Manager provides personalized support, focusing on a deep understanding of your business needs and ensuring complete transparency in fees and processes. Experience tailored guidance designed to help your business thrive',
+				'Your dedicated Relationship Manager provides dedicated support, focusing on a deep understanding of your needs. Experience tailored guidance designed to help you thrive whether as an SME or an investor!',
 			url: '/',
 			image: 'placeholder.jpg'
 		}
@@ -54,9 +54,9 @@
 	const heroProps = {
 		backgroundImage: assets + '/images/hero/home.jpg',
 		heroLabel:
-			'Unlock affordable, flexible, collateral-free financing with Koredor to boost your business growth',
+			'Unlock affordable, flexible financing for your business! Koredor raises financing for SMEs from private investors that best match your risk profile.',
 		heroDescription:
-			'Discover Koredor’s flexible financing solutions designed to empower your business growth with no collateral required and competitive, risk-based rates. Apply online effortlessly and enjoy personalized support with complete transparency, tailored to meet your unique business needs.'
+			'Discover Koredor’s flexible financing solutions designed to empower your business with no competitive, risk-based rates. Apply online effortlessly and enjoy support tailored to meet your unique business needs.'
 	};
 </script>
 

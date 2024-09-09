@@ -1,7 +1,7 @@
 export const disclaimers = [
-	'All amount presented here are estimate only. Final financing amount and other terms are subject to credit assessment.',
-	'The computation is based on the interest rate of 2% per month. Actual interest rate may vary depending on the credit grade and investor bid.',
-	'The financing amount is based on the maximum Loan-To-Value.'
+	'Amounts presented are estimates only. Final calculations and terms are subject to assessment upon note execution.',
+	'The sample computation is based on a 2% monthly interest rate. Actual interest rates may vary depending on the credit rating and auction results.',
+	'The financing amount is based on the maximum Loan-To-Value ratio.'
 ];
 
 /**

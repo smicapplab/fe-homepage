@@ -2,7 +2,7 @@
 	import { Icons } from '$lib/components/icons';
 </script>
 
-<footer class="footer bg-neutral p-10 text-white">
+<footer class="p-10 text-white footer bg-neutral">
 	<aside>
 		<Icons.koredorwhite height="50" />
 		<p>
@@ -39,3 +39,7 @@
 		<a href="/cookie-policy" class="link-hover link" aria-label="cookie-policy">Cookie policy</a>
 	</nav>
 </footer>
+<div class="w-full p-5 text-base font-light text-center text-white bg-neutral">
+	Participation through Koredor’s platform, by way of investing in securities, involves risk of loss of your investment. Koredor does not guarantee repayment or return on investment.
+	<p>&copy; Koredor Philippines {new Date().getFullYear()}</p>
+</div>
