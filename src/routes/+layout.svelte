@@ -1,5 +1,4 @@
 <script>
-	// @ts-nocheck
 	import { Navbar } from '$lib/components/ui/layout/navbar';
 	import { fly } from 'svelte/transition';
 	import '../app.css';
@@ -9,12 +8,14 @@
 
 	export let data;
 
+	/**
+	 * @type {any}
+	 */
 	let lazyComponents = {};
-	
+
 	onMount(async () => {
 		if (browser) {
 			lazyComponents = await lazyLoadLayoutComponents();
-			console.log("Components loaded:", Object.keys(lazyComponents));
 		}
 
 		const link = document.createElement('link');
@@ -33,7 +34,6 @@
 <div>
 	<Navbar />
 	{#key data.url}
-		<!-- This is for page navigation animation -->
 		<div in:fly={{ duration: 500, x: -200, delay: 200 }} out:fly={{ x: 300, duration: 200 }}>
 			<slot></slot>
 		</div>

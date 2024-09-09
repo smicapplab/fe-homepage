@@ -13,11 +13,10 @@
 	const description =
 		'Whether you have a question or feedback, we’re here to help and support you every step of the way.';
 
-	const lat = 14.548192822087382;
-	const lng = 121.15233919734136;
+	const lat = 14.547707094465098;
+	const lng = 121.05199743189662;
 
-	$: mapUrl = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15000!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1635787124!5m2!1sen!2sus`;
-
+	$: mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d966.4506370858161!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s${lat}%2C${lng}!5e0!3m2!1sen!2sus!4v1635787124!5m2!1sen!2sus`;	
 	let isLoading = false;
 
 	let data = $$props;
@@ -90,12 +89,12 @@
 						bind:value={$formData.message}
 					></textarea>
 					{#if $errors.message}
-						<span class="label-text-alt text-red-600">{$errors.message}</span>
+						<span class="text-red-600 label-text-alt">{$errors.message}</span>
 					{/if}
 
 					<button
 						type="submit"
-						class="btn btn-primary mt-2 max-w-60"
+						class="mt-2 btn btn-primary max-w-60"
 						disabled={isLoading}
 						aria-label="submit"
 					>
@@ -108,46 +107,47 @@
 				</form>
 			</div>
 		</div>
-		<div class="bg-gray-100 p-5 lg:p-10">
+		<div class="p-5 bg-gray-100 lg:p-10">
 			<div class="grid grid-cols-1 gap-5 py-10 lg:grid-cols-2">
 				<div>
-					<h2 class="text-2xl font-bold text-primary">Koredor Capital</h2>
+					<h2 class="mb-5 text-2xl font-bold text-primary">Koredor Philippines</h2>
 					<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-						<div class="flex items-center space-x-4">
-							<Icons.mapPin class="text-secondary" />
-							<div>
+						<div class="flex items-start space-x-4">
+							<Icons.mapPin class="flex-shrink-0 mr-2 text-secondary" />
+							<div class="flex-grow">
 								<h4 class="text-lg font-semibold text-secondary">Address</h4>
-								<p>1234 Street Name, City, State, Zip Code</p>
+								<p>17th Floor Unit 1702, High Street South Corporate Plaza Tower 2,</p>
+								<p>Bonifacio Global City, Fort Bonifacio, 1634,</p>
+								<p>Taguig City, Fourth District, Philippines</p>
 							</div>
 						</div>
 
-						<!-- Office Hours Section -->
-						<div class="flex items-center space-x-4">
-							<Icons.clock class="text-secondary" />
-							<div>
+						<div class="flex items-start space-x-4">
+							<Icons.clock class="flex-shrink-0 mr-2 text-secondary" />
+							<div class="flex-grow">
 								<h4 class="text-lg font-semibold text-secondary">Office Hours</h4>
-								<p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-								<p>Saturday: 10:00 AM - 4:00 PM</p>
+								<p>Monday - Friday</p>
+								<p>9:00 AM - 5:00 PM</p>
 							</div>
 						</div>
 
 						<!-- Mobile Numbers Section -->
-						<div class="flex items-center space-x-4">
-							<Icons.smartphone class="text-secondary" />
-							<div>
+						<div class="flex items-start space-x-4">
+							<Icons.clock class="flex-shrink-0 mr-2 text-secondary" />
+							<div class="flex-grow">
 								<h4 class="text-lg font-semibold text-secondary">Mobile Numbers</h4>
-								<p>+1 (555) 123-4567</p>
-								<p>+1 (555) 987-6543</p>
+								<p>+63 917 519 9303</p>
+								<p>+63 917 854 0981</p>
 							</div>
 						</div>
 
+
 						<!-- Email Section -->
-						<div class="flex items-center space-x-4">
-							<Icons.email class="text-secondary" />
-							<div>
+						<div class="flex items-start space-x-4">
+							<Icons.email class="flex-shrink-0 mr-2 text-secondary" />
+							<div class="flex-grow">
 								<h4 class="text-lg font-semibold text-secondary">Emails</h4>
-								<p>info@example.com</p>
-								<p>support@example.com</p>
+								<p>developer@koredorcapital.com</p>
 							</div>
 						</div>
 					</div>

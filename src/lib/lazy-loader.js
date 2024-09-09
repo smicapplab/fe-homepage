@@ -18,8 +18,8 @@ export async function lazyLoadLayoutComponents() {
 }
 
 export async function lazyLoadHomeComponents() {
-	const components = {};
 
+	const components = {};
 	const imports = [
 		import('$lib/components/seo.svelte'),
 		import('$lib/components/ui/home-page/financing-criteria/financing-criteria.svelte'),

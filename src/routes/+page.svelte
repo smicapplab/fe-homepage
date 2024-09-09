@@ -1,7 +1,6 @@
 <script>
 	import { browser } from '$app/environment';
 	import { assets } from '$app/paths';
-	import Hero from '$lib/components/ui/hero/hero.svelte';
 	import { lazyLoadHomeComponents } from '$lib/lazy-loader';
 	import { onMount } from 'svelte';
 
@@ -40,13 +39,15 @@
 		}
 	];
 
+	/**
+	 * @type {any}
+	 */
 	let lazyComponents = {};
 
 	onMount(async () => {
 		if (browser) {
 			// @ts-ignore
 			lazyComponents = await lazyLoadHomeComponents();
-			console.log('Components loaded:', Object.keys(lazyComponents));
 		}
 	});
 

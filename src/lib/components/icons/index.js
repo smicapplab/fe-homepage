@@ -30,7 +30,7 @@ import {
 	MoveRight,
 	Send,
 	MessagesSquare,
-	CircleX
+	CircleX,
 } from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
@@ -71,5 +71,5 @@ export const Icons = {
 	send: Send,
 	moveRight: MoveRight,
 	messagesSquare: MessagesSquare,
-	circleX: CircleX
+	circleX: CircleX,
 };

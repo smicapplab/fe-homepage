@@ -200,7 +200,6 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-
 		gtag('config', 'G-34KG9BD86Q');
 	</script>
 </svelte:head>
