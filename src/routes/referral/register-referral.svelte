@@ -47,17 +47,17 @@
 	});
 </script>
 
-<div class="container mx-auto p-5" id="reg-form">
+<div class="container p-5 mx-auto" id="reg-form">
 	<div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
 		<div class="py-5">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">
-				Why join our referral program as a Growth Solutions Partner?
+				Why join our referral program as a Koredor Konnect Partner?
 			</h2>
 			<div>
 				<h2 class="py-3 text-xl">Your business network is your net worth!</h2>
 
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">
@@ -67,7 +67,7 @@
 				</div>
 
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">
@@ -79,7 +79,7 @@
 				</div>
 
 				<div
-					class="join-item mb-3 mt-5 flex w-full items-start space-x-2 text-left text-xl font-medium text-neutral"
+					class="flex items-start w-full mt-5 mb-3 space-x-2 text-xl font-medium text-left join-item text-neutral"
 				>
 					<Icons.circleCheckBig class="flex-shrink-0" />
 					<div class="flex-1 text-base">
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="rounded-lg bg-base-200 p-5">
+		<div class="p-5 rounded-lg bg-base-200">
 			<h2 class="text-xl font-bold text-primary lg:text-2xl">Invest with Koredor</h2>
 			<form method="POST" class="grid gap-2 py-5" use:enhance action="?/anchorContact">
 				<Input label="Full Name" name="fullName" {formData} {errors} icon={Icons.idCard} />
@@ -113,12 +113,12 @@
 					bind:value={$formData.message}
 				></textarea>
 				{#if $errors.message}
-					<span class="label-text-alt text-red-600">{$errors.message}</span>
+					<span class="text-red-600 label-text-alt">{$errors.message}</span>
 				{/if}
 
 				<button
 					type="submit"
-					class="btn btn-primary mt-2 max-w-60"
+					class="mt-2 btn btn-primary max-w-60"
 					disabled={isLoading}
 					aria-label="submit"
 				>

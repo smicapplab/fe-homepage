@@ -7,16 +7,16 @@ export const invoiceCalculatorSchema = z.object({
 		required_error: 'Please enter product name.'
 	}),
 	invoiceAmount
-});
+}).passthrough();
 
 export const poCalculatorSchema = z.object({
 	email: email,
 	product,
 	poAmount
-});
+}).passthrough();
 
 export const capitalCalculatorSchema = z.object({
 	email: email,
 	product,
 	appraisalValue
-});
+}).passthrough();

@@ -5,7 +5,7 @@ export const finProcessSteps = [
 			'Register your account with a simple one-time online registration activation process',
 		link: {
 			label: 'Register Now',
-			url: '/register'
+			url: 'https://issuer.koredorcapital.com/'
 		}
 	},
 	{

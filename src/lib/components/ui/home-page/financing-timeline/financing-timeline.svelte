@@ -16,11 +16,11 @@
 				{#each finProcessSteps as finProcessStep, index}
 					<div class="timeline-item">
 						<div class="mr-3 timeline-icon whitespace-nowrap">
-							{#if finProcessSteps.length - 1 === index}
+							<!-- {#if finProcessSteps.length - 1 === index}
 								<Icons.circleDot class="inline-block mr-2" />
 							{:else}
 								<Icons.circleChevronRight class="inline-block mr-2" />
-							{/if}
+							{/if} -->
 
 							Step {index + 1}
 						</div>
@@ -28,8 +28,10 @@
 							<h3 class="text-lg font-bold">{finProcessStep.title}</h3>
 							<p class="text-sm">{finProcessStep.description}</p>
 							{#if finProcessStep.link}
-								<button class="text-white btn btn-link" aria-label={finProcessStep.link.label}
-									>{finProcessStep.link.label}</button
+								<a
+									aria-label="sign-in"
+									href="https://issuer.koredorcapital.com/"
+									class="text-white btn btn-link">{finProcessStep.link.label}</a
 								>
 							{/if}
 						</div>

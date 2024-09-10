@@ -2,50 +2,64 @@
 	import { Icons } from '$lib/components/icons';
 	import { Input } from '$lib/components/ui/input';
 	import { Select } from '$lib/components/ui/select';
-	import { investorContactSchema } from '$lib/schemas/contact';
 	import { superForm } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
 	import { addToast, ToastType } from '../../stores/toastStores';
-	import { investorType } from '$lib/lov';
+	import IndividualForm from './individual-form.svelte';
+	import InstitutionForm from './institution-form.svelte';
+	// import { investorType } from '$lib/lov';
 
-	let data = {
-		investorType: '',
-		fullName: '',
-		email: '',
-		mobile: ''
-	};
+	// let data = {
+	// 	investorType: '',
+	// 	fullName: '',
+	// 	email: '',
+	// 	mobile: ''
+	// };
 
-	let isLoading = false;
+	// let isLoading = false;
 
-	const {
-		form: formData,
-		errors,
-		enhance
-	} = superForm(data, {
-		validators: zodClient(investorContactSchema),
-		dataType: 'json',
-		onSubmit: () => {
-			isLoading = true;
-		},
-		onResult: (result) => {
-			isLoading = false;
-			// @ts-ignore
-			const { result: formResult } = result;
-			if (formResult.type === 'success') {
-				addToast(
-					ToastType.success,
-					'Thank you for reaching out! Your form has been successfully submitted. Our team at Koredor will review your details and contact you shortly to set up an initial discussion with you.'
-				);
-				// @ts-ignore
-				$formData = {};
-			} else {
-				addToast(
-					ToastType.error,
-					'Oops! Something went wrong while submitting the form. Please check your details and try again.'
-				);
-			}
+	// const {
+	// 	form: formData,
+	// 	errors,
+	// 	enhance
+	// } = superForm(data, {
+	// 	validators: zodClient(investorContactSchema),
+	// 	dataType: 'json',
+	// 	onSubmit: () => {
+	// 		isLoading = true;
+	// 	},
+	// 	onResult: (result) => {
+	// 		isLoading = false;
+	// 		// @ts-ignore
+	// 		const { result: formResult } = result;
+	// 		if (formResult.type === 'success') {
+	// 			addToast(
+	// 				ToastType.success,
+	// 				'Thank you for reaching out! Your form has been successfully submitted. Our team at Koredor will review your details and contact you shortly to set up an initial discussion with you.'
+	// 			);
+	// 			// @ts-ignore
+	// 			$formData = {};
+	// 		} else {
+	// 			addToast(
+	// 				ToastType.error,
+	// 				'Oops! Something went wrong while submitting the form. Please check your details and try again.'
+	// 			);
+	// 		}
+	// 	}
+	// });
+
+	let investorType = 'IND';
+
+	/**
+	 * @param {KeyboardEvent & { currentTarget: EventTarget & HTMLAnchorElement; }} event
+	 * @param {string} type
+	 */
+	function handleKeydown(event, type) {
+		if (event.key === 'Enter' || event.key === ' ') {
+			event.preventDefault();
+			investorType = type;
 		}
-	});
+	}
 </script>
 
 <div class="container p-5 mx-auto" id="reg-form">
@@ -58,9 +72,37 @@
 				Fill out the form, and we will set up an initial discussion with you!
 			</h2>
 		</div>
-		<div class="p-5 rounded-lg bg-base-200">
-			<h2 class="text-xl font-bold text-primary lg:text-2xl">Invest with Koredor</h2>
-			<form method="POST" class="grid gap-2 py-5" use:enhance action="?/anchorContact">
+		<div class="p-5 bg-gray-100 rounded-lg">
+			<h2 class="mb-5 text-xl font-bold text-primary lg:text-2xl">Invest with Koredor as</h2>
+
+			<div role="tablist" class="tabs tabs-bordered">
+				<button
+					type="button"
+					role="tab"
+					class="text-lg tab-bordered tab {investorType === 'IND' ? 'tab-active !border-primary text-primary font-bold' : ''}"
+					aria-selected={investorType === 'IND'}
+					on:click={() => (investorType = 'IND')}
+				>
+					Individual Investor
+				</button>
+				<button
+					type="button"
+					role="tab"
+					class="text-lg tab-bordered tab {investorType === 'INS' ? 'tab-active !border-primary text-primary font-bold' : ''}"
+					aria-selected={investorType === 'INS'}
+					on:click={() => (investorType = 'INS')}
+				>
+					Institutional Investor
+				</button>
+			</div>
+
+			{#if investorType === 'IND'}
+				<IndividualForm />
+			{:else if investorType === 'INS'}
+				<InstitutionForm />
+			{/if}
+
+			<!-- <form method="POST" class="grid gap-2 py-5" use:enhance action="?/anchorContact">
 				<Select
 					icon={Icons.handCoins}
 					label="I want to invest as"
@@ -100,7 +142,7 @@
 						Submit <Icons.send />
 					{/if}
 				</button>
-			</form>
+			</form> -->
 		</div>
 	</div>
 </div>

@@ -31,13 +31,25 @@ export const anchorContactSchema = z.object({
 	message
 });
 
-export const investorContactSchema = z.object({
+const baseSchema = z.object({
 	investorType,
 	fullName,
 	email,
 	mobile,
-	capital,
+	capital
 });
+
+export const individualInvestorContactSchema = baseSchema;
+
+export const institutionInvestorContactSchema = baseSchema.extend({
+	companyName,
+	industry
+});
+
+// @ts-ignore
+export const getInvestorSchema = (type) => {
+	return type === 'INS' ? institutionInvestorContactSchema : individualInvestorContactSchema;
+};
 
 export const referralContactSchema = z.object({
 	fullName,

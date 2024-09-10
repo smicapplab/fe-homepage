@@ -74,5 +74,6 @@ export const capital = z.preprocess(
 	(value) => (value === null || value === undefined ? null : Number(value)),
 	z
 		.number({ invalid_type_error: 'Estimated Capital is required' })
+		.min(1, 'Estimated Capital is required')
 		.max(1_000_000_000, 'Estimated Capital cannot exceed 1,000,000,000.00')
 );

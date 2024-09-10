@@ -1,18 +1,18 @@
 export const title =
-	'Unlock unlimited earning potential with our Referral Program—earn commissions on every successful referral, work at your own pace without quotas, and access exclusive resources to boost your income and support financial inclusion nationwide.';
+	'Earn through our Referral Program—earn commissions on every successful referral, work at your own pace without quotas, and access exclusive resources to boost your income and support financial inclusion nationwide.';
 export const description =
 	'Refer qualified SMEs in just two simple steps and earn up to ₱50,000 for each referral!';
 
 export const whyPartnerItems = [
 	{
-		subject: '100% Online Application',
+		subject: "Get Accredited",
 		description:
-			'Join us today and unlock exclusive benefits, gain recognition, and start making an impact—all from the convenience of your device.'
+			"Koredor values our network of partners and clients. Get accredited as a partner today to unlock our commision program with exclusive opportunities and advanced resources. Join a network of dedicated professionals dedicated to driving success and innovation in the industry."
 	},
 	{
-		subject: 'Express Referral',
+		subject: "Why join our referral program as a Koredor Konnect Partner?",
 		description:
-			'Instantly Earn ₱300 for Every Qualified SME Referral! Share the benefits with your network and get rewarded effortlessly for every successful referral. Start earning now by helping businesses grow!'
+			"Refer SMEs in good standing to unlock larger network benefits. "
 	},
 	{
 		subject: 'Be an Accredited Agent',

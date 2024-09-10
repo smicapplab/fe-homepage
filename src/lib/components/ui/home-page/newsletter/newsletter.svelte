@@ -37,11 +37,11 @@
 	});
 </script>
 
-<div class="flex items-center justify-center py-20">
+<div class="flex items-center justify-center p-5 py-20">
 	<div class="container">
 		<div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:justify-end">
 			<div class="lg:justify-self-start">
-				<h2 class="mb-4 text-center text-2xl font-bold text-secondary lg:text-left">
+				<h2 class="mb-4 text-2xl font-bold text-center text-secondary lg:text-left">
 					Join Our Newsletter
 				</h2>
 				<h2 class="py-3 text-xl">
@@ -51,7 +51,7 @@
 			</div>
 			<div class="flex justify-center lg:justify-start">
 				<form method="POST" class="w-full max-w-lg" use:enhance action="?/subscribeToNewsletter">
-					<div class="join mt-10 w-full">
+					<div class="w-full mt-10 join">
 						<label
 							class="input join-item input-bordered flex grow items-center gap-2 focus-within:outline-none focus-within:ring-0 focus-within:ring-offset-0 {$errors.email
 								? 'input-error'
@@ -59,7 +59,7 @@
 						>
 							<Icons.email />
 							<input
-								class="bg-transparent focus:outline-none"
+								class="bg-transparent focus:outline-none join-item grow"
 								placeholder="Email"
 								name="email"
 								bind:value={$formData.email}
@@ -68,7 +68,7 @@
 						<button
 							aria-label="Subscribe"
 							type="submit"
-							class="btn btn-primary join-item rounded-r-lg"
+							class="rounded-r-lg btn btn-primary join-item"
 							disabled={isLoading}
 						>
 							{#if isLoading}
@@ -79,7 +79,7 @@
 						</button>
 					</div>
 					{#if $errors.email}
-						<span class="label-text-alt text-red-600 lg:-mt-8">{$errors.email}</span>
+						<span class="text-red-600 label-text-alt lg:-mt-8">{$errors.email}</span>
 					{/if}
 				</form>
 			</div>

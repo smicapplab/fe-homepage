@@ -63,9 +63,9 @@
 <svelte:component this={lazyComponents.Seo} {title} {description} />
 <svelte:component this={lazyComponents.Hero} {...heroProps} />
 
-<div class="flex items-center justify-center py-6">
+<div class="flex items-center justify-center p-5">
 	<div class="container">
-		<div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+		<div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
 			{#each whyKoredorItems as whyKoredorItem}
 				<div class="card glass">
 					<div class="card-body">
