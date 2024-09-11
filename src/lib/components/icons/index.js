@@ -31,6 +31,7 @@ import {
 	Send,
 	MessagesSquare,
 	CircleX,
+	Search,
 } from 'lucide-svelte';
 import Koredor from './koredor.svelte';
 import IconButton from './icon-button.svelte';
@@ -72,4 +73,5 @@ export const Icons = {
 	moveRight: MoveRight,
 	messagesSquare: MessagesSquare,
 	circleX: CircleX,
+	search: Search,
 };

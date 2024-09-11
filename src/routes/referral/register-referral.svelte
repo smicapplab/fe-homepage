@@ -111,6 +111,8 @@
 					class="textarea textarea-bordered {$errors.message ? 'textarea-error' : ''}"
 					placeholder="Your Message"
 					bind:value={$formData.message}
+					aria-label="message"
+					rows="10"
 				></textarea>
 				{#if $errors.message}
 					<span class="text-red-600 label-text-alt">{$errors.message}</span>
