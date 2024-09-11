@@ -1,10 +1,13 @@
 <script>
 	import { Icons } from '$lib/components/icons/index.js';
-import Seo from '$lib/components/seo.svelte';
+	import Seo from '$lib/components/seo.svelte';
 
 	export let data;
 
 	let query = '';
+	/**
+	 * @type {any[]}
+	 */
 	let searchResults = [];
 	let isLoading = false;
 
@@ -12,12 +15,15 @@ import Seo from '$lib/components/seo.svelte';
 	$: faqData = query.trim() ? searchResults : originalFaqData;
 	$: accordionStates = faqData.map(() => false);
 
-	function toggleAccordion(index) {
+	/**
+	 * @param {number} index
+	 */
+	const toggleAccordion = (index) => {
 		accordionStates[index] = !accordionStates[index];
 		accordionStates = [...accordionStates]; // Trigger reactivity
-	}
+	};
 
-	async function handleSearch() {
+	const handleSearch = async () => {
 		if (!query.trim()) {
 			searchResults = [];
 			return;
@@ -43,12 +49,12 @@ import Seo from '$lib/components/seo.svelte';
 		} finally {
 			isLoading = false;
 		}
-	}
+	};
 </script>
 
 <Seo
-	title="What is Koredor and Koredor Products | FAQs"
-	description="Get your oredor and Koredor Products questions answered. Find answers to common questions, like Is Koredor an investor that directly provides the funds? Who provides funding to my business?"
+	title="Koredor Crowdfunding Platform & Products | Frequently Asked Questions (FAQs)"
+	description="Find answers to common questions about Koredor, the crowdfunding platform. Learn who provides funding to businesses, how Koredor works, and whether Koredor itself invests directly.”"
 />
 
 <div class="flex items-center justify-center p-10 bg-base-200">

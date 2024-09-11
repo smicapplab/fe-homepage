@@ -31,11 +31,17 @@ function searchFAQ(query) {
 }
 
 export async function POST({ request }) {
-	const { query } = await request.json();
+	const { query, topOnly = false } = await request.json();
 	if (!query) {
 		return json({ error: 'Query is required' }, { status: 400 });
 	}
 
 	const results = searchFAQ(query);
+
+	// if topOnly is true, return only 1 result
+	if(topOnly) {
+		return json(results[0]);
+	}
+
 	return json(results);
 }

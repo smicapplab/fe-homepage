@@ -2,68 +2,41 @@
 	import { Icons } from '$lib/components/icons';
 	import IconButton from '$lib/components/icons/icon-button.svelte';
 	import { formatDistanceToNow } from 'date-fns';
+	import { onMount, tick, afterUpdate } from 'svelte';
 
 	let chatMessages = [
 		{
-			author: 'Obi-Wan Koredor',
-			message: 'Hello, how can I help you today, my padawan?',
+			author: 'Koredor Agent (Bot)',
+			message: 'Hello! How can I assist you today? Feel free to ask me anything.',
 			timeSent: new Date(),
 			role: 'admin'
 		}
 	];
 
-	const jediPhrases = [
-		'Do, or do not. There is no try.',
-		'The Force will be with you. Always.',
-		'I am a Jedi, like my father before me.',
-		'Your focus determines your reality.',
-		'The Jedi are keepers of the peace, not soldiers.',
-		'Fear is the path to the dark side.',
-		'In my experience, there is no such thing as luck.',
-		'Patience you must have, my young Padawan.',
-		'Trust in the Force.',
-		'A Jedi uses the Force for knowledge and defense, never for attack.',
-		'Train yourself to let go of everything you fear to lose.',
-		'Wars not make one great.',
-		'Adventure. Excitement. A Jedi craves not these things.',
-		'Clear your mind of questions.',
-		'Much to learn you still have.',
-		'May the Force be with you.',
-		'The ability to speak does not make you intelligent.',
-		'Many of the truths we cling to depend greatly on our own point of view.',
-		'Control, control, you must learn control!',
-		'Size matters not. Look at me. Judge me by my size, do you?'
-	];
-
 	let isOpen = false;
 	let customerMessage = '';
-
-	/**
-	 * @type {HTMLDivElement}
-	 */
 	let chatContainer;
+	let shouldScroll = false;
 
-	// @ts-ignore
-	let interval;
+	onMount(() => {
+		scrollToBottom();
+	});
+
+	afterUpdate(() => {
+		if (shouldScroll) {
+			scrollToBottom();
+			shouldScroll = false;
+		}
+	});
 
 	function toggleChat() {
 		isOpen = !isOpen;
-
 		if (isOpen) {
-			pickRandomPhrase();
-			interval = setInterval(pickRandomPhrase, 10000);
-			// @ts-ignore
-			return () => clearInterval(interval);
-		} else {
-			// @ts-ignore
-			if (interval) {
-				clearInterval(interval);
-				interval = null;
-			}
+			shouldScroll = true;
 		}
 	}
 
-	function sendMessage() {
+	const sendMessage = async () => {
 		if (customerMessage.trim() === '') return;
 
 		chatMessages = [
@@ -75,41 +48,60 @@
 				role: 'customer'
 			}
 		];
+		shouldScroll = true;
+
+		const response = await handleSearch(customerMessage);
+		if (response && response.answer) {
+			chatMessages = [
+				...chatMessages,
+				{
+					author: 'Koredor Agent (Bot)',
+					message: response.answer,
+					timeSent: new Date(),
+					role: 'admin'
+				}
+			];
+			shouldScroll = true;
+		}
 
 		customerMessage = '';
-		scrollToBottom();
-	}
+	};
 
-	// @ts-ignore
 	function handleKeyDown(event) {
 		if (event.key === 'Enter') {
 			sendMessage();
 		}
 	}
 
-	// Scroll to the bottom of the chat container whenever a new message is added
 	function scrollToBottom() {
 		if (chatContainer) {
 			chatContainer.scrollTop = chatContainer.scrollHeight;
 		}
 	}
 
-	// Function to randomly pick a phrase
-	function pickRandomPhrase() {
-		const randomIndex = Math.floor(Math.random() * jediPhrases.length);
-		const currentPhrase = jediPhrases[randomIndex];
-		chatMessages = [
-			...chatMessages,
-			{
-				author: 'Obi-Wan Koredor',
-				message: currentPhrase,
-				timeSent: new Date(),
-				role: 'admin'
-			}
-		];
+	const handleSearch = async (query) => {
+		if (!query || !query.trim()) {
+			return null;
+		}
 
-		scrollToBottom();
-	}
+		try {
+			const response = await fetch('/api/search-faq', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ query, topOnly: true })
+			});
+
+			if (response.ok) {
+				return await response.json();
+			} else {
+				console.error('Search failed');
+				return null;
+			}
+		} catch (error) {
+			console.error('Error during search:', error);
+			return null;
+		}
+	};
 </script>
 
 <!-- Chat Window -->
@@ -125,25 +117,24 @@
 	{/if}
 
 	{#if isOpen}
-		<div class="mt-2 w-96 max-w-full rounded-lg bg-white p-4 shadow-lg">
-			<div class="mb-2 flex items-center justify-between">
+		<div class="max-w-full p-4 mt-2 bg-white rounded-lg shadow-lg w-96">
+			<div class="flex items-center justify-between mb-2">
 				<h3 class="text-lg font-semibold">Chat with Us</h3>
 				<button on:click={toggleChat} aria-label="Close Chat">
 					<Icons.circleX />
 				</button>
 			</div>
-			<!-- Bind the chat container to chatContainer for scrolling -->
-			<div class="my-2 h-96 space-y-2 overflow-y-auto border-b border-t" bind:this={chatContainer}>
+			<div class="my-2 space-y-2 overflow-y-auto border-t border-b h-96" bind:this={chatContainer}>
 				{#each chatMessages as message}
 					<div class="chat {message.role === 'admin' ? 'chat-start' : 'chat-end'}">
 						<div class="chat-header">
 							{message.author}
-							<time class="text-xs opacity-50"
-								>{formatDistanceToNow(message.timeSent, {
+							<time class="text-xs opacity-50">
+								{formatDistanceToNow(message.timeSent, {
 									addSuffix: true,
 									includeSeconds: true
-								})}</time
-							>
+								})}
+							</time>
 						</div>
 						<div
 							class="chat-bubble {message.role === 'admin'
@@ -155,16 +146,16 @@
 					</div>
 				{/each}
 			</div>
-			<div class="mt-2 flex items-center">
+			<div class="flex items-center mt-2">
 				<input
 					type="text"
 					placeholder="Type a message..."
-					class="input input-bordered w-full"
+					class="w-full input input-bordered"
 					bind:value={customerMessage}
 					on:keydown={handleKeyDown}
 				/>
 				<button
-					class="ml-2 rounded-full bg-primary p-2 text-white transition hover:bg-secondary"
+					class="p-2 ml-2 text-white transition rounded-full bg-primary hover:bg-secondary"
 					on:click={sendMessage}
 					aria-label="Send Message"
 					disabled={customerMessage.trim() === ''}
