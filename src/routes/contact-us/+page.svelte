@@ -19,7 +19,13 @@
 	$: mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d966.4506370858161!2d${lng}!3d${lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s${lat}%2C${lng}!5e0!3m2!1sen!2sus!4v1635787124!5m2!1sen!2sus`;	
 	let isLoading = false;
 
-	let data = $$props;
+	let data = {
+		fullName: "",
+		companyName: "",
+		email: "",
+		mobile: "",
+		message: ""
+	};
 	const form = superForm(data, {
 		validators: zodClient(contactUsFormSchema),
 		dataType: 'json',

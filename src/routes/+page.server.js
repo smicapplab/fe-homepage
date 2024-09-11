@@ -13,10 +13,14 @@ export const actions = {
 				return fail(400, { form });
 			}
 
+			const messageHtml = `
+              <strong>Email:</strong> ${form.data.email}<br/>
+              <p><strong>Message:</strong><br>${'Join Newsletter'.replace(/\n/g, '<br>')}</p>
+            `;
+
 			await sendEmailViaResend({
-				fullName: '',
-				email: form.data.email,
-				message: 'Join Newsletter',
+				to: 's.torrefranca@gmail.com',
+				message: messageHtml,
 				subject: 'Join Newsletter'
 			});
 

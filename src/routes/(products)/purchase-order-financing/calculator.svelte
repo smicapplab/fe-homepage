@@ -26,11 +26,22 @@
 	$: marketplaceFee = calculateMarketplaceFee(financingAmount);
 	$: amountToPay = calculateRepayment(financingAmount);
 
-	const form = superForm(data, {
+	const {
+		form: formData,
+		errors,
+		enhance
+	} = superForm(data, {
 		validators: zodClient(poCalculatorSchema),
 		dataType: 'json',
-		onSubmit: () => {
+		onSubmit: ({ formData }) => {
 			isLoading = true;
+			// Add additional fields directly to formData
+			formData.append('inputLabel', "Purchase Order Amount");
+			formData.append('amountInputted', amountInputted.toString());
+			formData.append('interestRate', interestRate.toString());
+			formData.append('financingAmount', financingAmount.toString());
+			formData.append('marketplaceFee', marketplaceFee.toString());
+			formData.append('amountToPay', JSON.stringify(amountToPay));
 		},
 		onResult: (result) => {
 			isLoading = false;
@@ -49,7 +60,7 @@
 		}
 	});
 
-	const { form: formData, errors, enhance } = form;
+	$: amountInputted = $formData.poAmount;
 
 	const calculateFinAmount = (poAmount) => {
 		return poAmount * 0.5;
@@ -74,7 +85,7 @@
 </script>
 
 <form method="POST" class="grid gap-2 py-5" use:enhance action="?/sendComputation">
-	<p class="label-text px-2">Purchase Order Amount</p>
+	<p class="px-2 label-text">Purchase Order Amount</p>
 	<div class="grid grid-cols-3 gap-4">
 		<div class="col-span-2">
 			<Input type="number" name="poAmount" {formData} {errors} icon={Icons.banknote} />
@@ -82,17 +93,17 @@
 	</div>
 
 	<div class="w-full">
-		<div class="no-scrollbar stats stats-vertical w-full text-center shadow sm:stats-horizontal">
-			<div class="stat p-3">
-				<div class="stat-title flex items-center space-x-1">
-					<div class="mb-2 w-full font-bold text-secondary">
+		<div class="w-full text-center shadow no-scrollbar stats stats-vertical sm:stats-horizontal">
+			<div class="p-3 stat">
+				<div class="flex items-center space-x-1 stat-title">
+					<div class="w-full mb-2 font-bold text-secondary">
 						<span>Financing Amount</span>
 						<div class="tooltip tooltip-bottom z-100" data-tip="Estimated amount to finance">
 							<Icons.info size={16} />
 						</div>
 					</div>
 				</div>
-				<div class="stat-value text-center text-lg font-bold text-primary">
+				<div class="text-lg font-bold text-center stat-value text-primary">
 					₱{numeral(financingAmount).format('0,0.00')}
 				</div>
 				{#if financingAmount < 100000}
@@ -104,24 +115,24 @@
 			</div>
 
 			<div class="stat">
-				<div class="stat-title flex items-center space-x-1">
-					<div class="mb-2 w-full font-bold text-secondary">
+				<div class="flex items-center space-x-1 stat-title">
+					<div class="w-full mb-2 font-bold text-secondary">
 						<span>Marketplace Fee</span>
 						<div class="tooltip tooltip-bottom z-100" data-tip="3.5 of amount to finance">
 							<Icons.info size={16} />
 						</div>
 					</div>
 				</div>
-				<div class="stat-value text-lg font-bold text-primary">
+				<div class="text-lg font-bold stat-value text-primary">
 					₱{numeral(marketplaceFee).format('0,0.00')}
 				</div>
 			</div>
 		</div>
 
-		<h2 class="mt-10 py-3 text-xl font-bold">Repayment Terms</h2>
-		<div class="relative grid grid-cols-2 gap-2 rounded-xl bg-white p-5 shadow">
-			<p class="text-center font-bold text-secondary">Terms</p>
-			<p class="text-center font-bold text-secondary">Amount</p>
+		<h2 class="py-3 mt-10 text-xl font-bold">Repayment Terms</h2>
+		<div class="relative grid grid-cols-2 gap-2 p-5 bg-white shadow rounded-xl">
+			<p class="font-bold text-center text-secondary">Terms</p>
+			<p class="font-bold text-center text-secondary">Amount</p>
 
 			{#each Object.keys(amountToPay) as key}
 				<p>
@@ -131,16 +142,16 @@
 						{key} Monthly Installments
 					{/if}
 				</p>
-				<p class="px-5 text-right text-lg text-primary">
+				<p class="px-5 text-lg text-right text-primary">
 					₱{numeral(amountToPay[key]).format('0,0.00')}
 				</p>
 			{/each}
-			<div class="absolute inset-y-0 left-1/2 w-px bg-gray-200"></div>
+			<div class="absolute inset-y-0 w-px bg-gray-200 left-1/2"></div>
 		</div>
 
-		<div class="mt-5 flex justify-center">
+		<div class="flex justify-center mt-5">
 			{#if showForm}
-				<div class="join w-full">
+				<div class="w-full join">
 					<label
 						class="input join-item input-bordered flex grow items-center gap-2 focus-within:outline-none focus-within:ring-0 focus-within:ring-offset-0 {$errors.email
 							? 'input-error'
@@ -157,7 +168,7 @@
 					<button
 						type="submit"
 						aria-label="submit"
-						class="btn btn-primary join-item rounded-r-lg"
+						class="rounded-r-lg btn btn-primary join-item"
 						disabled={isLoading}
 					>
 						{#if isLoading}
@@ -174,11 +185,11 @@
 			{/if}
 		</div>
 		{#if $errors.email}
-			<span class="label-text-alt text-red-600 lg:-mt-8">{$errors.email}</span>
+			<span class="text-red-600 label-text-alt lg:-mt-8">{$errors.email}</span>
 		{/if}
 
-		<p class="mb-2 mt-10 text-sm font-bold italic">Disclaimer:</p>
-		<ul class="ml-4 list-decimal text-sm italic selection:list-outside">
+		<p class="mt-10 mb-2 text-sm italic font-bold">Disclaimer:</p>
+		<ul class="ml-4 text-sm italic list-decimal selection:list-outside">
 			{#each disclaimers as disclaimer}
 				<li>{disclaimer}</li>
 			{/each}

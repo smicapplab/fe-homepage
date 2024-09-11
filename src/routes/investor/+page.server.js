@@ -13,6 +13,16 @@ export const actions = {
 			return fail(400, { form });
 		}
 
+		// {
+		// 	investorType: 'IND',
+		// 	fullName: 'Steve Torrefranca',
+		// 	email: 's.torrefranca@gmail.com',
+		// 	mobile: '9178540981',
+		// 	capital: 5555555
+		//   }
+
+		console.log(form.data);
+
 		return {
 			form
 		};
@@ -22,6 +32,8 @@ export const actions = {
 		if (!form.valid) {
 			return fail(400, { form });
 		}
+
+		console.log(form.data);
 
 		return {
 			form

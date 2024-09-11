@@ -3,17 +3,18 @@ import { Resend } from 'resend';
 import { RESEND_API_KEY } from '$env/static/private';
 
 const resend = new Resend(RESEND_API_KEY);
-export const sendEmailViaResend = async ({ fullName, email, message, subject }) => {
+export const sendEmailViaResend = async ({
+	message = '<p>No Message</p>',
+	subject = 'Koredor capital',
+	from = 'Koredor Capital<no-reply@koredorcapital.com>',
+	to = 's.torrefranca@gmail.com'
+}) => {
 	try {
 		await resend.emails.send({
-			from: 'developer@koredorcapital.com',
-			to: 's.torrefranca@gmail.com',
+			from,
+			to,
 			subject,
-			html: `
-              <strong>From:</strong> ${fullName}<br/>
-              <strong>Email:</strong> ${email}<br/>
-              <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
-            `
+			html: message
 		});
 
 		return true;

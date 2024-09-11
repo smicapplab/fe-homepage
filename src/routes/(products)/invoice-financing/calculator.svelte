@@ -27,7 +27,6 @@
 	$: amountToPay = calculateRepayment(financingAmount);
 
 	const {
-		tainted,
 		form: formData,
 		errors,
 		enhance
@@ -37,6 +36,8 @@
 		onSubmit: ({ formData }) => {
 			isLoading = true;
 			// Add additional fields directly to formData
+			formData.append('inputLabel', "Invoice Order Amount");
+			formData.append('amountInputted', amountInputted.toString());
 			formData.append('interestRate', interestRate.toString());
 			formData.append('financingAmount', financingAmount.toString());
 			formData.append('marketplaceFee', marketplaceFee.toString());
@@ -58,6 +59,8 @@
 			}
 		}
 	});
+
+	$: amountInputted = $formData.invoiceAmount;
 
 	const calculateFinAmount = (invoiceAmount) => {
 		return invoiceAmount * 0.8;

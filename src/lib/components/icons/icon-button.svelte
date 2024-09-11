@@ -16,7 +16,6 @@
 	}
 </script>
 
-<!-- Use $$restProps directly in the button element -->
-<button class={buttonClass} id={name} aria-label={name} on:click={handleClick} {...$$restProps}>
+<button class={buttonClass} id={name} aria-label={name} on:click={handleClick}>
 	<svelte:component this={icon} class={iconClass} size={iconSize} />
 </button>
