@@ -2,7 +2,7 @@
 	import { Icons } from '$lib/components/icons';
 	import IconButton from '$lib/components/icons/icon-button.svelte';
 	import { formatDistanceToNow } from 'date-fns';
-	import { onMount, tick, afterUpdate } from 'svelte';
+	import { onMount, afterUpdate } from 'svelte';
 
 	let chatMessages = [
 		{
@@ -15,6 +15,10 @@
 
 	let isOpen = false;
 	let customerMessage = '';
+
+	/**
+	 * @type {HTMLDivElement}
+	 */
 	let chatContainer;
 	let shouldScroll = false;
 
@@ -67,6 +71,9 @@
 		customerMessage = '';
 	};
 
+	/**
+	 * @param {{ key: string; }} event
+	 */
 	function handleKeyDown(event) {
 		if (event.key === 'Enter') {
 			sendMessage();
@@ -79,6 +86,9 @@
 		}
 	}
 
+	/**
+	 * @param {string} query
+	 */
 	const handleSearch = async (query) => {
 		if (!query || !query.trim()) {
 			return null;
@@ -139,7 +149,7 @@
 						<div
 							class="chat-bubble {message.role === 'admin'
 								? 'chat-bubble-primary'
-								: 'chat-bubble-info'}"
+								: 'chat-bubble-secondary'}"
 						>
 							{message.message}
 						</div>
