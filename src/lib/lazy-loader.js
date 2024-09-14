@@ -2,13 +2,18 @@
 export async function lazyLoadLayoutComponents() {
 	const components = {};
 
+	// const imports = [
+	// 	import('$lib/components/ui/layout/footer'),
+	// 	import('$lib/components/ui/chat/chat.svelte'),
+	// 	import('$lib/components/ui/toast/toast.svelte')
+	// ];
+
 	const imports = [
 		import('$lib/components/ui/layout/footer'),
-		import('$lib/components/ui/chat/chat.svelte'),
 		import('$lib/components/ui/toast/toast.svelte')
 	];
 
-	const [footerModule, chatModule, toastModule] = await Promise.all(imports);
+	const [footerModule, toastModule] = await Promise.all(imports);
 
 	components.Footer = footerModule.Footer;
 	components.Chat = chatModule.default;

@@ -40,5 +40,4 @@
 	{/key}
 	<svelte:component this={lazyComponents.Toast} />
 	<svelte:component this={lazyComponents.Footer} />
-	<svelte:component this={lazyComponents.Chat} />
 </div>
