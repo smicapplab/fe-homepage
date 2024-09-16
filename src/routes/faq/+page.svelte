@@ -37,61 +37,26 @@
 			</p>
 		</div>
 
-		<div role="tablist" class="mt-10 tabs tabs-bordered">
-			<button
-				type="button"
-				role="tab"
-				class="tab-bordered tab text-lg {faq === 'Issuer'
-					? 'tab-active !border-primary font-bold text-primary'
-					: ''}"
-				aria-selected={faq === 'Issuer'}
-				on:click={() => (faq = 'Issuer')}
-			>
-				Issuer
-			</button>
-			<button
-				type="button"
-				role="tab"
-				class="tab-bordered tab text-lg {faq === 'Investor'
-					? 'tab-active !border-primary font-bold text-primary'
-					: ''}"
-				aria-selected={faq === 'Investor'}
-				on:click={() => (faq = 'Investor')}
-			>
-				Investor
-			</button>
-			<button
-				type="button"
-				role="tab"
-				class="tab-bordered tab text-lg {faq === 'Anchor'
-					? 'tab-active !border-primary font-bold text-primary'
-					: ''}"
-				aria-selected={faq === 'Anchor'}
-				on:click={() => (faq = 'Anchor')}
-			>
-				Anchor
-			</button>
-			<button
-				type="button"
-				role="tab"
-				class="tab-bordered tab text-lg {faq === 'Partner'
-					? 'tab-active !border-primary font-bold text-primary'
-					: ''}"
-				aria-selected={faq === 'Partner'}
-				on:click={() => (faq = 'Partner')}
-			>
-				Partner
-			</button>
-		</div>
+		<div role="tablist" class="tabs tabs-lifted">
+			<input type="radio" name="faq_tabs" role="tab" class="text-xl tab" aria-label="Issuer" checked />
+			<div role="tabpanel" class="p-6 tab-content rounded-box border-base-300 bg-base-100">
+				<Issuer data={data.issuerFaqData} />
+			</div>
 
-		{#if faq === 'Issuer'}
-			<Issuer data={data.issuerFaqData} />
-		{:else if faq === 'Anchor'}
-			<Anchor data={data.issuerAnchorData} />
-		{:else if faq === 'Investor'}
-			<Investor data={data.investorFaqData} />
-		{:else if faq === 'Partner'}
-			<Partner data={data.partnerFaqData} />
-		{/if}
+			<input type="radio" name="faq_tabs" role="tab" class="text-xl tab" aria-label="Investor" />
+			<div role="tabpanel" class="p-6 tab-content rounded-box border-base-300 bg-base-100">
+				<Investor data={data.investorFaqData} />
+			</div>
+
+			<input type="radio" name="faq_tabs" role="tab" class="text-xl tab" aria-label="Anchor" />
+			<div role="tabpanel" class="p-6 tab-content rounded-box border-base-300 bg-base-100">
+				<Anchor data={data.issuerAnchorData} />
+			</div>
+
+			<input type="radio" name="faq_tabs" role="tab" class="text-xl tab" aria-label="Partner" />
+			<div role="tabpanel" class="p-6 tab-content rounded-box border-base-300 bg-base-100">
+				<Partner data={data.partnerFaqData} />
+			</div>
+		</div>
 	</div>
 </div>
