@@ -1,0 +1,194 @@
+[
+	{
+		"question": "What is crowdfunding?",
+		"answer": "<p>Crowdfunding serves as a dynamic method for sourcing capital from investors to fuel diverse projects and businesses. There are several types of crowdfunding, including debt, equity, reward, and donation-based approaches. Koredor specializes in debt-based crowdfunding, wherein an SME's debt or borrowings are converted into a promissory (promise to pay) note, creating an avenue for a collective pool of investors to participate.</p><p>With Koredor's crowdfunding concept, SEC-qualified individual and institutional investors can choose SMEs they wish to support, and the SME will repay the borrowed funds at the due date. This innovative form of fundraising presents a financing alternative for SMEs that are underserved or unserved by traditional financing institutions with more stringent and lengthy processes.</p><p>Koredor's crowdfunding platform facilitates a relationship that connects SMEs with a pool of investors eager to contribute to their growth and success.</p>"
+	},
+	{
+		"question": "Is Koredor an investor that directly provides the funds? Who provides funding to my business?",
+		"answer": "<p>Koredor serves as an intermediary platform connecting SMEs with partner investors for financing solutions. Koredor itself does not directly provide funds; instead, it collaborates with sophisticated investors who are willing to assist SMEs with additional capital and who they trust to pay back on time.</p>"
+	},
+	{
+		"question": "What is an Issuer?",
+		"answer": "<p>The SMEs or business owners who are availing of financing through a crowdfunding platform are referred to as Issuers. The Security or Promissory Note are issued by the SMEs, hence Issuers.</p>"
+	},
+	{
+		"question": "What is a Note?",
+		"answer": "<p>A note, or Promissory Note is a financial instrument that contains a written promise by the SME (Issuer) to pay the Investor a definite sum of money.</p>"
+	},
+	{
+		"question": "What types of financing solutions you offer?",
+		"answer": "<p>We cater to SMEs' business financing needs with our supplier financing: Purchase Order Financing, Invoice Financing and Working Capital Term Loans.</p>"
+	},
+	{
+		"question": "Do you offer personal financing?",
+		"answer": "<p>We do not provide personal financing services. Instead, our financing solutions are designed to cater specifically to the needs of Filipino SMEs seeking to achieve business growth and expansion.</p>"
+	},
+	{
+		"question": "How can we contact you?",
+		"answer": "<p>For immediate concerns, you may reach us via <a href=\"mailto:info@koredorcapital.com\">info@koredorcapital.com</a>.</p>"
+	},
+	{
+		"question": "How do I apply for financing?",
+		"answer": "<p>You can start by creating an account <a class=\"link\" href=\"https://issuer.koredorcapital.com\" target=\"_blank\">here</a>.</p>"
+	},
+	{
+		"question": "How do I know that my personal information is safe with Koredor?",
+		"answer": "<p>Your information is stored and used in accordance with our Data Privacy Policy. Koredor will not disclose customer information to third parties without your permission, and will not contact you for personal information other than during the verification process. You may visit our Data Privacy Policy for full information.</p>"
+	},
+	{
+		"question": "What happens after I submit my documents?",
+		"answer": "<p>Your Relationship Manager will contact upon receipt of application to confirm the details. Once your information is complete and verified, your application will be submitted for credit evaluation. Term Sheet will be sent to your registered email upon financing approval. Following that, it will be endorsed for a 5-day auction, or earlier if we receive an early close bid from our investors. Funds will be disbursed in 1-2 business days after you accept the investor offer in the dashboard.</p>"
+	},
+	{
+		"question": "What is Marketplace Fee?",
+		"answer": "<p>This is the fee that you pay to Koredor for each successful funding. The fee is deducted from the financing proceeds.</p>"
+	},
+	{
+		"question": "How will I know the status of my disbursement?",
+		"answer": "<p>You may ask your Relationship Manager or contact us at <a href=\"mailto:info@koredorcapital.com\">info@koredorcapital.com</a> to find out the status of your disbursement.</p>"
+	},
+	{
+		"question": "How long does it take to receive my funds?",
+		"answer": "<p>If the investor has bidded and fully funded a note at the onset of note listing, there is a possibility for earlier release of funds (early closing). Otherwise, a 5 day standard note listing period will apply to allow more time for investors to bid on the note.</p><p>Once fully funded, a notification will be sent to you indicating the fully funded status, a confirmation will be required for the acceptance of early closing. Once confirmed, other Investors will be given a 24-hour window to conduct rebidding in case they wish to do so. The auction will be closed if no bids are received.</p>"
+	},
+	{
+		"question": "Do I get notified on the status of my disbursement?",
+		"answer": "<p>Yes, we will be sending you an email confirmation once the disbursement to your bank account has been completed.</p>"
+	},
+	{
+		"question": "Do I have to provide collateral in order to get financing?",
+		"answer": "<p>No collateral required! We only request a set of Post-Dated Checks (PDCs) as a form of security.</p>"
+	},
+	{
+		"question": "What happens to my post dated check (PDC) after repayment?",
+		"answer": "<p>For security purposes of the collected PDCs, there are 2 options to choose from:</p><p>1. PDC Destruction: After financing is fully paid, the default option for the unused/remaining PDCS is by destruction. Issuers may sign the PDC Destruction Approval form in advance, which will be attached in Note Purchase Agreement upon signing. In case of disapproved destruction, we will send the result to the Issuer for second confirmation and will proceed to PDC Return.</p><p>2. PDC Return: For any PDCs collected for security purposes, we will return these to you and requests for the delivery details once the financing is fully.</p><ul><li>Return within Within Metro Manila – by using a recognized delivery application (e.g. Grab, Lalamove, etc)</li><li>Return outside Metro Manila - by using a known courier (e.g. LBC and the like)</li><li>For Pick up – The issuer may pick up the remaining PDCs in our office by coordinating with your Relationship Manager for pick up schedule.</li></ul>"
+	},
+	{
+		"question": "Can I pay off the financing early?",
+		"answer": "<p>Yes, you can pay off the financing before it matures with no penalties or charges. Please note that if you choose to pay off your financing before the minimum tenor is fulfilled, you must still pay off the minimum interest amount following the minimum tenor. The minimum tenor of a note is usually 14 or 30 days, depending on the tenor of the note.</p><p>Requesting for the re-computation for early repayment should be done between 9AM and 5PM, at least 1 day before the day of intended early repayment</p>"
+	},
+	{
+		"question": "What fee will I incur if I pay late?",
+		"answer": "<p>We charge an additional 0.13% of the outstanding financing amount along with the daily interest amount for each day of late repayment. If you have any concerns before your maturity date, please contact your Relationship Manager.</p>"
+	},
+	{
+		"question": "I was disapproved for financing, what could be the reason?",
+		"answer": "<p>There are many possible reasons why an application may be disapproved, among the top three reasons are (1) existence of default payments in bank, credit cards, and other lenders, and (2) capacity to pay, and (3) incomplete documents. We encourage you to talk to your Relationship Manager to assess which area you can work on to possibly get an approval in the future.</p>"
+	},
+	{
+		"question": "What happens if I don't pay back on time?",
+		"answer": "<p>Missing payment on time will register as bad credit history and will make financing difficult for you in the future.</p>"
+	},
+	{
+		"question": "How does Invoice Financing work?",
+		"answer": "<p>Invoice financing works by guaranteeing the financing with an invoice— a bill for goods or services given to you by your buyer. A single repayment should be made at the due date. You can use the funds to grow your business while waiting to get paid by your buyer.</p><p>* This will vary based on the assessment made by our Risk team.</p>"
+	},
+	{
+		"question": "How much money can I get from Invoice Financing?",
+		"answer": "<p>You can get funds of up to 80%* of the invoice amount.</p><p>* This will vary based on the assessment made by our Risk team.</p>"
+	},
+	{
+		"question": "What are your interest rates for Invoice Financing?",
+		"answer": "<p>We charge an interest rate between 2% and 4% per month, depending on our Risk team's assessment of your business profile and the financing type.</p>"
+	},
+	{
+		"question": "How do you determine the interest rates?",
+		"answer": "<p>Our proprietary credit scoring technology uses a risk-based pricing model to determine the interest rates, which are based on the profiles of your business and your client.</p>"
+	},
+	{
+		"question": "What is the tenor length for Invoice Financing?",
+		"answer": "<p>Our tenor ranges from 30 to 720 days.</p>"
+	},
+	{
+		"question": "What are the costs involved in applying for financing with Koredor?",
+		"answer": "<p>The costs involved are the interest payment and the processing fee, called the Marketplace Fee. All costs will be made transparent to you in the term sheet.</p>"
+	},
+	{
+		"question": "How much is the processing fee?",
+		"answer": "<p>We charge a processing fee of 5%, referred to as the Marketplace Fee, of the financing amount per each transaction.</p>"
+	},
+	{
+		"question": "How does Purchase Order Financing work?",
+		"answer": "<p>Purchase order financing works by guaranteeing the financing with a purchase order— an order for goods or services given to you by your buyer. The financing due date will be set around the time that you expect payment from your client for the purchase order. Purchase order financing will help you accept larger orders from your buyer.</p><p>* This will vary based on the analysis made by our Risk team.</p>"
+	},
+	{
+		"question": "How much money can I get from Purchase Order Financing?",
+		"answer": "<p>You can get funds of up to 50%* of the purchase order amount.</p><p>* This will vary based on the assessment made by our Risk team.</p>"
+	},
+	{
+		"question": "What are your interest rates for Purchase Order Financing?",
+		"answer": "<p>We charge an interest rate between 2% and 4% per month, depending on our Risk team's assessment of your business profile and the financing type.</p>"
+	},
+	{
+		"question": "What is Real Estate Mortgage?",
+		"answer": "<p>A Real Estate Mortgage is an agreement where a real estate property is put up as a guarantee by the debtor (the \"mortgagor\") in the creditor's favor for a loan. If the debtor fails to pay the loan the creditor may foreclose the mortgage and sell the real estate property. The proceeds of the sale will then be used to pay the debt.</p>"
+	},
+	{
+		"question": "I have a real estate property but I don't have a registered business, am I qualified for financing?",
+		"answer": "<p>Unfortunately, Koredor's financing programs are exclusive to registered businesses.</p>"
+	},
+	{
+		"question": "Can I use more than 1 property as collateral?",
+		"answer": "<p>Yes, you may use more than 1 collateral to increase the amount that you can borrow.</p>"
+	},
+	{
+		"question": "How long does it take to process the financing?",
+		"answer": "<p>If the documents are complete and submitted on time, you can receive your fund between 5-7 weeks.</p>"
+	},
+	{
+		"question": "How long can I pay?",
+		"answer": "<p>The note is payable from 7 months to 36 months.</p>"
+	},
+	{
+		"question": "Can I choose how long I can pay?",
+		"answer": "<p>Yes, you can choose how long you can pay to make payments easier and more flexible for you.</p>"
+	},
+	{
+		"question": "Can I make early partial payment?",
+		"answer": "<p>Unfortunately, early partial payment is not an option yet.</p>"
+	},
+	{
+		"question": "Can I make early full payment?",
+		"answer": "<p>Yes, you can make early full payment without penalty.</p>"
+	},
+	{
+		"question": "Can I make one-time full payment at maturity date?",
+		"answer": "<p>Bullet payment or one-time payment at maturity is not an option yet. Payment option is monthly installment for principal and interest.</p>"
+	},
+	{
+		"question": "What are the associated costs for financing?",
+		"answer": "<p>Marketplace fee, processing cost, and insurance.</p>"
+	},
+	{
+		"question": "What are included in the Processing Cost?",
+		"answer": "<p>The processing cost include but is not limited to appraisal fee, inspection fee, and annotation of mortgage to Registry of Deeds.</p>"
+	},
+	{
+		"question": "What type of insurance am I required to get?",
+		"answer": "<p>Fire Insurance and MRI.</p>"
+	},
+	{
+		"question": "What is MRI?",
+		"answer": "<p>Mortgage Redemption Insurance (MRI) is a type of insurance that will settle the outstanding mortgage balance in the case of death of the borrower.</p>"
+	},
+	{
+		"question": "Can I use my existing life insurance coverage for MRI?",
+		"answer": "<p>In some cases life insurance may replace MRI with additional documentation needed like assignment of the investor as a beneficiary, among others. Talk to your Relationship Manager if this is an option you would like to take.</p>"
+	},
+	{
+		"question": "Can I have a co-borrower?",
+		"answer": "<p>A co-borrower is an additional borrower whose name appears on financing agreements and will have an obligation to repay the loan. For mortgages, the names on the property's title will be co-borrowers.</p>"
+	},
+	{
+		"question": "The real estate property is not under the business or company name, can I use it as collateral?",
+		"answer": "<p>Depending on whom the property is titled to and the relation to the business or company, we may accept subject to third-party REM. We can discuss the details more thoroughly with you.</p>"
+	},
+	{
+		"question": "Will the title name change when I avail financing?",
+		"answer": "<p>The owner of the TCT will not change but we will register the mortgage on the property to the Registry of Deeds.</p>"
+	},
+	{
+		"question": "What happens if I don't pay back on time?",
+		"answer": "<p>Missing payment on time will register as bad credit history and will make financing difficult for you in the future. You might also lose the collateral if payments remain unpaid for a certain period.</p>"
+	}
+]

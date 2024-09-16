@@ -50,16 +50,6 @@
 
 	let investorType = 'IND';
 
-	/**
-	 * @param {KeyboardEvent & { currentTarget: EventTarget & HTMLAnchorElement; }} event
-	 * @param {string} type
-	 */
-	function handleKeydown(event, type) {
-		if (event.key === 'Enter' || event.key === ' ') {
-			event.preventDefault();
-			investorType = type;
-		}
-	}
 </script>
 
 <div class="container p-5 mx-auto" id="reg-form">

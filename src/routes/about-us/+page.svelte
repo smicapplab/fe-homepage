@@ -22,7 +22,7 @@
 		</p>
 	</div>
 </div>
-<div class="flex items-center justify-center p-10">
+<div class="flex items-center justify-center p-10 pb-36">
 	<div class="container">
 		<div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
 			<div>

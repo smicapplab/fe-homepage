@@ -16,7 +16,6 @@ export async function lazyLoadLayoutComponents() {
 	const [footerModule, toastModule] = await Promise.all(imports);
 
 	components.Footer = footerModule.Footer;
-	components.Chat = chatModule.default;
 	components.Toast = toastModule.default;
 
 	return components;

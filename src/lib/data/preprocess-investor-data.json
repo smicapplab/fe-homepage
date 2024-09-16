@@ -1,0 +1,86 @@
+[
+	{
+		"question": "Who can provide funding on Koredor?",
+		"answer": "<p>Currently, we can only accept individual and institutional investors that are Qualified Buyers defined in SEC SRC Rule 10 (<a href=\"https://www.sec.gov.ph/wp-content/uploads/2019/11/SRCRule10.1.pdf\" target=\"_blank\">https://www.sec.gov.ph/wp-content/uploads/2019/11/SRCRule10.1.pdf</a>)</p>"
+	},
+	{
+		"question": "If my company is not on the list of qualified buyers, are there ways for me to invest on the Koredor platform?",
+		"answer": "<p>On Koredor, only Qualified Buyers as defined in SEC SRC Rule 10 can provide funding. These include banks, registered investment houses, insurance companies, pension or provident funds, registered securities dealers, and certain trust corporations. Other eligible entities include mutual funds, collective investment schemes, and certain foreign entities that meet the qualifications of financial sophistication and capacity under the SEC's guidelines.</p>"
+	},
+	{
+		"question": "What are the costs and charges involved in investing with Koredor?",
+		"answer": "<p>Investor's Fees are calculated based on: (Rate * funded loan amount * tenor) / 365</p><table class=\"table\"><thead><tr><th>Risk Grade</th><th>Investor's Fees</th></tr></thead><tbody><tr><th>A+, A, A-</th><th>2.75%</th></tr><tr><th>B, B-</th><th>3.25%</th></tr><tr><th>C+, C, C-</th><th>4.00%</th></tr></tbody></table>"
+	},
+	{
+		"question": "What is the scope of Koredor's services as the crowdfunding platform?",
+		"answer": "<p>Koredor, as a crowdfunding platform, performs KYC on SMEs (issuers), assesses their applications, and provides investors with details via a Fact Sheet. It secures legal agreements, administers disbursement and repayment transactions, and handles collection activities on behalf of investors</p>"
+	},
+	{
+		"question": "What products can investors invest in?",
+		"answer": "<p>We offer Invoice Financing, Purchase Order Financing, and Working Capital Term Loans to SMEs.</p>"
+	},
+	{
+		"question": "What are the risks with lending through Koredor?",
+		"answer": "<p>While Koredor has measures to mitigate risks when approving applications, the investors bear the credit risks when funding applications from issuers. We advise investors to make use of our Fact Sheet to screen applications based on their own risk appetite.</p>"
+	},
+	{
+		"question": "What are the documents needed to register as an investor?",
+		"answer": "<p>If you are interested to apply as an investor, you can fill up the form on our investor page (<a href=\"https://www.koredorcapital.com/investor\" target=\"_blank\">https://www.koredorcapital.com/investor</a>) or send an email to <a href=\"mailto:info@koredorcapital.com\">info@koredorcapital.com</a></p>"
+	},
+	{
+		"question": "Where can I submit inquiries about my investments on the platform?",
+		"answer": "<p>You can call your assigned relationship manager or send us an email at <a href=\"mailto:info@koredorcapital.com\">info@koredorcapital.com</a> or you may check your portfolio through your online portal.</p>"
+	},
+	{
+		"question": "How often are notes offered on the platform?",
+		"answer": "<p>New notes are made available on the platform nearly every day. You will be notified of new SMEs that apply through the investor portal.</p>"
+	},
+	{
+		"question": "How does bid allocation work?",
+		"answer": "<p>Bid allocation is determined based on the following priorities (in order)</p><ol><li>Bids equal to full note amount</li><li>Lowest Interest Rate</li><li>Time of bid (in the event of tied bids)</li></ol>"
+	},
+	{
+		"question": "How is the final price of the note determined?",
+		"answer": "<p>For Notes with full bids, the final rate will be the rate at which the winning investor bid.</p><p>For Notes with partial bids, highest interest rate among winning investor/s serves as the final interest rate to be applied.</p>"
+	},
+	{
+		"question": "Do bids need to be within the indicated interest rate range?",
+		"answer": "<p>Bids may fall within or below the price range stated in the Platform/Fact Sheet.</p>"
+	},
+	{
+		"question": "Can I cancel my bid?",
+		"answer": "<p>Bids may be cancelled within 24 hours and will be subject to a processing fee.</p>"
+	},
+	{
+		"question": "How long is the auction per note?",
+		"answer": "<p><strong>Standard Auction</strong><br/>The standard auction period is 5 calendar days.</p><p><strong>Early Closing</strong><br/>In the event that the note reaches full allocation, the issuer has the option to initiate early closing, which closes the bidding in 24 hours. During this period, other investors can still place their bids.</p><p><strong>Extended Auction</strong><br/>If there are no bids placed on the note after 5 calendar days, the note goes into extended auction for 10 calendar days. If there are no bids placed after the extended auction period, the note will be cancelled.</p>"
+	},
+	{
+		"question": "What happens if a note does not reach full allocation during the auction period?",
+		"answer": "<p>If the note does not reach full allocation, the issuer will be given the option the following options</p><ol><li>Put up note for auction (re-listing) in order to raise a higher amount</li><li>Proceed with documentation & disbursement</li></ol>"
+	},
+	{
+		"question": "What are the credit grades and yields on the platform?",
+		"answer": "<table class=\"table\"><thead><tr><th>Credit Grade</th><th>Interest Range</th></tr></thead><tbody><tr><th>A+</th><th>2.00-2.25%</th></tr><tr><th>A</th><th>2.26 - 2.50%</th></tr><tr><th>A-</th><th>2.51 - 2.75%</th></tr><tr><th>B</th><th>2.76 - 3.00%</th></tr><tr><th>B-</th><th>3.01 - 3.25%</th></tr><tr><th>C+</th><th>3.26 - 3.50%</th></tr><tr><th>C</th><th>3.51 - 3.75%</th></tr><tr><th>C-</th><th>3.76 - 4.00%</th></tr></tbody></table>"
+	},
+	{
+		"question": "What are Issuer Fact Sheets?",
+		"answer": "<p>Fact Sheets contain information on the approved notes that are available to be funded by investors. The investor can see the following on the Fact Sheet:</p><ul><li>Product type</li><li>Note amount and estimated disbursement date</li><li>Note maturity date</li><li>Note tenor and minimum tenor</li><li>Note price (interest rate and interest amount) range and the indicative note repayment amount</li><li>Any purchaser fees</li><li>Basic information on the SME's business, financial standing, and the PO/Invoice being funded</li></ul>"
+	},
+	{
+		"question": "How are funds disbursed to Issuers?",
+		"answer": "<p>Funds will be directly deposited into the nominated issuers account. For security purposes funds will only be disbursed to accounts owned by the issuer.</p>"
+	},
+	{
+		"question": "What is the turn-around-time to disburse funds to Issuers upon auction closing?",
+		"answer": "<p>1-2 working days</p>"
+	},
+	{
+		"question": "Is it possible for the issuer to pay before the note maturity date?",
+		"answer": "<p>Yes, the issuer may fully pay prior to the original maturity date but must settle at least 30 days worth of interest.</p>"
+	},
+	{
+		"question": "What happens if the issuer/SME is unable to repay on time?",
+		"answer": "<p>The account will be turned over to Koredor's dedicated in-house collections team. Koredor will initiate the collection process by issuing warning letters, depositing the PDCs for safekeeping, and scheduling visits to the issuers. We will keep investors informed throughout this process and recommend possible endorsement to third party collection agencies or litigation if there is no movement despite in-house collection efforts.</p><p>Should the investor choose to turn over the account to a third party collection agency or for litigation, costs will be shouldered by the investor.</p>"
+	}
+]
