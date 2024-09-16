@@ -48,7 +48,7 @@
 	}
 </script>
 
-<section class="flex bg-neutral">
+<section bind:this={sectionTimelineRef} class="flex justify-center bg-neutral">
 	<div class="container p-10">
 		<div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
 			<div>
@@ -59,29 +59,23 @@
 					Our process is 100% online, so you can apply anytime, anywhere!
 				</h2>
 			</div>
-
 			<div
 				class="relative flex flex-col items-center col-span-2 space-y-6"
-				bind:this={sectionTimelineRef}
+				
 			>
-				<!-- Vertical Line -->
 				{#each visibleCards as step, i}
 					<div
 						class="relative flex items-start w-full space-x-4"
-						in:fly={{ x: 100, duration: 1500, easing: cubicOut }}
+						in:fly={{ x: 200, duration: 1500, easing: cubicOut }}
 					>
-						<!-- Step Circle/Number -->
 						<div
 							class="z-10 flex items-center justify-center w-12 h-12 text-xl font-bold bg-white rounded-full shadow-lg"
 						>
 							{i + 1}
 						</div>
-						<!-- Conditional Line (except for the last step) -->
 						{#if i < visibleCards.length - 1}
-							<div class="absolute -bottom-10 left-1 top-10 h-full w-0.5 bg-white"></div>
+							<div class="absolute left-1 top-6 h-full w-0.5 bg-white"></div>
 						{/if}
-
-						<!-- Step Card -->
 						<div class="w-full p-6 ml-8 bg-white rounded-lg shadow-md">
 							<h2 class="mb-2 text-lg font-bold">{step.title}</h2>
 							<p class="text-gray-700">{step.description}</p>
