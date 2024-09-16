@@ -63,7 +63,7 @@
 <svelte:component this={lazyComponents.Seo} {title} {description} />
 <svelte:component this={lazyComponents.Hero} {...heroProps} />
 
-<div class="flex items-center justify-center p-5">
+<div class="flex items-center justify-center p-5 mb-10">
 	<div class="container">
 		<div class="grid grid-cols-1 gap-4 lg:grid-cols-4">
 			{#each whyKoredorItems as whyKoredorItem}
