@@ -155,7 +155,7 @@
 							<Icons.email class="flex-shrink-0 mr-2 text-secondary" />
 							<div class="flex-grow">
 								<h4 class="text-lg font-semibold text-secondary">Emails</h4>
-								<p>developer@koredorcapital.com</p>
+								<p>info@koredorcapital.com</p>
 							</div>
 						</div>
 					</div>

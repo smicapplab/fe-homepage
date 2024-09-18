@@ -189,7 +189,7 @@
 	</div>
 </div>
 <div class="w-full py-5 text-center text-white bg-secondary">
-	Operating Soon! We’re in our beta stage and accepting pre-registrations for the waitlist. For inquiries, email us at developer@koredorcapital.com.
+	Operating Soon! We’re in our beta stage and accepting pre-registrations for the waitlist. For inquiries, email us at <a href="mailto:info@koredorcapital.com" class="text-white underline">info@koredorcapital.com</a>.
 </div>
 
 <style>

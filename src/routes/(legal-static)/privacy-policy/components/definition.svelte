@@ -1,49 +1,30 @@
-<div class="collapse collapse-plus mt-2 bg-base-200">
-	<input type="radio" name="policy-accordion" />
-	<div class="collapse-title text-xl font-medium text-primary">Definition</div>
-	<div class="collapse-content">
-		<ul class="list-inside list-decimal space-y-4">
-			<li><strong>"Koredor"</strong> has the same meaning as specified in the Terms of Use.</li>
-			<li>
-				<strong>"Koredor Group"</strong> has the same meaning as specified in the Terms of Use.
-			</li>
-			<li><strong>"Cookie Policy"</strong> refers to the cookie policy of the Koredor Site.</li>
-			<li>
-				<strong>"Interactive Services"</strong> has the same meaning as specified in the Terms of Use.
-			</li>
-			<li>
-				<strong>"Personal Information"</strong> refers to any information, whether recorded in a material
-				form or not, from which the identity of an individual is apparent or can be reasonably and directly
-				ascertained by Koredor or entity which holds the information or when put together with other
-				information would directly and certainly identify an individual.
-			</li>
-			<li>
-				<strong>"Personal Data"</strong> refers to all types of Personal Information collected and processed
-				by Koredor.
-			</li>
-			<li><strong>"Product"</strong> has the same meaning as specified in the Terms of Use.</li>
-			<li>
-				<strong>"Selected Third Parties"</strong> refers to the third parties stipulated in article IV.5
-				below.
-			</li>
-			<li><strong>"Site"</strong> has the same meaning as specified in the Terms of Use.</li>
-			<li>
-				<strong>"Site Content"</strong> has the same meaning as specified in the Terms of Use.
-			</li>
-			<li><strong>"Terms of Use"</strong> refers to the Terms of Use for this site.</li>
-			<li>
-				<strong>"Third Party Content"</strong> has the same meaning as specified in the Terms of Use.
-			</li>
-			<li>
-				<strong>"Third Party Sites"</strong> has the same meaning as specified in the Terms of Use.
-			</li>
-			<li><strong>"Users"</strong> has the same meaning as specified in the Terms of Use.</li>
-			<li>
-				<strong>"We" and "Our"</strong> have the same meaning as specified in the Terms of Use.
-			</li>
-			<li>
-				<strong>"You" and "Your"</strong> have the same meaning as specified in the Terms of Use.
-			</li>
-		</ul>
-	</div>
-</div>
+<ol class="pl-5 space-y-2 list-decimal list-inside">
+	<li><strong>Koredor:</strong> Our company and its services.</li>
+	<li><strong>Koredor Group:</strong> Koredor and its affiliated entities.</li>
+	<li>
+		<strong>Cookie Policy:</strong> Our policy on using cookies and similar technologies.
+	</li>
+	<li>
+		<strong>Interactive Services:</strong> Features allowing user interaction on our site.
+	</li>
+	<li>
+		<strong>Personal Information:</strong> Any data that can identify an individual, directly or indirectly.
+	</li>
+	<li>
+		<strong>Personal Data:</strong> All types of Personal Information we collect and process.
+	</li>
+	<li><strong>Product:</strong> Goods or services offered through our site.</li>
+	<li>
+		<strong>Selected Third Parties:</strong> External entities we may share data with (see Section IV.5).
+	</li>
+	<li><strong>Site:</strong> Our website and related digital platforms.</li>
+	<li><strong>Site Content:</strong> All material published on our site.</li>
+	<li><strong>Terms of Use:</strong> The conditions governing use of our site.</li>
+	<li>
+		<strong>Third Party Content:</strong> Content on our site provided by external sources.
+	</li>
+	<li><strong>Third Party Sites:</strong> External websites linked from our site.</li>
+	<li><strong>Users:</strong> Individuals accessing or using our site.</li>
+	<li><strong>We/Our:</strong> Refers to Koredor and the Koredor Group.</li>
+	<li><strong>You/Your:</strong> The user or viewer of our site.</li>
+</ol>
