@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { navItems } from './navigation';
 	import { browser } from '$app/environment';
+	import IconButton from '$lib/components/icons/icon-button.svelte';
 
 	let isScrolled = false;
 	let openDetails = null;
@@ -98,7 +99,7 @@
 				{#each navItems as navItem}
 					<li>
 						{#if navItem.subMenus}
-							<span class="flex justify-start w-full text-left btn btn-ghost">
+							<span class="btn btn-ghost flex w-full justify-start text-left">
 								{navItem.name}
 							</span>
 							<ul
@@ -122,7 +123,7 @@
 							<a
 								aria-label={navItem.name}
 								href={navItem.href}
-								class="flex justify-start w-full text-left btn btn-ghost"
+								class="btn btn-ghost flex w-full justify-start text-left"
 							>
 								{navItem.name}
 							</a>
@@ -131,7 +132,7 @@
 				{/each}
 			</ul>
 		</div>
-		<a class="btn btn-link" href="/" aria-label="logo-link">
+		<a class="btn btn-link pt-2" href="/" aria-label="logo-link">
 			{#if isScrolled}
 				<Icons.koredorwhite />
 			{:else}
@@ -139,8 +140,8 @@
 			{/if}
 		</a>
 	</div>
-	<div class="hidden navbar-center lg:flex">
-		<ul class="px-1 menu menu-horizontal">
+	<div class="navbar-center hidden lg:flex">
+		<ul class="menu menu-horizontal px-1">
 			{#each navItems as navItem, index}
 				<li>
 					{#if navItem.subMenus}
@@ -188,8 +189,11 @@
 		>
 	</div>
 </div>
-<div class="w-full py-5 text-center text-white bg-secondary">
-	Operating Soon! We’re in our beta stage and accepting pre-registrations for the waitlist. For inquiries, email us at <a href="mailto:info@koredorcapital.com" class="text-white underline">info@koredorcapital.com</a>.
+<div class="w-full bg-secondary py-5 text-center text-white">
+	Operating Soon! We’re in our beta stage and accepting pre-registrations for the waitlist. For
+	inquiries, email us at <a href="mailto:info@koredorcapital.com" class="text-white underline"
+		>info@koredorcapital.com</a
+	>.
 </div>
 
 <style>
